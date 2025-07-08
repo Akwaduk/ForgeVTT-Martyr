@@ -1,0 +1,243 @@
+/* Martyr Class Styles for Foundry VTT */
+
+.martyr-resource {
+    background: linear-gradient(135deg, #2c1810 0%, #4a2c1a 100%);
+    border: 2px solid #8b4513;
+    border-radius: 8px;
+    padding: 10px;
+    margin: 5px 0;
+    color: #f4f4f4;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.martyr-resource h3 {
+    margin: 0 0 5px 0;
+    color: #ff6b6b;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.martyr-resource p {
+    margin: 0;
+    font-size: 12px;
+}
+
+.martyr-spell {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    border: 2px solid #4a5568;
+    border-radius: 8px;
+    padding: 12px;
+    margin: 5px 0;
+    color: #e2e8f0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.martyr-spell h3 {
+    margin: 0 0 8px 0;
+    color: #9f7aea;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.martyr-spell p {
+    margin: 4px 0;
+    font-size: 13px;
+}
+
+.martyr-spell em {
+    color: #a0aec0;
+    font-style: italic;
+    font-size: 11px;
+}
+
+.martyr-controls-dialog {
+    padding: 10px;
+}
+
+.martyr-controls-dialog h3 {
+    color: #ff6b6b;
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 18px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.martyr-controls-dialog .form-group {
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.martyr-controls-dialog label {
+    min-width: 140px;
+    font-weight: bold;
+}
+
+.martyr-controls-dialog input[type="number"] {
+    width: 60px;
+    padding: 4px 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.martyr-controls-dialog button {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.2s;
+}
+
+.martyr-controls-dialog #spend-btn {
+    background-color: #dc3545;
+    color: white;
+}
+
+.martyr-controls-dialog #spend-btn:hover {
+    background-color: #c82333;
+}
+
+.martyr-controls-dialog #add-btn {
+    background-color: #28a745;
+    color: white;
+}
+
+.martyr-controls-dialog #add-btn:hover {
+    background-color: #218838;
+}
+
+.blood-magic-section {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid #ddd;
+}
+
+.blood-magic-section h4 {
+    margin: 0 0 10px 0;
+    color: #6f42c1;
+    font-size: 16px;
+}
+
+.blood-magic-btn {
+    display: block;
+    width: 100%;
+    margin: 5px 0;
+    padding: 8px 12px;
+    background: linear-gradient(135deg, #6f42c1 0%, #5a32a3 100%);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.2s;
+}
+
+.blood-magic-btn:hover {
+    background: linear-gradient(135deg, #5a32a3 0%, #4c2a85 100%);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.blood-magic-btn:active {
+    transform: translateY(0);
+}
+
+/* Character Sheet Integration */
+.sheet.actor.character .martyr-resource.form-group {
+    background: rgba(139, 69, 19, 0.1);
+    border: 1px solid #8b4513;
+    border-radius: 6px;
+    padding: 8px;
+    margin: 5px 0;
+}
+
+.sheet.actor.character .martyr-resource label {
+    color: #8b4513;
+    font-weight: bold;
+}
+
+.sheet.actor.character .martyr-resource .form-fields {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.sheet.actor.character .martyr-resource input {
+    width: 50px;
+    text-align: center;
+    border: 1px solid #8b4513;
+    border-radius: 3px;
+}
+
+.sheet.actor.character .martyr-resource .max {
+    color: #8b4513;
+    font-weight: bold;
+}
+
+/* Header button styling */
+.martyr-controls.header-button {
+    background: linear-gradient(135deg, #8b4513 0%, #a0522d 100%);
+    border: 1px solid #654321;
+    color: white;
+}
+
+.martyr-controls.header-button:hover {
+    background: linear-gradient(135deg, #a0522d 0%, #b8651a 100%);
+}
+
+/* Vengeance-specific styling */
+.vengeance-resource {
+    border-color: #dc143c;
+    background: linear-gradient(135deg, #2c1810 0%, #4a1a1a 100%);
+}
+
+.vengeance-resource h3 {
+    color: #ff4444;
+}
+
+/* Mercy-specific styling */
+.mercy-resource {
+    border-color: #ffd700;
+    background: linear-gradient(135deg, #2c2810 0%, #4a4a1a 100%);
+}
+
+.mercy-resource h3 {
+    color: #ffdd44;
+}
+
+/* Path of the Moon theming */
+.path-moon .martyr-resource {
+    border-color: #6a0dad;
+    background: linear-gradient(135deg, #1a0c2e 0%, #2d1b4e 100%);
+}
+
+.path-moon .martyr-spell {
+    border-color: #4b0082;
+}
+
+/* Path of the Sun theming */
+.path-sun .martyr-resource {
+    border-color: #ff8c00;
+    background: linear-gradient(135deg, #2e1a0c 0%, #4e2d1b 100%);
+}
+
+.path-sun .martyr-spell {
+    border-color: #daa520;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .martyr-controls-dialog .form-group {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .martyr-controls-dialog label {
+        min-width: auto;
+        margin-bottom: 5px;
+    }
+}
