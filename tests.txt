@@ -1,0 +1,118 @@
+🧪 Martyr Module Testing Checklist
+Initial Setup Tests
+
+ Module appears in Module Management
+ Module enables without errors
+ Console shows "Martyr Class | Module initialized"
+ Compendium packs visible in sidebar
+ No error messages in console (F12)
+
+Character Creation Tests
+
+ Can drag Martyr class to character sheet
+ Class shows correct hit die (d10)
+ Proficiencies set correctly (Con, Wis saves)
+ Starting equipment appears
+
+Level 1 Features
+
+ Can add "Vengeance and Mercy" feature
+ Can add "Martyr's Insight" feature
+ Resource maximum calculates (Level × Con mod)
+ Martyr button appears in character sheet header
+
+Subclass Tests (Level 3)
+
+ Can add "Disciple of the Moon" subclass
+ Can add "Disciple of the Sun" subclass
+ Subclass features appear at correct levels
+
+Resource System Tests
+Moon Path (Vengeance)
+
+ Taking damage automatically adds Vengeance points
+ Gain = half damage taken (max 7/turn)
+ Cannot exceed maximum points
+ Chat message shows point gain
+
+Sun Path (Mercy)
+
+ Manual Mercy point addition works
+ Cannot exceed maximum points
+ Chat message shows point gain
+
+UI Controls Tests
+
+ "Martyr" button opens control dialog
+ Current resource points display correctly
+ "Spend Points" reduces resources
+ "Add Points" increases resources (respects max)
+ Resource counter updates on character sheet
+
+Blood Magic Tests
+
+ Quick cast buttons work
+ Correct point costs deducted
+ Chat messages show spell cast
+ Cannot cast without sufficient points
+ Error messages for insufficient resources
+
+Combat Simulation
+
+Create test encounter
+Damage the Martyr (Moon path should gain Vengeance)
+Use Retribution feature
+Cast Blood Magic spells
+Verify point calculations
+
+Edge Cases
+
+ Level 20 character (unlimited resources)
+ Zero Constitution modifier
+ Negative hit points
+ Long rest resource reset
+ Module disable/re-enable
+
+Performance Tests
+
+ No lag when taking damage
+ Smooth UI interactions
+ Quick dialog opening/closing
+ No memory leaks over extended play
+
+Compatibility Tests
+
+ Works with other common modules
+ No conflicts with automation modules
+ Character import/export works
+ Backup/restore functions
+
+Error Scenarios
+
+ Invalid resource amounts
+ Missing subclass selection
+ Corrupted character flags
+ Module conflicts
+
+
+🔧 Quick Test Setup
+Test Character Build:
+
+Level 3 Martyr
+14 Constitution (+2 mod = 6 max points)
+Moon or Sun path chosen
+Add key features from compendium
+
+Test Sequence:
+
+Take 10 damage → Should gain 5 Vengeance (Moon)
+Open Martyr controls → Verify 5 points shown
+Cast "Flesh Bolt" (5 points) → Should reduce to 0
+Try casting again → Should show error
+
+Success Criteria:
+✅ All automation works without manual intervention
+✅ UI is intuitive and responsive
+✅ No console errors during normal use
+✅ Resources calculate correctly at all levels
+✅ Both Moon and Sun paths function properly
