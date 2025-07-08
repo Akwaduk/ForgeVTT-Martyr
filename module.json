@@ -78,6 +78,6 @@
       "paths": ["templates", "lang"]
     }
   },
-  "manifest": "https://github.com/your-repo/dnd5e-martyr-class/releases/latest/download/module.json",
-  "download": "https://github.com/your-repo/dnd5e-martyr-class/releases/latest/download/module.zip"
+  "manifest": "https://github.com/akwaduk/ForgeVTT-Martyr/releases/latest/download/module.json",
+  "download": "https://github.com/akwaduk/ForgeVTT-Martyr/releases/latest/download/module.zip"
 }
