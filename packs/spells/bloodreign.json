@@ -1,0 +1,88 @@
+{
+  "name": "Bloodreign",
+  "type": "spell",
+  "img": "icons/magic/water/projectile-bolts-salvo-red.webp",
+  "system": {
+    "description": {
+      "value": "<p>Must be outdoors. Crimson clouds gather; beginning on your next turn and each round thereafter, you may (no action) summon rain of blood. Every hostile creature in the area makes a Wisdom save, taking <strong>1d6 necrotic</strong> damage on a failure, half on a success. You heal <strong>½</strong> the damage dealt each round.</p><p><strong>At Higher Levels:</strong> 2d6 at 11th level; 3d6 at 17th level.</p>",
+      "chat": "",
+      "unidentified": ""
+    },
+    "source": "Martyr Class",
+    "activation": {
+      "type": "action",
+      "cost": 1,
+      "condition": "Outdoors only, Path of the Moon"
+    },
+    "duration": {
+      "value": 1,
+      "units": "minute"
+    },
+    "target": {
+      "value": 20,
+      "width": null,
+      "units": "ft",
+      "type": "cylinder"
+    },
+    "range": {
+      "value": 60,
+      "long": null,
+      "units": "ft"
+    },
+    "uses": {
+      "value": null,
+      "max": "",
+      "per": null,
+      "recovery": ""
+    },
+    "consume": {
+      "type": "attribute",
+      "target": "flags.dnd5e-martyr-class.vengeance",
+      "amount": 10
+    },
+    "ability": "cha",
+    "actionType": "save",
+    "attackBonus": "",
+    "chatFlavor": "Crimson rain of judgment",
+    "critical": {
+      "threshold": null,
+      "damage": ""
+    },
+    "damage": {
+      "parts": [
+        ["1d6", "necrotic"]
+      ],
+      "versatile": ""
+    },
+    "formula": "",
+    "save": {
+      "ability": "wis",
+      "dc": null,
+      "scaling": "spell"
+    },
+    "level": 3,
+    "school": "nec",
+    "components": {
+      "value": "",
+      "vocal": true,
+      "somatic": true,
+      "material": false,
+      "ritual": false,
+      "concentration": true
+    },
+    "materials": {
+      "value": "",
+      "consumed": false,
+      "cost": 0,
+      "supply": 0
+    },
+    "preparation": {
+      "mode": "prepared",
+      "prepared": false
+    },
+    "scaling": {
+      "mode": "none",
+      "formula": ""
+    }
+  }
+}

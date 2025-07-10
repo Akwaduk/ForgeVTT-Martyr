@@ -1,0 +1,72 @@
+{
+  "name": "Martyr Class Features",
+  "label": "Martyr Class Features", 
+  "entries": [
+    {
+      "name": "Vengeance and Mercy Resource",
+      "type": "feat",
+      "_id": "vengeance-mercy-resource",
+      "sort": 100000,
+      "ownership": {
+        "default": 0,
+        "PLAYER": 2,
+        "ASSISTANT": 3
+      }
+    },
+    {
+      "name": "Martyr's Insight",
+      "type": "feat",
+      "_id": "martyrs-insight",
+      "sort": 200000,
+      "ownership": {
+        "default": 0,
+        "PLAYER": 2,
+        "ASSISTANT": 3
+      }
+    },
+    {
+      "name": "Double-Edged Blade",
+      "type": "feat", 
+      "_id": "double-edged-blade",
+      "sort": 300000,
+      "ownership": {
+        "default": 0,
+        "PLAYER": 2,
+        "ASSISTANT": 3
+      }
+    },
+    {
+      "name": "Martyr Spellcasting",
+      "type": "feat",
+      "_id": "martyr-spellcasting", 
+      "sort": 400000,
+      "ownership": {
+        "default": 0,
+        "PLAYER": 2,
+        "ASSISTANT": 3
+      }
+    },
+    {
+      "name": "Retribution",
+      "type": "feat",
+      "_id": "retribution",
+      "sort": 500000,
+      "ownership": {
+        "default": 0,
+        "PLAYER": 2,
+        "ASSISTANT": 3
+      }
+    },
+    {
+      "name": "Apocalyptic Affinity",
+      "type": "feat",
+      "_id": "apocalyptic-affinity",
+      "sort": 600000,
+      "ownership": {
+        "default": 0,
+        "PLAYER": 2,
+        "ASSISTANT": 3
+      }
+    }
+  ]
+}

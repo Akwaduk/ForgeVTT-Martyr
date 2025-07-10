@@ -1,0 +1,67 @@
+{
+  "name": "Apocalyptic Affinity",
+  "type": "feat",
+  "img": "icons/magic/defensive/shield-barrier-glowing-triangle-blue.webp",
+  "system": {
+    "description": {
+      "value": "<p>Upon reaching 20th level, your mastery over suffering is complete. When an ally within 30 feet of you takes damage, you can use your reaction to reduce the damage they take to 0. You then take the same amount of damage that the ally would have taken. This damage cannot be reduced in any way. You can use this feature a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest.</p>",
+      "chat": "",
+      "unidentified": ""
+    },
+    "source": "Martyr Class",
+    "activation": {
+      "type": "reaction",
+      "cost": 1,
+      "condition": "When an ally within 30 feet takes damage"
+    },
+    "duration": {
+      "value": null,
+      "units": "inst"
+    },
+    "target": {
+      "value": null,
+      "width": null,
+      "units": "",
+      "type": "ally"
+    },
+    "range": {
+      "value": 30,
+      "long": null,
+      "units": "ft"
+    },
+    "uses": {
+      "value": null,
+      "max": "@prof",
+      "per": "lr",
+      "recovery": ""
+    },
+    "consume": {
+      "type": "",
+      "target": "",
+      "amount": null
+    },
+    "ability": null,
+    "actionType": "other",
+    "attackBonus": "",
+    "chatFlavor": "Ultimate sacrifice for allies",
+    "critical": {
+      "threshold": null,
+      "damage": ""
+    },
+    "damage": {
+      "parts": [],
+      "versatile": ""
+    },
+    "formula": "",
+    "save": {
+      "ability": "",
+      "dc": null,
+      "scaling": "spell"
+    },
+    "requirements": "Martyr 20",
+    "recharge": {
+      "value": null,
+      "charged": false
+    }
+  }
+}

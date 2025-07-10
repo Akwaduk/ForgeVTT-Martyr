@@ -1,0 +1,54 @@
+{
+  "name": "Disciple of the Sun",
+  "type": "subclass",
+  "img": "icons/magic/symbols/rune-sigil-yellow-white.webp",
+  "system": {
+    "description": {
+      "value": "<p>Disciples of the Sun believe that suffering can be transcended through compassion and healing. You channel benevolent light, taking on burdens to uplift and protect your allies.</p><p>Your spellcasting ability is <strong>Wisdom</strong>.</p><h3>Bonus Proficiency</h3><p>When you choose this devotion at 3rd level, you gain proficiency in the Medicine skill. If you are already proficient in it, you gain proficiency in a different skill from the Martyr skill list.</p><h3>Undertaker's Sigh</h3><p>At 3rd level, your presence stabilizes the dying. When a creature within 30 feet of you is reduced to 0 hit points, you can use your reaction to stabilize them. They immediately become stable and conscious at 1 hit point, instead of falling unconscious. You can use this feature a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest.</p><h3>Cusp of Greatness</h3><p>Starting at 6th level, your willingness to sacrifice invigorates your allies. When you cast a spell that restores hit points to an ally, that ally can immediately use their reaction to move up to half their speed without provoking opportunity attacks.</p><h3>Forgiveness</h3><p>At 11th level, your compassion can quell aggression. As a reaction when a creature hits you or an ally within 30 feet with an attack, you can expend up to 5 Mercy points. The attacking creature must make a Wisdom saving throw against your spell save DC. On a failed save, the creature is charmed by you until the end of its next turn. A charmed creature can't willingly attack the charmer.</p><h3>Heaviest Matter of the Universe</h3><p>Beginning at 15th level, your benevolent aura can impede your foes. As a bonus action, you can create a shimmering sphere of light in a 10-foot radius centered on a point you can see within 60 feet. For 1 minute or until you lose concentration (as if concentrating on a spell), any hostile creature that starts its turn within the sphere or enters it for the first time on a turn must succeed on a Strength saving throw against your spell save DC or have its speed reduced to 0 until the start of its next turn. Once you use this feature, you can't use it again until you finish a long rest.</p><h3>Radiant Intervention</h3><p>At 18th level, your protective embrace can divert even the most lethal strikes. When an ally within 60 feet of you takes damage, you can use your reaction to absorb up to half of that damage. You take the absorbed damage as radiant damage, and your ally takes the remaining damage. This damage taken by you cannot be reduced in any way. You can use this feature a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest.</p>",
+      "chat": "",
+      "unidentified": ""
+    },
+    "source": "Martyr Class",
+    "identifier": "disciple-of-the-sun",
+    "classIdentifier": "martyr",
+    "advancement": [
+      {
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.dnd5e-martyr-class.martyr-class-features.undertakers-sigh",
+              "level": 3
+            },
+            {
+              "uuid": "Compendium.dnd5e-martyr-class.martyr-class-features.cusp-of-greatness",
+              "level": 6
+            },
+            {
+              "uuid": "Compendium.dnd5e-martyr-class.martyr-class-features.forgiveness",
+              "level": 11
+            },
+            {
+              "uuid": "Compendium.dnd5e-martyr-class.martyr-class-features.heaviest-matter-of-the-universe",
+              "level": 15
+            },
+            {
+              "uuid": "Compendium.dnd5e-martyr-class.martyr-class-features.radiant-intervention",
+              "level": 18
+            }
+          ],
+          "optional": false
+        },
+        "value": {},
+        "level": 3,
+        "title": "Disciple of the Sun Features",
+        "icon": "",
+        "_id": "sunfeatures001"
+      }
+    ],
+    "spellcasting": {
+      "progression": "none",
+      "ability": "wis"
+    }
+  }
+}

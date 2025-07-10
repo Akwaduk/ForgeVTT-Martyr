@@ -1,0 +1,67 @@
+{
+  "name": "Martyr Spellcasting",
+  "type": "feat",
+  "img": "icons/magic/symbols/runes-star-pentagon-blue.webp",
+  "system": {
+    "description": {
+      "value": "<p>Also at 2nd level, you gain the ability to cast spells as a Martyr. See chapter 10 for the general rules of spellcasting and the end of this document for the Martyr spell list.</p><p><strong>Spell Slots:</strong> You do not gain normal spell slots. Instead you prepare blood magics as described in the Blood-Magic Spellcasting table. A Martyr can only cast one bonus action or reaction spell per round.</p><p><strong>Spells Known of 1st Level and Higher:</strong> You know two 1st-level spells of your choice from the Martyr spell list. The Spells Known column of the Martyr table shows when you learn more Martyr spells of your choice. Each of these spells must be of a level for which you have spell slots. For instance, when you reach 5th level in this class, you can learn one new spell of 1st, 2nd, or 3rd level. Additionally, when you gain a level in this class, you can choose one of the Martyr spells you know and replace it with another spell from the Martyr spell list, which also must be of a level for which you have spell slots.</p><p><strong>Spellcasting Ability:</strong> Charisma or Wisdom is your spellcasting ability for your Martyr spells, this will depend on your alignment to your deity (Moon = Charisma, Sun = Wisdom) and be referred to as your Chosen modifier. You use this modifier whenever a spell refers to your spellcasting ability. In addition, you use this modifier when setting the saving throw DC for a Martyr spell you cast and when making an attack roll with one.</p><ul><li><strong>Spell save DC</strong> = 8 + your proficiency bonus + your chosen modifier</li><li><strong>Spell attack modifier</strong> = your proficiency bonus + your chosen modifier</li></ul>",
+      "chat": "",
+      "unidentified": ""
+    },
+    "source": "Martyr Class",
+    "activation": {
+      "type": "special",
+      "cost": null,
+      "condition": ""
+    },
+    "duration": {
+      "value": null,
+      "units": ""
+    },
+    "target": {
+      "value": null,
+      "width": null,
+      "units": "",
+      "type": "self"
+    },
+    "range": {
+      "value": null,
+      "long": null,
+      "units": "self"
+    },
+    "uses": {
+      "value": null,
+      "max": "",
+      "per": null,
+      "recovery": ""
+    },
+    "consume": {
+      "type": "",
+      "target": "",
+      "amount": null
+    },
+    "ability": null,
+    "actionType": "other",
+    "attackBonus": "",
+    "chatFlavor": "",
+    "critical": {
+      "threshold": null,
+      "damage": ""
+    },
+    "damage": {
+      "parts": [],
+      "versatile": ""
+    },
+    "formula": "",
+    "save": {
+      "ability": "",
+      "dc": null,
+      "scaling": "spell"
+    },
+    "requirements": "Martyr 2",
+    "recharge": {
+      "value": null,
+      "charged": false
+    }
+  }
+}

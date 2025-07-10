@@ -1,0 +1,88 @@
+{
+  "name": "Vindicate",
+  "type": "spell",
+  "img": "icons/magic/light/beam-rays-orange-large.webp",
+  "system": {
+    "description": {
+      "value": "<p>You invoke final judgment upon foes who have truly harmed you. Choose any number of enemies within 60 ft that have dealt <strong>50 HP or more</strong> damage to you since your last long rest. Each must make a WIS save.</p><p><strong>Fail:</strong> a solar/lunar bolt erases the creature, dropping it to 0 HP with no death saves.</p><p><strong>Success:</strong> it instead takes <strong>12d10 radiant or necrotic</strong> (your choice).</p><p><strong>Restriction:</strong> Only usable if the sun or moon is visible to you.</p>",
+      "chat": "",
+      "unidentified": ""
+    },
+    "source": "Martyr Class",
+    "activation": {
+      "type": "action",
+      "cost": 1,
+      "condition": "Sun or moon visible, targets must have dealt 50+ damage"
+    },
+    "duration": {
+      "value": null,
+      "units": "inst"
+    },
+    "target": {
+      "value": null,
+      "width": null,
+      "units": "",
+      "type": "creature"
+    },
+    "range": {
+      "value": 60,
+      "long": null,
+      "units": "ft"
+    },
+    "uses": {
+      "value": null,
+      "max": "",
+      "per": null,
+      "recovery": ""
+    },
+    "consume": {
+      "type": "attribute",
+      "target": "flags.dnd5e-martyr-class.vengeance",
+      "amount": 120
+    },
+    "ability": "cha",
+    "actionType": "save",
+    "attackBonus": "",
+    "chatFlavor": "Ultimate judgment of the Martyr",
+    "critical": {
+      "threshold": null,
+      "damage": ""
+    },
+    "damage": {
+      "parts": [
+        ["12d10", "radiant"]
+      ],
+      "versatile": ""
+    },
+    "formula": "",
+    "save": {
+      "ability": "wis",
+      "dc": null,
+      "scaling": "spell"
+    },
+    "level": 9,
+    "school": "evo",
+    "components": {
+      "value": "",
+      "vocal": true,
+      "somatic": true,
+      "material": false,
+      "ritual": false,
+      "concentration": false
+    },
+    "materials": {
+      "value": "",
+      "consumed": false,
+      "cost": 0,
+      "supply": 0
+    },
+    "preparation": {
+      "mode": "prepared",
+      "prepared": false
+    },
+    "scaling": {
+      "mode": "none",
+      "formula": ""
+    }
+  }
+}

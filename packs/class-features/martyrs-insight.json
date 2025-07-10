@@ -1,0 +1,67 @@
+{
+  "name": "Martyr's Insight",
+  "type": "feat",
+  "img": "icons/magic/perception/eye-ringed-glow-angry-small-red.webp",
+  "system": {
+    "description": {
+      "value": "<p>Starting at 1st level, your understanding of suffering grants you unique insights. You gain proficiency in one of the following skills of your choice: Medicine, Intimidation, or Religion.</p>",
+      "chat": "",
+      "unidentified": ""
+    },
+    "source": "Martyr Class",
+    "activation": {
+      "type": "special",
+      "cost": null,
+      "condition": ""
+    },
+    "duration": {
+      "value": null,
+      "units": ""
+    },
+    "target": {
+      "value": null,
+      "width": null,
+      "units": "",
+      "type": "self"
+    },
+    "range": {
+      "value": null,
+      "long": null,
+      "units": "self"
+    },
+    "uses": {
+      "value": null,
+      "max": "",
+      "per": null,
+      "recovery": ""
+    },
+    "consume": {
+      "type": "",
+      "target": "",
+      "amount": null
+    },
+    "ability": null,
+    "actionType": "other",
+    "attackBonus": "",
+    "chatFlavor": "",
+    "critical": {
+      "threshold": null,
+      "damage": ""
+    },
+    "damage": {
+      "parts": [],
+      "versatile": ""
+    },
+    "formula": "",
+    "save": {
+      "ability": "",
+      "dc": null,
+      "scaling": "spell"
+    },
+    "requirements": "Martyr 1",
+    "recharge": {
+      "value": null,
+      "charged": false
+    }
+  }
+}

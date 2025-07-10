@@ -1,0 +1,69 @@
+{
+  "name": "Double-Edged Blade",
+  "type": "feat",
+  "img": "icons/weapons/swords/sword-broad-flame-orange.webp",
+  "system": {
+    "description": {
+      "value": "<p>At 2nd level, you learn to imbue your attacks with your life force. Before you make an attack roll, you can choose to take necrotic damage (for Martyr of the Moon) or radiant damage (for Martyr of the Sun) equal to your Constitution modifier (minimum 1). If the attack hits, you add an additional amount of the chosen damage type equal to your Chosen modifier to the damage roll. This can only be used once per turn.</p>",
+      "chat": "",
+      "unidentified": ""
+    },
+    "source": "Martyr Class",
+    "activation": {
+      "type": "special",
+      "cost": null,
+      "condition": "Before making an attack roll"
+    },
+    "duration": {
+      "value": null,
+      "units": "inst"
+    },
+    "target": {
+      "value": null,
+      "width": null,
+      "units": "",
+      "type": "self"
+    },
+    "range": {
+      "value": null,
+      "long": null,
+      "units": "self"
+    },
+    "uses": {
+      "value": 1,
+      "max": "1",
+      "per": "turn",
+      "recovery": ""
+    },
+    "consume": {
+      "type": "",
+      "target": "",
+      "amount": null
+    },
+    "ability": null,
+    "actionType": "other",
+    "attackBonus": "",
+    "chatFlavor": "Sacrifice vitality for enhanced damage",
+    "critical": {
+      "threshold": null,
+      "damage": ""
+    },
+    "damage": {
+      "parts": [
+        ["@mod", "necrotic"]
+      ],
+      "versatile": ""
+    },
+    "formula": "",
+    "save": {
+      "ability": "",
+      "dc": null,
+      "scaling": "spell"
+    },
+    "requirements": "Martyr 2",
+    "recharge": {
+      "value": null,
+      "charged": false
+    }
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "name": "Retribution",
+  "type": "feat",
+  "img": "icons/magic/defensive/shield-barrier-flaming-diamond-orange.webp",
+  "system": {
+    "description": {
+      "value": "<p>Also at 3rd level, your suffering teaches you to respond to threats. When a creature targets you or an ally within 30 feet with an attack, you can use your reaction and expend a number of Vengeance or Mercy points (maximum 5) up to your Chosen modifier.</p><ul><li><strong>Path of the Moon:</strong> The attacking creature takes necrotic damage equal to the Vengeance points spent.</li><li><strong>Path of the Sun:</strong> The target of the attack regains hit points equal to the Mercy points spent.</li></ul><p>You can use this feature a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest.</p>",
+      "chat": "",
+      "unidentified": ""
+    },
+    "source": "Martyr Class",
+    "activation": {
+      "type": "reaction",
+      "cost": 1,
+      "condition": "When a creature targets you or an ally within 30 feet with an attack"
+    },
+    "duration": {
+      "value": null,
+      "units": "inst"
+    },
+    "target": {
+      "value": null,
+      "width": null,
+      "units": "",
+      "type": "creature"
+    },
+    "range": {
+      "value": 30,
+      "long": null,
+      "units": "ft"
+    },
+    "uses": {
+      "value": null,
+      "max": "@prof",
+      "per": "lr",
+      "recovery": ""
+    },
+    "consume": {
+      "type": "attribute",
+      "target": "flags.dnd5e-martyr-class.vengeance",
+      "amount": 5
+    },
+    "ability": "cha",
+    "actionType": "other",
+    "attackBonus": "",
+    "chatFlavor": "Respond to threats with divine retribution",
+    "critical": {
+      "threshold": null,
+      "damage": ""
+    },
+    "damage": {
+      "parts": [
+        ["@consume.amount", "necrotic"]
+      ],
+      "versatile": ""
+    },
+    "formula": "",
+    "save": {
+      "ability": "",
+      "dc": null,
+      "scaling": "spell"
+    },
+    "requirements": "Martyr 3",
+    "recharge": {
+      "value": null,
+      "charged": false
+    }
+  }
+}

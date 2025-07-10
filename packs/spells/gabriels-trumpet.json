@@ -1,0 +1,88 @@
+{
+  "name": "Gabriel's Trumpet",
+  "type": "spell",
+  "img": "icons/magic/sonic/explosion-shock-sound-wave.webp",
+  "system": {
+    "description": {
+      "value": "<p>Each creature in the cone must make a Wisdom saving throw.</p><p><strong>Fail:</strong> <strong>1d4 force</strong> damage and the creature is <strong>taunted</strong> until the end of its next turn.</p><p><strong>Success:</strong> the creature is taunted but takes no damage.</p><p><em>A taunted creature has disadvantage on attack rolls against any target other than you.</em></p>",
+      "chat": "",
+      "unidentified": ""
+    },
+    "source": "Martyr Class",
+    "activation": {
+      "type": "action",
+      "cost": 1,
+      "condition": "Path of the Moon only"
+    },
+    "duration": {
+      "value": 1,
+      "units": "round"
+    },
+    "target": {
+      "value": 60,
+      "width": null,
+      "units": "ft",
+      "type": "cone"
+    },
+    "range": {
+      "value": null,
+      "long": null,
+      "units": "self"
+    },
+    "uses": {
+      "value": null,
+      "max": "",
+      "per": null,
+      "recovery": ""
+    },
+    "consume": {
+      "type": "attribute",
+      "target": "flags.dnd5e-martyr-class.vengeance",
+      "amount": 10
+    },
+    "ability": "cha",
+    "actionType": "save",
+    "attackBonus": "",
+    "chatFlavor": "Divine trumpet of judgment",
+    "critical": {
+      "threshold": null,
+      "damage": ""
+    },
+    "damage": {
+      "parts": [
+        ["1d4", "force"]
+      ],
+      "versatile": ""
+    },
+    "formula": "",
+    "save": {
+      "ability": "wis",
+      "dc": null,
+      "scaling": "spell"
+    },
+    "level": 1,
+    "school": "evo",
+    "components": {
+      "value": "",
+      "vocal": true,
+      "somatic": true,
+      "material": false,
+      "ritual": false,
+      "concentration": false
+    },
+    "materials": {
+      "value": "",
+      "consumed": false,
+      "cost": 0,
+      "supply": 0
+    },
+    "preparation": {
+      "mode": "prepared",
+      "prepared": false
+    },
+    "scaling": {
+      "mode": "none",
+      "formula": ""
+    }
+  }
+}

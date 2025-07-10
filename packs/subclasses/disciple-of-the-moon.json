@@ -1,0 +1,54 @@
+{
+  "name": "Disciple of the Moon",
+  "type": "subclass",
+  "img": "icons/magic/symbols/rune-sigil-black-purple.webp",
+  "system": {
+    "description": {
+      "value": "<p>Disciples of the Moon see death as the ultimate judgment and suffering as the inevitable journey towards it. Your power grows as you inflict pain and witness the demise of others.</p><p>Your spellcasting ability is <strong>Charisma</strong>.</p><h3>Bonus Proficiency</h3><p>When you choose this devotion at 3rd level, you gain proficiency with heavy armor.</p><h3>Hellbent</h3><p>At 3rd level, your bond with suffering makes you resistant to death. When you are reduced to 0 hit points but not killed outright, you can instead choose to regain a number of hit points equal to your current Vengeance points (minimum 1). You can't use this feature again until you finish a long rest.</p><h3>Bane of Sisyphus</h3><p>Starting at 6th level, you draw power from the suffering of your enemies. When you reduce a hostile creature to 0 hit points, you gain temporary hit points equal to your Chosen modifier + your Martyr level.</p><h3>Impending Conviction</h3><p>At 11th level, your words carry the weight of your chosen path. When you make a Charisma (Intimidation) check, you can expend up to 5 Vengeance points. For each point spent, you gain a +1 bonus to the roll.</p><h3>Burden of Existence</h3><p>Starting at 15th level, you can sacrifice your own vitality to ward off death from an ally. As an action, you can touch a creature that has 0 hit points and is making death saving throws. You can expend all your Vengeance points, and the creature regains hit points equal to half the Vengeance points expended. This feature can't be used to revive a creature killed outright. Once you use this feature, you can't use it again until you finish a long rest.</p><h3>Aspect of Death</h3><p>At 18th level, you embody death's judgment. While you are wielding a sickle, you can use your action to choose one creature within 5 feet of you. This can't be used on undead or constructs. That creature must make a Wisdom saving throw against your spell save DC. On a failed save, if the creature has fewer hit points than your current Vengeance points, it instantly drops to 0 hit points. On a successful save, the creature takes 8d8 necrotic damage. Once you use this feature, you can't use it again until you finish a long rest.</p>",
+      "chat": "",
+      "unidentified": ""
+    },
+    "source": "Martyr Class",
+    "identifier": "disciple-of-the-moon",
+    "classIdentifier": "martyr",
+    "advancement": [
+      {
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.dnd5e-martyr-class.martyr-class-features.hellbent",
+              "level": 3
+            },
+            {
+              "uuid": "Compendium.dnd5e-martyr-class.martyr-class-features.bane-of-sisyphus",
+              "level": 6
+            },
+            {
+              "uuid": "Compendium.dnd5e-martyr-class.martyr-class-features.impending-conviction",
+              "level": 11
+            },
+            {
+              "uuid": "Compendium.dnd5e-martyr-class.martyr-class-features.burden-of-existence",
+              "level": 15
+            },
+            {
+              "uuid": "Compendium.dnd5e-martyr-class.martyr-class-features.aspect-of-death",
+              "level": 18
+            }
+          ],
+          "optional": false
+        },
+        "value": {},
+        "level": 3,
+        "title": "Disciple of the Moon Features",
+        "icon": "",
+        "_id": "moonfeatures001"
+      }
+    ],
+    "spellcasting": {
+      "progression": "none",
+      "ability": "cha"
+    }
+  }
+}

@@ -29,11 +29,20 @@ class MartyrResourceManager {
         // Hook for when actors take damage
         Hooks.on('preUpdateActor', this._onPreUpdateActor.bind(this));
         
+        // Hook for when tokens take damage (for Sun Martyrs)
+        Hooks.on('preUpdateToken', this._onPreUpdateToken.bind(this));
+        
         // Hook for character sheet rendering
         Hooks.on('renderActorSheet5eCharacter', this._onRenderCharacterSheet.bind(this));
         
         // Hook for adding custom resources to character sheets
         Hooks.on('dnd5e.getActorSheetHeaderButtons', this._addMartyrControls.bind(this));
+        
+        // Hook for long rest
+        Hooks.on('dnd5e.longRest', this._onLongRest.bind(this));
+        
+        // Hook for rendering chat messages with roll buttons
+        Hooks.on('renderChatMessage', this._onRenderChatMessage.bind(this));
     }
 
     static _onPreUpdateActor(actor, updateData, options, userId) {
@@ -288,15 +297,170 @@ class MartyrResourceManager {
         const newPoints = currentPoints - cost;
         actor.setFlag(this.ID, flagName, newPoints);
         
+        // Create enhanced blood magic message with spell effects
+        const spellEffects = this._getSpellEffects(spellName, actor, path);
+        
         ChatMessage.create({
             speaker: ChatMessage.getSpeaker({ actor }),
             content: `<div class="martyr-spell">
                 <h3>Blood Magic: ${spellName}</h3>
                 <p>Spent ${cost} ${path === 'moon' ? 'Vengeance' : 'Mercy'} points</p>
                 <p>${newPoints} points remaining</p>
-                <em>Roll damage and effects manually or use the spell item.</em>
+                <div class="spell-effects">
+                    ${spellEffects}
+                </div>
             </div>`
         });
+    }
+
+    static _getSpellEffects(spellName, actor, path) {
+        const martyrLevel = this._getMartyrLevel(actor);
+        const chosenMod = path === 'moon' ? actor.system.abilities.cha.mod : actor.system.abilities.wis.mod;
+        
+        switch(spellName) {
+            case 'Flesh Bolt':
+                const fleshBoltDice = martyrLevel >= 20 ? '4d8' : martyrLevel >= 11 ? '3d8' : '2d8';
+                return `<p><strong>Ranged Spell Attack:</strong> ${fleshBoltDice} necrotic damage</p>
+                        <p><strong>Healing:</strong> You regain ¼ of damage dealt</p>
+                        <p><strong>Range:</strong> 80 feet</p>`;
+            
+            case "Gabriel's Trumpet":
+                return `<p><strong>60-foot Cone:</strong> WIS save or 1d4 force damage + taunted</p>
+                        <p><strong>Success:</strong> Taunted but no damage</p>
+                        <p><strong>DC:</strong> ${8 + actor.system.attributes.prof + chosenMod}</p>`;
+            
+            case 'Absolution':
+                return `<p><strong>Self:</strong> Take 6d10 lightning damage</p>
+                        <p><strong>Enemies in 30 ft:</strong> WIS save or take force damage = ½ your lightning damage</p>
+                        <p><strong>Failed save:</strong> Also pushed 20 ft and knocked prone</p>
+                        <p><strong>DC:</strong> ${8 + actor.system.attributes.prof + chosenMod}</p>`;
+            
+            default:
+                return '<p><em>Use the spell item for detailed effects.</em></p>';
+        }
+    }
+
+    // Add ally damage tracking for Sun Martyrs
+    static _onPreUpdateToken(token, updateData, options, userId) {
+        const actor = token.actor;
+        if (!actor || !this._isMartyr(actor)) return;
+        
+        const path = this._getMartyrPath(actor);
+        if (path !== 'sun') return;
+        
+        const currentHP = actor.system.attributes.hp.value;
+        const newHP = updateData?.actorData?.system?.attributes?.hp?.value;
+        
+        if (newHP !== undefined && newHP < currentHP) {
+            const damage = currentHP - newHP;
+            this._checkForNearbyMartyrSun(token, damage);
+        }
+    }
+
+    static _checkForNearbyMartyrSun(damagedToken, damage) {
+        const nearbyTokens = canvas.tokens.placeables.filter(t => {
+            const distance = canvas.grid.measureDistance(damagedToken, t);
+            return distance <= 30 && t.actor && this._isMartyr(t.actor) && this._getMartyrPath(t.actor) === 'sun';
+        });
+
+        nearbyTokens.forEach(martyrToken => {
+            const mercyGain = Math.min(Math.floor(damage / 2), 7);
+            const martyrLevel = this._getMartyrLevel(martyrToken.actor);
+            const conMod = martyrToken.actor.system.abilities.con.mod;
+            const maxPoints = martyrLevel * conMod;
+            
+            this._addMercyPoints(martyrToken.actor, mercyGain, maxPoints);
+        });
+    }
+
+    // Enhanced resource calculation with level 20 handling
+    static _calculateMaxPoints(actor) {
+        const martyrLevel = this._getMartyrLevel(actor);
+        const conMod = actor.system.abilities.con.mod;
+        
+        if (martyrLevel >= 20) {
+            return 9999; // Unlimited at level 20
+        }
+        
+        return martyrLevel * conMod;
+    }
+
+    // Add long rest resource reset
+    static _onLongRest(actor) {
+        if (!this._isMartyr(actor)) return;
+        
+        const path = this._getMartyrPath(actor);
+        if (!path) return;
+        
+        const flagName = path === 'moon' ? 'vengeance' : 'mercy';
+        actor.setFlag(this.ID, flagName, 0);
+        
+        ChatMessage.create({
+            speaker: ChatMessage.getSpeaker({ actor }),
+            content: `<div class="martyr-resource">
+                <h3>Long Rest</h3>
+                <p>${path === 'moon' ? 'Vengeance' : 'Mercy'} points reset to 0</p>
+            </div>`
+        });
+    }
+
+    // Add chat message rendering for interactive rolls
+    static _onRenderChatMessage(message, html, data) {
+        if (!message.content.includes('martyr-spell')) return;
+        
+        html.find('.spell-roll-btn').click(async (event) => {
+            const rollType = event.currentTarget.dataset.roll;
+            const actorId = event.currentTarget.dataset.actor;
+            const actor = game.actors.get(actorId);
+            
+            if (!actor) return;
+            
+            await this._performSpellRoll(actor, rollType);
+        });
+    }
+
+    static async _performSpellRoll(actor, rollType) {
+        const path = this._getMartyrPath(actor);
+        const chosenMod = path === 'moon' ? actor.system.abilities.cha.mod : actor.system.abilities.wis.mod;
+        const spellAttackBonus = actor.system.attributes.prof + chosenMod;
+        const spellDC = 8 + actor.system.attributes.prof + chosenMod;
+        
+        let roll;
+        let flavor;
+        
+        switch(rollType) {
+            case 'flesh-bolt-attack':
+                roll = await new Roll(`1d20 + ${spellAttackBonus}`).evaluate();
+                flavor = "Flesh Bolt - Ranged Spell Attack";
+                break;
+            
+            case 'flesh-bolt-damage':
+                const martyrLevel = this._getMartyrLevel(actor);
+                const dice = martyrLevel >= 20 ? '4d8' : martyrLevel >= 11 ? '3d8' : '2d8';
+                roll = await new Roll(dice).evaluate();
+                flavor = "Flesh Bolt - Necrotic Damage";
+                break;
+            
+            case 'gabriels-trumpet-damage':
+                roll = await new Roll('1d4').evaluate();
+                flavor = "Gabriel's Trumpet - Force Damage";
+                break;
+            
+            case 'absolution-self':
+                roll = await new Roll('6d10').evaluate();
+                flavor = "Absolution - Self Lightning Damage";
+                break;
+            
+            default:
+                return;
+        }
+        
+        if (roll) {
+            roll.toMessage({
+                speaker: ChatMessage.getSpeaker({ actor }),
+                flavor: flavor
+            });
+        }
     }
 }
 

@@ -1,0 +1,88 @@
+{
+  "name": "Flesh Bolt",
+  "type": "spell",
+  "img": "icons/magic/death/projectile-bolts-flying-salvo-red.webp",
+  "system": {
+    "description": {
+      "value": "<p>You hurl a lance of necrotic power. Make a ranged spell attack; on a hit the target takes <strong>2d8 necrotic</strong> damage, and you regain hit points equal to <strong>¼</strong> of the damage dealt.</p><p><strong>At Higher Levels:</strong> 3d8 at 11th level; 4d8 at 20th level.</p>",
+      "chat": "",
+      "unidentified": ""
+    },
+    "source": "Martyr Class",
+    "activation": {
+      "type": "action",
+      "cost": 1,
+      "condition": "Path of the Moon only"
+    },
+    "duration": {
+      "value": null,
+      "units": "inst"
+    },
+    "target": {
+      "value": 1,
+      "width": null,
+      "units": "",
+      "type": "creature"
+    },
+    "range": {
+      "value": 80,
+      "long": null,
+      "units": "ft"
+    },
+    "uses": {
+      "value": null,
+      "max": "",
+      "per": null,
+      "recovery": ""
+    },
+    "consume": {
+      "type": "attribute",
+      "target": "flags.dnd5e-martyr-class.vengeance",
+      "amount": 5
+    },
+    "ability": "cha",
+    "actionType": "rsak",
+    "attackBonus": "",
+    "chatFlavor": "Blood magic of the Moon",
+    "critical": {
+      "threshold": null,
+      "damage": ""
+    },
+    "damage": {
+      "parts": [
+        ["2d8", "necrotic"]
+      ],
+      "versatile": ""
+    },
+    "formula": "",
+    "save": {
+      "ability": "",
+      "dc": null,
+      "scaling": "spell"
+    },
+    "level": 1,
+    "school": "nec",
+    "components": {
+      "value": "",
+      "vocal": true,
+      "somatic": true,
+      "material": false,
+      "ritual": false,
+      "concentration": false
+    },
+    "materials": {
+      "value": "",
+      "consumed": false,
+      "cost": 0,
+      "supply": 0
+    },
+    "preparation": {
+      "mode": "prepared",
+      "prepared": false
+    },
+    "scaling": {
+      "mode": "none",
+      "formula": ""
+    }
+  }
+}

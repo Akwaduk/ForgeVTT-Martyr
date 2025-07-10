@@ -1,23 +1,42 @@
-# Martyr Class Module - Installation Guide
+# Installation Guide
 
-## Overview
-This Foundry VTT module adds the custom Martyr class with its unique Vengeance/Mercy resource system and Blood Magic spells. The class features two paths: Disciple of the Moon (Vengeance) and Disciple of the Sun (Mercy).
+## Installing the Martyr Class Module
 
-## Installation
+### Method 1: Direct Download
+1. Download the `dnd5e-martyr-class.zip` file from the releases
+2. Open Foundry VTT and go to **Configuration** > **Add-on Modules**
+3. Click **Install Module** at the bottom
+4. Click **Browse** and select the downloaded ZIP file
+5. Click **Install**
 
-### Option 1: Manual Installation
-1. Download the module files
-2. Extract to your Foundry `modules` directory: `Data/modules/dnd5e-martyr-class/`
-3. Restart Foundry VTT
-4. Enable the module in your world's Module Management
+### Method 2: Module Browser (if available)
+1. Open Foundry VTT and go to **Configuration** > **Add-on Modules**
+2. Click **Install Module** at the bottom
+3. Search for "Martyr Class" in the search bar
+4. Click **Install** next to the module
 
-### Option 2: Module Browser (if published)
-1. Open Foundry VTT
-2. Go to Add-on Modules
-3. Search for "Martyr Class"
-4. Click Install
+### After Installation
+1. Enable the module in your world's **Module Management**
+2. The Martyr class and features will be available in compendium packs
+3. You can now create Martyr characters using the class from the compendium
 
-## File Structure
+## First Time Setup
+
+1. **Create a Character**: Make a new character and add the Martyr class
+2. **Choose Starting Equipment**: The class provides starting equipment options
+3. **Select Skills**: Choose 2 skills from the Martyr skill list
+4. **At Level 3**: Choose your Mortal Devotion (Disciple of the Moon or Sun)
+5. **Start Playing**: The module will automatically track your resources!
+
+## Troubleshooting
+
+**Module won't enable**: Make sure you're using Foundry VTT v11+ and D&D 5e system v3.0.0+
+
+**Resources not tracking**: Check that the "Auto-calculate Vengeance/Mercy" setting is enabled in module settings
+
+**Spells not appearing**: Make sure you've selected the Martyr class and are at least level 2
+
+**Need help?**: Create an issue on the GitHub repository or ask in the Foundry VTT community
 ```
 dnd5e-martyr-class/
 ├── module.json
