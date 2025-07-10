@@ -1,0 +1,17 @@
+{
+  "name": "Martyr Classes",
+  "label": "Martyr Classes",
+  "entries": [
+    {
+      "name": "Martyr",
+      "type": "class",
+      "_id": "martyrclass001",
+      "sort": 50000,
+      "ownership": {
+        "default": 0,
+        "PLAYER": 2,
+        "ASSISTANT": 3
+      }
+    }
+  ]
+}

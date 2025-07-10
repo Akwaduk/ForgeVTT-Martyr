@@ -37,6 +37,49 @@ Adds a complete **Martyr** class to the D&D 5e system in Foundry VTT, built arou
 
 ---
 
+## 🔧 **Manual Class Creation (If Needed)**
+
+If the Martyr class doesn't appear in your compendium after installation, you can create it manually:
+
+1. **Open the Martyr Class Features compendium**
+2. **Click "Create Item"** 
+3. **Set Type to "Class"**
+4. **Name it "Martyr"**
+5. **Copy the following into the Description:**
+
+```html
+<p>The Martyr understands that suffering is the ultimate path to self-realization. They obtain their powers through a profound connection to either the Sun or the Moon, aligning with paths of Mercy or Vengeance.</p>
+
+<h3>Hit Points</h3>
+<ul>
+<li><strong>Hit Dice:</strong> 1d10 per Martyr level</li>
+<li><strong>Hit Points at 1st Level:</strong> 10 + your Constitution modifier</li>
+<li><strong>Hit Points at Higher Levels:</strong> 1d10 (or 6) + your Constitution modifier per Martyr level after 1st</li>
+</ul>
+
+<h3>Proficiencies</h3>
+<ul>
+<li><strong>Armor:</strong> Light armor, Medium armor, Shields</li>
+<li><strong>Weapons:</strong> Simple weapons, Greatsword, Maul, Heavy Crossbow</li>
+<li><strong>Tools:</strong> None</li>
+<li><strong>Saving Throws:</strong> Constitution, Wisdom</li>
+<li><strong>Skills:</strong> Choose two from Athletics, Intimidation, Medicine, Persuasion, Religion, and Survival</li>
+</ul>
+```
+
+6. **Set the following Class Details:**
+   - **Identifier:** `martyr`
+   - **Hit Die:** `d10`
+   - **Primary Ability:** Constitution
+   - **Saving Throws:** Constitution, Wisdom
+   - **Skills:** Choose 2 from Athletics, Intimidation, Medicine, Persuasion, Religion, Survival
+
+7. **Save the item**
+
+The module will handle all the automation and features once you have the base class!
+
+---
+
 ## ⚙️ Core Mechanics
 
 ### Vengeance / Mercy Points

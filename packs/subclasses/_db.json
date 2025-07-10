@@ -1,0 +1,28 @@
+{
+  "name": "Martyr Subclasses",
+  "label": "Martyr Subclasses",
+  "entries": [
+    {
+      "name": "Disciple of the Moon",
+      "type": "subclass",
+      "_id": "disciple-of-the-moon",
+      "sort": 100000,
+      "ownership": {
+        "default": 0,
+        "PLAYER": 2,
+        "ASSISTANT": 3
+      }
+    },
+    {
+      "name": "Disciple of the Sun",
+      "type": "subclass", 
+      "_id": "disciple-of-the-sun",
+      "sort": 200000,
+      "ownership": {
+        "default": 0,
+        "PLAYER": 2,
+        "ASSISTANT": 3
+      }
+    }
+  ]
+}

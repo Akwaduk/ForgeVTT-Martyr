@@ -1,0 +1,182 @@
+{
+  "name": "Martyr Blood Magic Spells",
+  "label": "Martyr Blood Magic Spells",
+  "entries": [
+    {
+      "name": "Flesh Bolt",
+      "type": "spell",
+      "_id": "flesh-bolt",
+      "sort": 100000,
+      "ownership": {
+        "default": 0,
+        "PLAYER": 2,
+        "ASSISTANT": 3
+      }
+    },
+    {
+      "name": "Gabriel's Trumpet",
+      "type": "spell",
+      "_id": "gabriels-trumpet",
+      "sort": 110000,
+      "ownership": {
+        "default": 0,
+        "PLAYER": 2,
+        "ASSISTANT": 3
+      }
+    },
+    {
+      "name": "The Devil's Leverage",
+      "type": "spell",
+      "_id": "the-devils-leverage",
+      "sort": 120000,
+      "ownership": {
+        "default": 0,
+        "PLAYER": 2,
+        "ASSISTANT": 3
+      }
+    },
+    {
+      "name": "Eagleheart",
+      "type": "spell",
+      "_id": "eagleheart",
+      "sort": 130000,
+      "ownership": {
+        "default": 0,
+        "PLAYER": 2,
+        "ASSISTANT": 3
+      }
+    },
+    {
+      "name": "Crucifixion",
+      "type": "spell",
+      "_id": "crucifixion",
+      "sort": 140000,
+      "ownership": {
+        "default": 0,
+        "PLAYER": 2,
+        "ASSISTANT": 3
+      }
+    },
+    {
+      "name": "Veil of Suffering",
+      "type": "spell",
+      "_id": "veil-of-suffering",
+      "sort": 200000,
+      "ownership": {
+        "default": 0,
+        "PLAYER": 2,
+        "ASSISTANT": 3
+      }
+    },
+    {
+      "name": "Dark Penance",
+      "type": "spell",
+      "_id": "dark-penance",
+      "sort": 210000,
+      "ownership": {
+        "default": 0,
+        "PLAYER": 2,
+        "ASSISTANT": 3
+      }
+    },
+    {
+      "name": "Bloodreign",
+      "type": "spell",
+      "_id": "bloodreign",
+      "sort": 300000,
+      "ownership": {
+        "default": 0,
+        "PLAYER": 2,
+        "ASSISTANT": 3
+      }
+    },
+    {
+      "name": "Spiteful Maneuver",
+      "type": "spell",
+      "_id": "spiteful-maneuver",
+      "sort": 400000,
+      "ownership": {
+        "default": 0,
+        "PLAYER": 2,
+        "ASSISTANT": 3
+      }
+    },
+    {
+      "name": "Flesh Storm",
+      "type": "spell",
+      "_id": "flesh-storm",
+      "sort": 500000,
+      "ownership": {
+        "default": 0,
+        "PLAYER": 2,
+        "ASSISTANT": 3
+      }
+    },
+    {
+      "name": "Absolution",
+      "type": "spell",
+      "_id": "absolution",
+      "sort": 600000,
+      "ownership": {
+        "default": 0,
+        "PLAYER": 2,
+        "ASSISTANT": 3
+      }
+    },
+    {
+      "name": "Uncompromising Purity",
+      "type": "spell",
+      "_id": "uncompromising-purity",
+      "sort": 610000,
+      "ownership": {
+        "default": 0,
+        "PLAYER": 2,
+        "ASSISTANT": 3
+      }
+    },
+    {
+      "name": "Altar of Sacrifice",
+      "type": "spell",
+      "_id": "altar-of-sacrifice",
+      "sort": 700000,
+      "ownership": {
+        "default": 0,
+        "PLAYER": 2,
+        "ASSISTANT": 3
+      }
+    },
+    {
+      "name": "Deconstruct Flesh",
+      "type": "spell",
+      "_id": "deconstruct-flesh",
+      "sort": 900000,
+      "ownership": {
+        "default": 0,
+        "PLAYER": 2,
+        "ASSISTANT": 3
+      }
+    },
+    {
+      "name": "Edge of Mortality",
+      "type": "spell",
+      "_id": "edge-of-mortality",
+      "sort": 910000,
+      "ownership": {
+        "default": 0,
+        "PLAYER": 2,
+        "ASSISTANT": 3
+      }
+    },
+    {
+      "name": "Vindicate",
+      "type": "spell",
+      "_id": "vindicate",
+      "sort": 920000,
+      "ownership": {
+        "default": 0,
+        "PLAYER": 2,
+        "ASSISTANT": 3
+      }
+    }
+  ]
+}
