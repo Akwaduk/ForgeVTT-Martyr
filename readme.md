@@ -23,14 +23,14 @@ Adds a complete **Martyr** class to the D&D 5e system in Foundry VTT, built arou
    *System → Add-on Modules → Install Module*  
    Paste this manifest URL (or pick it from the browser):
 2. **Enable the module** in *Manage Modules* for your world.  
-3. **Import compendia** (`Martyr Class Features`, `Martyr Spells`, `Martyr Subclasses`).
+3. **Import compendia** (`Martyr Classes`, `Martyr Class Features`, `Martyr Spells`, `Martyr Subclasses`).
 
 ---
 
 ## 🚀 Quick-start
 
 1. Create or open a character.  
-2. From the compendium, drag the **Martyr** class onto the sheet.  
+2. From the **Martyr Classes** compendium, drag the **Martyr** class onto the sheet.  
 3. At **3rd level**, choose either **Disciple of the Moon** or **Disciple of the Sun**.  
 4. Use the **Martyr Control Panel** (button in the header) to track resources.  
 5. Cast Blood-Magic spells—**no spell slots needed**, they spend points instead.
@@ -126,6 +126,18 @@ Please open an issue and include:
 ---
 
 ## Changelog
+
+### Version 1.1.3
+- 🔧 **FIXED**: All compendium items now have proper metadata and IDs
+- ✨ **RESOLVED**: Compendiums will now properly display all content when imported
+- 📦 **IMPROVED**: All spells, features, and subclasses now appear correctly in Foundry VTT
+- 🎯 **ENHANCED**: Fixed empty compendium issue - items are now visible and searchable
+
+### Version 1.1.2
+- 🎯 **FIXED**: Martyr class now properly appears in the Classes compendium
+- 📦 **CHANGED**: Separated classes into dedicated compendium pack for better organization
+- 🔧 **IMPROVED**: Updated module structure to follow Foundry VTT best practices
+- ✨ **ENHANCED**: Automatic class creation now uses correct compendium reference
 
 ### Version 1.1.0
 - Added complete blood magic spell collection (16 spells total)

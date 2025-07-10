@@ -84,5 +84,22 @@
       "mode": "none",
       "formula": ""
     }
-  }
+  },
+  "ownership": {
+    "default": 0,
+    "PLAYER": 2,
+    "ASSISTANT": 3
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "dnd5e",
+    "systemVersion": "3.3.1",
+    "coreVersion": "12.331",
+    "createdTime": 1736445600000,
+    "modifiedTime": 1736445600000,
+    "lastModifiedBy": "martyrmodule"
+  },
+  "folder": null,
+  "sort": 900000,
+  "_id": "deconstruct-flesh"
 }
