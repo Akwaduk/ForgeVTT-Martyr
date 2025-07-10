@@ -1,44 +1,85 @@
-D&D 5e Martyr Class Module
-A comprehensive Foundry VTT module that adds the Martyr class to D&D 5e, featuring a unique resource system and Blood Magic spells.
+# 🩸 D&D 5e – Martyr Class (Foundry VTT Module)
 
-Features
-🗡️ Complete Martyr Class - Full 20-level progression with automated features 🌙 Path of the Moon - Vengeance-based subclass with offensive abilities
-☀️ Path of the Sun - Mercy-based subclass with healing and protection ⚡ Blood Magic System - Spells powered by Vengeance/Mercy points instead of spell slots 🎯 Automated Resource Tracking - Automatically gain points when taking/witnessing damage 🎮 Enhanced UI - Custom controls and resource displays integrated into character sheets
+Adds a complete **Martyr** class to the D&D 5e system in Foundry VTT, built around a Vengeance / Mercy resource economy and Blood-Magic spell list.
 
-Installation
-Download or install via Foundry's module browser
-Enable in your world's Module Management
-Import compendium content to start using the class
-Quick Start
-Create a new character
-Add the "Martyr" class from the compendium
-At 3rd level, choose "Disciple of the Moon" or "Disciple of the Sun"
-Use the Martyr control panel (header button) to manage resources
-Cast Blood Magic spells using Vengeance/Mercy points
-Core Mechanics
-Resource System
-Vengeance (Moon): Gain points = ½ damage taken (max 7/turn)
-Mercy (Sun): Gain points = ½ ally damage witnessed (reaction, max 7/turn)
-Maximum: Martyr Level × Constitution Modifier
-Blood Magic Spells
-No spell slots required
-Powered by Vengeance/Mercy points
-Unique spells like Flesh Bolt, Bloodreign, and Vindicate
-Scales with character level and resource expenditure
-Requirements
-Foundry VTT v11+
-D&D 5e System v3.0.0+
-Compatibility
-Works with most other modules. May have minor conflicts with other custom resource management systems.
+---
 
-Documentation
-See the Installation Guide for detailed setup instructions and troubleshooting.
+## ✨ Features
 
-Support
-Found a bug or have a suggestion? Please create an issue with:
+|                           | Description |
+|---------------------------|-------------|
+| 🗡️ **Full 20-level Class** | All class features automated and ready to drag-and-drop. |
+| 🌙 **Path of the Moon**   | Vengeance-based subclass focused on raw offense. |
+| ☀️ **Path of the Sun**    | Mercy-based subclass focused on healing & protection. |
+| ⚡ **Blood-Magic System**  | Spells consume Vengeance / Mercy points instead of spell slots. |
+| 🎯 **Auto Resource Gain** | Points generated when you take or witness damage. |
+| 🎮 **Enhanced UI**        | Dedicated Martyr panel and resource tracker on the character sheet. |
 
-Foundry and module versions
-Steps to reproduce
-Console error logs (if applicable)
-This module implements a custom class design and is not affiliated with official D&D content.
+---
 
+## 📥 Installation
+
+1. **Foundry UI**  
+   *System → Add-on Modules → Install Module*  
+   Paste this manifest URL (or pick it from the browser):
+2. **Enable the module** in *Manage Modules* for your world.  
+3. **Import compendia** (`Martyr Class Features`, `Martyr Spells`, `Martyr Subclasses`).
+
+---
+
+## 🚀 Quick-start
+
+1. Create or open a character.  
+2. From the compendium, drag the **Martyr** class onto the sheet.  
+3. At **3rd level**, choose either **Disciple of the Moon** or **Disciple of the Sun**.  
+4. Use the **Martyr Control Panel** (button in the header) to track resources.  
+5. Cast Blood-Magic spells—**no spell slots needed**, they spend points instead.
+
+---
+
+## ⚙️ Core Mechanics
+
+### Vengeance / Mercy Points
+| Resource | How you gain it | Cap |
+|----------|-----------------|-----|
+| **Vengeance**<br>(Moon) | ½ the damage **you** take (rounded up, max 7 / turn) | `Level × CON mod` |
+| **Mercy**<br>(Sun) | ½ the damage an **ally** takes that you witness (reaction, max 7 / turn) | `Level × CON mod` |
+
+### Blood-Magic Highlights
+* No spell-slot progression—every spell costs points.  
+* Signature spells: **Flesh Bolt**, **Bloodreign**, **Vindicate** (and more).  
+* Each spell scales with the points you invest and your character level.
+
+---
+
+## 📋 Requirements
+
+* **Foundry VTT** &nbsp;v11 or later  
+* **D&D 5e System** &nbsp;v3.0.0 or later
+
+> Works with most popular modules. Minor conflicts may occur with other custom-resource systems.
+
+---
+
+## 📚 Documentation
+
+See **`docs/Installation Guide.md`** (included in the module) for detailed setup, FAQ, and troubleshooting tips.
+
+---
+
+## 🐞 Support & Feedback
+
+Found a bug or want to suggest a feature?  
+Please open an issue and include:
+
+* Foundry version, D&D 5e system version, module version  
+* Exact steps to reproduce  
+* Any console errors (press **F12 → Console tab**)
+
+> **Disclaimer:** This is a **home-brew** class. It is **not** affiliated with Wizards of the Coast or official D&D content.
+
+---
+
+### License
+
+Distributed under the MIT License. See `LICENSE` for details.
