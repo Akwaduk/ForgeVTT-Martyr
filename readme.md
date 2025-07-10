@@ -47,8 +47,10 @@ Adds a complete **Martyr** class to the D&D 5e system in Foundry VTT, built arou
 
 ### Blood-Magic Highlights
 * No spell-slot progression—every spell costs points.  
-* Signature spells: **Flesh Bolt**, **Bloodreign**, **Vindicate** (and more).  
+* **16 unique spells** spanning all levels from 1st to 9th
+* Signature spells: **Flesh Bolt**, **Bloodreign**, **Absolution**, **Vindicate** (and more).  
 * Each spell scales with the points you invest and your character level.
+* **Path-specific spells**: Some spells only available to Moon or Sun disciples
 
 ---
 
@@ -77,6 +79,26 @@ Please open an issue and include:
 * Any console errors (press **F12 → Console tab**)
 
 > **Disclaimer:** This is a **home-brew** class. It is **not** affiliated with Wizards of the Coast or official D&D content.
+
+---
+
+## Changelog
+
+### Version 1.1.0
+- Added complete blood magic spell collection (16 spells total)
+- Added missing spells: The Devil's Leverage, Crucifixion, Veil of Suffering, Dark Penance, Spiteful Maneuver, Flesh Storm, Absolution, Altar of Sacrifice, Deconstruct Flesh, Uncompromising Purity, Edge of Mortality
+- Enhanced spell descriptions with proper mechanics
+- Improved spell scaling and level requirements
+- Updated module compatibility
+
+### Version 1.0.0
+- Initial release
+- Complete Martyr class implementation
+- Vengeance/Mercy resource system
+- Basic blood magic spells
+- Both subclasses (Moon and Sun)
+- Automated resource management
+- Interactive UI for resource control
 
 ---
 

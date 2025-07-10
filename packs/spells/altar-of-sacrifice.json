@@ -1,0 +1,88 @@
+{
+  "name": "Altar of Sacrifice",
+  "type": "spell",
+  "img": "icons/environment/settlement/altar-stone-temple.webp",
+  "system": {
+    "description": {
+      "value": "<p>A gore-slick pillar (hit points = <strong>d6 × Wis modifier</strong>) erupts from the ground. Choose one creature within 15 ft of it; the target is restrained and dragged 5 ft toward the altar at the start of each of its turns. If the pillar still stands after 3 rounds, the creature takes <strong>6d6 necrotic</strong> as flesh fuses to stone. Destroying the altar ends the effect early.</p>",
+      "chat": "",
+      "unidentified": ""
+    },
+    "source": "Martyr Class",
+    "activation": {
+      "type": "action",
+      "cost": 1,
+      "condition": ""
+    },
+    "duration": {
+      "value": 3,
+      "units": "round"
+    },
+    "target": {
+      "value": 1,
+      "width": null,
+      "units": "",
+      "type": "creature"
+    },
+    "range": {
+      "value": 30,
+      "long": null,
+      "units": "ft"
+    },
+    "uses": {
+      "value": null,
+      "max": "",
+      "per": null,
+      "recovery": ""
+    },
+    "consume": {
+      "type": "attribute",
+      "target": "flags.dnd5e-martyr-class.vengeance",
+      "amount": 40
+    },
+    "ability": "cha",
+    "actionType": "other",
+    "attackBonus": "",
+    "chatFlavor": "Conjure sacrificial altar",
+    "critical": {
+      "threshold": null,
+      "damage": ""
+    },
+    "damage": {
+      "parts": [
+        ["6d6", "necrotic"]
+      ],
+      "versatile": ""
+    },
+    "formula": "",
+    "save": {
+      "ability": "",
+      "dc": null,
+      "scaling": "spell"
+    },
+    "level": 7,
+    "school": "con",
+    "components": {
+      "value": "",
+      "vocal": true,
+      "somatic": true,
+      "material": false,
+      "ritual": false,
+      "concentration": false
+    },
+    "materials": {
+      "value": "",
+      "consumed": false,
+      "cost": 0,
+      "supply": 0
+    },
+    "preparation": {
+      "mode": "prepared",
+      "prepared": false
+    },
+    "scaling": {
+      "mode": "none",
+      "formula": ""
+    }
+  }
+}
