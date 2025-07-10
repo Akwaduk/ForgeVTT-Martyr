@@ -78,6 +78,6 @@
       "paths": ["templates", "lang"]
     }
   },
-  "manifest": "https://github.com/Akwaduk/ForgeVTT-Martyr/blob/master/module.json",
-  "download": "https://github.com/Akwaduk/ForgeVTT-Martyr/blob/master/module.zip"
+  "manifest": "https://raw.githubusercontent.com/Akwaduk/ForgeVTT-Martyr/refs/heads/master/module.json",
+  "download": "https://raw.githubusercontent.com/Akwaduk/ForgeVTT-Martyr/refs/heads/master/module.zip"
 }
