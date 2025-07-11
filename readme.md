@@ -127,6 +127,12 @@ Please open an issue and include:
 
 ## Changelog
 
+### Version 1.1.4
+- 🧹 **CLEANUP**: Removed duplicate class file from class-features folder
+- 📁 **ORGANIZED**: Proper separation of classes and features for optimal compendium structure
+- 🔧 **VERIFIED**: All JSON files have correct structure and metadata for Foundry VTT
+- 📖 **IMPROVED**: Updated documentation for proper import process
+
 ### Version 1.1.3
 - 🔧 **FIXED**: All compendium items now have proper metadata and IDs
 - ✨ **RESOLVED**: Compendiums will now properly display all content when imported
