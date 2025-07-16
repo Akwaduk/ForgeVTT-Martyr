@@ -2,7 +2,7 @@
   "id": "dnd5e-martyr-class",
   "title": "D&D 5e Martyr Class",
   "description": "Adds the Martyr class with Vengeance/Mercy resource system and blood magic spells",
-  "version": "1.1.6",
+  "version": "1.1.7",
   "compatibility": {
     "minimum": "11",
     "verified": "13"
@@ -34,41 +34,25 @@
       "name": "martyr-classes",
       "label": "Martyr Classes",
       "path": "packs/classes",
-      "type": "Item",
-      "ownership": {
-        "PLAYER": "OBSERVER",
-        "ASSISTANT": "OWNER"
-      }
+      "type": "Item"
     },
     {
       "name": "martyr-class-features",
       "label": "Martyr Class Features",
       "path": "packs/class-features",
-      "type": "Item",
-      "ownership": {
-        "PLAYER": "OBSERVER",
-        "ASSISTANT": "OWNER"
-      }
+      "type": "Item"
     },
     {
       "name": "martyr-spells",
       "label": "Martyr Blood Magic Spells",
       "path": "packs/spells",
-      "type": "Item",
-      "ownership": {
-        "PLAYER": "OBSERVER",
-        "ASSISTANT": "OWNER"
-      }
+      "type": "Item"
     },
     {
       "name": "martyr-subclasses",
       "label": "Martyr Subclasses",
       "path": "packs/subclasses",
-      "type": "Item",
-      "ownership": {
-        "PLAYER": "OBSERVER",
-        "ASSISTANT": "OWNER"
-      }
+      "type": "Item"
     }
   ],
   "packFolders": [
