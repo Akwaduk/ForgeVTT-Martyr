@@ -1,4 +1,4 @@
-﻿{
+﻿[{
     "name":  "Martyr",
     "type":  "class",
     "img":  "icons/magic/death/skull-bones-worn-brown.webp",
@@ -328,4 +328,4 @@
     "folder":  null,
     "sort":  0,
     "_id":  "martyrclass001"
-}
+}]
