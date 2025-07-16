@@ -465,12 +465,17 @@ class MartyrResourceManager {
 
     // Validate that compendium packs are available
     static async validateCompendiums() {
+        console.log("Martyr Class | Starting compendium validation...");
+        
         const packNames = [
             "dnd5e-martyr-class.martyr-classes",
             "dnd5e-martyr-class.martyr-class-features", 
             "dnd5e-martyr-class.martyr-spells",
             "dnd5e-martyr-class.martyr-subclasses"
         ];
+        
+        console.log("Martyr Class | Looking for packs:", packNames);
+        console.log("Martyr Class | Available packs:", Array.from(game.packs.keys()));
         
         // Wait for compendiums to be ready
         let attempts = 0;
@@ -494,6 +499,8 @@ class MartyrResourceManager {
             }
             
             attempts++;
+            console.log(`Martyr Class | Attempt ${attempts}/${maxAttempts} - Missing: ${missingPacks.join(', ')}`);
+            
             if (attempts >= maxAttempts) {
                 console.warn("Martyr Class | Missing compendium packs after waiting:", missingPacks);
                 ui.notifications.warn("Martyr Class: Some compendium packs are missing. Module may not work correctly.");
