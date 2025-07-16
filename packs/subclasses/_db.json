@@ -1,28 +1,30 @@
-{
-  "name": "Martyr Subclasses",
-  "label": "Martyr Subclasses",
-  "entries": [
+﻿[
     {
-      "name": "Disciple of the Moon",
-      "type": "subclass",
-      "_id": "disciple-of-the-moon",
-      "sort": 100000,
-      "ownership": {
-        "default": 0,
-        "PLAYER": 2,
-        "ASSISTANT": 3
-      }
+        "sort":  100000,
+        "type":  "subclass",
+        "name":  "Disciple of the Moon",
+        "_stats":  {
+                       "modifiedTime":  1735776000000,
+                       "systemId":  "dnd5e",
+                       "lastModifiedBy":  "foundryuserid",
+                       "systemVersion":  "3.0.0",
+                       "createdTime":  1735776000000,
+                       "coreVersion":  "13.291"
+                   },
+        "_id":  "disciple-of-the-moon"
     },
     {
-      "name": "Disciple of the Sun",
-      "type": "subclass", 
-      "_id": "disciple-of-the-sun",
-      "sort": 200000,
-      "ownership": {
-        "default": 0,
-        "PLAYER": 2,
-        "ASSISTANT": 3
-      }
+        "sort":  200000,
+        "type":  "subclass",
+        "name":  "Disciple of the Sun",
+        "_stats":  {
+                       "modifiedTime":  1735776000000,
+                       "systemId":  "dnd5e",
+                       "lastModifiedBy":  "foundryuserid",
+                       "systemVersion":  "3.0.0",
+                       "createdTime":  1735776000000,
+                       "coreVersion":  "13.291"
+                   },
+        "_id":  "disciple-of-the-sun"
     }
-  ]
-}
+]

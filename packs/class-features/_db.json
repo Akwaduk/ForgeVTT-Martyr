@@ -1,72 +1,86 @@
-{
-  "name": "Martyr Class Features",
-  "label": "Martyr Class Features", 
-  "entries": [
+﻿[
     {
-      "name": "Vengeance and Mercy Resource",
-      "type": "feat",
-      "_id": "vengeance-mercy-resource",
-      "sort": 100000,
-      "ownership": {
-        "default": 0,
-        "PLAYER": 2,
-        "ASSISTANT": 3
-      }
+        "sort":  100000,
+        "type":  "feat",
+        "name":  "Vengeance and Mercy Resource",
+        "_stats":  {
+                       "modifiedTime":  1735776000000,
+                       "systemId":  "dnd5e",
+                       "lastModifiedBy":  "foundryuserid",
+                       "systemVersion":  "3.0.0",
+                       "createdTime":  1735776000000,
+                       "coreVersion":  "13.291"
+                   },
+        "_id":  "vengeance-mercy-resource"
     },
     {
-      "name": "Martyr's Insight",
-      "type": "feat",
-      "_id": "martyrs-insight",
-      "sort": 110000,
-      "ownership": {
-        "default": 0,
-        "PLAYER": 2,
-        "ASSISTANT": 3
-      }
+        "sort":  110000,
+        "type":  "feat",
+        "name":  "Martyr\u0027s Insight",
+        "_stats":  {
+                       "modifiedTime":  1735776000000,
+                       "systemId":  "dnd5e",
+                       "lastModifiedBy":  "foundryuserid",
+                       "systemVersion":  "3.0.0",
+                       "createdTime":  1735776000000,
+                       "coreVersion":  "13.291"
+                   },
+        "_id":  "martyrs-insight"
     },
     {
-      "name": "Double-Edged Blade",
-      "type": "feat", 
-      "_id": "double-edged-blade",
-      "sort": 120000,
-      "ownership": {
-        "default": 0,
-        "PLAYER": 2,
-        "ASSISTANT": 3
-      }
+        "sort":  120000,
+        "type":  "feat",
+        "name":  "Double-Edged Blade",
+        "_stats":  {
+                       "modifiedTime":  1735776000000,
+                       "systemId":  "dnd5e",
+                       "lastModifiedBy":  "foundryuserid",
+                       "systemVersion":  "3.0.0",
+                       "createdTime":  1735776000000,
+                       "coreVersion":  "13.291"
+                   },
+        "_id":  "double-edged-blade"
     },
     {
-      "name": "Martyr Spellcasting",
-      "type": "feat",
-      "_id": "martyr-spellcasting", 
-      "sort": 130000,
-      "ownership": {
-        "default": 0,
-        "PLAYER": 2,
-        "ASSISTANT": 3
-      }
+        "sort":  130000,
+        "type":  "feat",
+        "name":  "Martyr Spellcasting",
+        "_stats":  {
+                       "modifiedTime":  1735776000000,
+                       "systemId":  "dnd5e",
+                       "lastModifiedBy":  "foundryuserid",
+                       "systemVersion":  "3.0.0",
+                       "createdTime":  1735776000000,
+                       "coreVersion":  "13.291"
+                   },
+        "_id":  "martyr-spellcasting"
     },
     {
-      "name": "Retribution",
-      "type": "feat",
-      "_id": "retribution",
-      "sort": 140000,
-      "ownership": {
-        "default": 0,
-        "PLAYER": 2,
-        "ASSISTANT": 3
-      }
+        "sort":  140000,
+        "type":  "feat",
+        "name":  "Retribution",
+        "_stats":  {
+                       "modifiedTime":  1735776000000,
+                       "systemId":  "dnd5e",
+                       "lastModifiedBy":  "foundryuserid",
+                       "systemVersion":  "3.0.0",
+                       "createdTime":  1735776000000,
+                       "coreVersion":  "13.291"
+                   },
+        "_id":  "retribution"
     },
     {
-      "name": "Apocalyptic Affinity",
-      "type": "feat",
-      "_id": "apocalyptic-affinity",
-      "sort": 150000,
-      "ownership": {
-        "default": 0,
-        "PLAYER": 2,
-        "ASSISTANT": 3
-      }
+        "sort":  150000,
+        "type":  "feat",
+        "name":  "Apocalyptic Affinity",
+        "_stats":  {
+                       "modifiedTime":  1735776000000,
+                       "systemId":  "dnd5e",
+                       "lastModifiedBy":  "foundryuserid",
+                       "systemVersion":  "3.0.0",
+                       "createdTime":  1735776000000,
+                       "coreVersion":  "13.291"
+                   },
+        "_id":  "apocalyptic-affinity"
     }
-  ]
-}
+]

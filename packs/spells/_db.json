@@ -1,182 +1,226 @@
-{
-  "name": "Martyr Blood Magic Spells",
-  "label": "Martyr Blood Magic Spells",
-  "entries": [
+﻿[
     {
-      "name": "Flesh Bolt",
-      "type": "spell",
-      "_id": "flesh-bolt",
-      "sort": 100000,
-      "ownership": {
-        "default": 0,
-        "PLAYER": 2,
-        "ASSISTANT": 3
-      }
+        "sort":  100000,
+        "type":  "spell",
+        "name":  "Flesh Bolt",
+        "_stats":  {
+                       "modifiedTime":  1735776000000,
+                       "systemId":  "dnd5e",
+                       "lastModifiedBy":  "foundryuserid",
+                       "systemVersion":  "3.0.0",
+                       "createdTime":  1735776000000,
+                       "coreVersion":  "13.291"
+                   },
+        "_id":  "flesh-bolt"
     },
     {
-      "name": "Gabriel's Trumpet",
-      "type": "spell",
-      "_id": "gabriels-trumpet",
-      "sort": 110000,
-      "ownership": {
-        "default": 0,
-        "PLAYER": 2,
-        "ASSISTANT": 3
-      }
+        "sort":  110000,
+        "type":  "spell",
+        "name":  "Gabriel\u0027s Trumpet",
+        "_stats":  {
+                       "modifiedTime":  1735776000000,
+                       "systemId":  "dnd5e",
+                       "lastModifiedBy":  "foundryuserid",
+                       "systemVersion":  "3.0.0",
+                       "createdTime":  1735776000000,
+                       "coreVersion":  "13.291"
+                   },
+        "_id":  "gabriels-trumpet"
     },
     {
-      "name": "The Devil's Leverage",
-      "type": "spell",
-      "_id": "the-devils-leverage",
-      "sort": 120000,
-      "ownership": {
-        "default": 0,
-        "PLAYER": 2,
-        "ASSISTANT": 3
-      }
+        "sort":  120000,
+        "type":  "spell",
+        "name":  "The Devil\u0027s Leverage",
+        "_stats":  {
+                       "modifiedTime":  1735776000000,
+                       "systemId":  "dnd5e",
+                       "lastModifiedBy":  "foundryuserid",
+                       "systemVersion":  "3.0.0",
+                       "createdTime":  1735776000000,
+                       "coreVersion":  "13.291"
+                   },
+        "_id":  "the-devils-leverage"
     },
     {
-      "name": "Eagleheart",
-      "type": "spell",
-      "_id": "eagleheart",
-      "sort": 130000,
-      "ownership": {
-        "default": 0,
-        "PLAYER": 2,
-        "ASSISTANT": 3
-      }
+        "sort":  130000,
+        "type":  "spell",
+        "name":  "Eagleheart",
+        "_stats":  {
+                       "modifiedTime":  1735776000000,
+                       "systemId":  "dnd5e",
+                       "lastModifiedBy":  "foundryuserid",
+                       "systemVersion":  "3.0.0",
+                       "createdTime":  1735776000000,
+                       "coreVersion":  "13.291"
+                   },
+        "_id":  "eagleheart"
     },
     {
-      "name": "Crucifixion",
-      "type": "spell",
-      "_id": "crucifixion",
-      "sort": 140000,
-      "ownership": {
-        "default": 0,
-        "PLAYER": 2,
-        "ASSISTANT": 3
-      }
+        "sort":  140000,
+        "type":  "spell",
+        "name":  "Crucifixion",
+        "_stats":  {
+                       "modifiedTime":  1735776000000,
+                       "systemId":  "dnd5e",
+                       "lastModifiedBy":  "foundryuserid",
+                       "systemVersion":  "3.0.0",
+                       "createdTime":  1735776000000,
+                       "coreVersion":  "13.291"
+                   },
+        "_id":  "crucifixion"
     },
     {
-      "name": "Veil of Suffering",
-      "type": "spell",
-      "_id": "veil-of-suffering",
-      "sort": 200000,
-      "ownership": {
-        "default": 0,
-        "PLAYER": 2,
-        "ASSISTANT": 3
-      }
+        "sort":  200000,
+        "type":  "spell",
+        "name":  "Veil of Suffering",
+        "_stats":  {
+                       "modifiedTime":  1735776000000,
+                       "systemId":  "dnd5e",
+                       "lastModifiedBy":  "foundryuserid",
+                       "systemVersion":  "3.0.0",
+                       "createdTime":  1735776000000,
+                       "coreVersion":  "13.291"
+                   },
+        "_id":  "veil-of-suffering"
     },
     {
-      "name": "Dark Penance",
-      "type": "spell",
-      "_id": "dark-penance",
-      "sort": 210000,
-      "ownership": {
-        "default": 0,
-        "PLAYER": 2,
-        "ASSISTANT": 3
-      }
+        "sort":  210000,
+        "type":  "spell",
+        "name":  "Dark Penance",
+        "_stats":  {
+                       "modifiedTime":  1735776000000,
+                       "systemId":  "dnd5e",
+                       "lastModifiedBy":  "foundryuserid",
+                       "systemVersion":  "3.0.0",
+                       "createdTime":  1735776000000,
+                       "coreVersion":  "13.291"
+                   },
+        "_id":  "dark-penance"
     },
     {
-      "name": "Bloodreign",
-      "type": "spell",
-      "_id": "bloodreign",
-      "sort": 300000,
-      "ownership": {
-        "default": 0,
-        "PLAYER": 2,
-        "ASSISTANT": 3
-      }
+        "sort":  300000,
+        "type":  "spell",
+        "name":  "Bloodreign",
+        "_stats":  {
+                       "modifiedTime":  1735776000000,
+                       "systemId":  "dnd5e",
+                       "lastModifiedBy":  "foundryuserid",
+                       "systemVersion":  "3.0.0",
+                       "createdTime":  1735776000000,
+                       "coreVersion":  "13.291"
+                   },
+        "_id":  "bloodreign"
     },
     {
-      "name": "Spiteful Maneuver",
-      "type": "spell",
-      "_id": "spiteful-maneuver",
-      "sort": 400000,
-      "ownership": {
-        "default": 0,
-        "PLAYER": 2,
-        "ASSISTANT": 3
-      }
+        "sort":  400000,
+        "type":  "spell",
+        "name":  "Spiteful Maneuver",
+        "_stats":  {
+                       "modifiedTime":  1735776000000,
+                       "systemId":  "dnd5e",
+                       "lastModifiedBy":  "foundryuserid",
+                       "systemVersion":  "3.0.0",
+                       "createdTime":  1735776000000,
+                       "coreVersion":  "13.291"
+                   },
+        "_id":  "spiteful-maneuver"
     },
     {
-      "name": "Flesh Storm",
-      "type": "spell",
-      "_id": "flesh-storm",
-      "sort": 500000,
-      "ownership": {
-        "default": 0,
-        "PLAYER": 2,
-        "ASSISTANT": 3
-      }
+        "sort":  500000,
+        "type":  "spell",
+        "name":  "Flesh Storm",
+        "_stats":  {
+                       "modifiedTime":  1735776000000,
+                       "systemId":  "dnd5e",
+                       "lastModifiedBy":  "foundryuserid",
+                       "systemVersion":  "3.0.0",
+                       "createdTime":  1735776000000,
+                       "coreVersion":  "13.291"
+                   },
+        "_id":  "flesh-storm"
     },
     {
-      "name": "Absolution",
-      "type": "spell",
-      "_id": "absolution",
-      "sort": 600000,
-      "ownership": {
-        "default": 0,
-        "PLAYER": 2,
-        "ASSISTANT": 3
-      }
+        "sort":  600000,
+        "type":  "spell",
+        "name":  "Absolution",
+        "_stats":  {
+                       "modifiedTime":  1735776000000,
+                       "systemId":  "dnd5e",
+                       "lastModifiedBy":  "foundryuserid",
+                       "systemVersion":  "3.0.0",
+                       "createdTime":  1735776000000,
+                       "coreVersion":  "13.291"
+                   },
+        "_id":  "absolution"
     },
     {
-      "name": "Uncompromising Purity",
-      "type": "spell",
-      "_id": "uncompromising-purity",
-      "sort": 610000,
-      "ownership": {
-        "default": 0,
-        "PLAYER": 2,
-        "ASSISTANT": 3
-      }
+        "sort":  610000,
+        "type":  "spell",
+        "name":  "Uncompromising Purity",
+        "_stats":  {
+                       "modifiedTime":  1735776000000,
+                       "systemId":  "dnd5e",
+                       "lastModifiedBy":  "foundryuserid",
+                       "systemVersion":  "3.0.0",
+                       "createdTime":  1735776000000,
+                       "coreVersion":  "13.291"
+                   },
+        "_id":  "uncompromising-purity"
     },
     {
-      "name": "Altar of Sacrifice",
-      "type": "spell",
-      "_id": "altar-of-sacrifice",
-      "sort": 700000,
-      "ownership": {
-        "default": 0,
-        "PLAYER": 2,
-        "ASSISTANT": 3
-      }
+        "sort":  700000,
+        "type":  "spell",
+        "name":  "Altar of Sacrifice",
+        "_stats":  {
+                       "modifiedTime":  1735776000000,
+                       "systemId":  "dnd5e",
+                       "lastModifiedBy":  "foundryuserid",
+                       "systemVersion":  "3.0.0",
+                       "createdTime":  1735776000000,
+                       "coreVersion":  "13.291"
+                   },
+        "_id":  "altar-of-sacrifice"
     },
     {
-      "name": "Deconstruct Flesh",
-      "type": "spell",
-      "_id": "deconstruct-flesh",
-      "sort": 900000,
-      "ownership": {
-        "default": 0,
-        "PLAYER": 2,
-        "ASSISTANT": 3
-      }
+        "sort":  900000,
+        "type":  "spell",
+        "name":  "Deconstruct Flesh",
+        "_stats":  {
+                       "modifiedTime":  1735776000000,
+                       "systemId":  "dnd5e",
+                       "lastModifiedBy":  "foundryuserid",
+                       "systemVersion":  "3.0.0",
+                       "createdTime":  1735776000000,
+                       "coreVersion":  "13.291"
+                   },
+        "_id":  "deconstruct-flesh"
     },
     {
-      "name": "Edge of Mortality",
-      "type": "spell",
-      "_id": "edge-of-mortality",
-      "sort": 910000,
-      "ownership": {
-        "default": 0,
-        "PLAYER": 2,
-        "ASSISTANT": 3
-      }
+        "sort":  910000,
+        "type":  "spell",
+        "name":  "Edge of Mortality",
+        "_stats":  {
+                       "modifiedTime":  1735776000000,
+                       "systemId":  "dnd5e",
+                       "lastModifiedBy":  "foundryuserid",
+                       "systemVersion":  "3.0.0",
+                       "createdTime":  1735776000000,
+                       "coreVersion":  "13.291"
+                   },
+        "_id":  "edge-of-mortality"
     },
     {
-      "name": "Vindicate",
-      "type": "spell",
-      "_id": "vindicate",
-      "sort": 920000,
-      "ownership": {
-        "default": 0,
-        "PLAYER": 2,
-        "ASSISTANT": 3
-      }
+        "sort":  920000,
+        "type":  "spell",
+        "name":  "Vindicate",
+        "_stats":  {
+                       "modifiedTime":  1735776000000,
+                       "systemId":  "dnd5e",
+                       "lastModifiedBy":  "foundryuserid",
+                       "systemVersion":  "3.0.0",
+                       "createdTime":  1735776000000,
+                       "coreVersion":  "13.291"
+                   },
+        "_id":  "vindicate"
     }
-  ]
-}
+]
