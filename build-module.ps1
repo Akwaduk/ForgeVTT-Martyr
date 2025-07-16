@@ -30,7 +30,7 @@ Copy-Item $include -Destination $rootDir -Recurse -Force
 
 # --- zip it ------------------------------------------------------------------
 if (Test-Path $Output) { Remove-Item $Output -Force }
-Compress-Archive -Path "$rootDir\*" -DestinationPath $Output
+Compress-Archive -Path $rootDir -DestinationPath $Output
 
 # --- clean up ----------------------------------------------------------------
 Remove-Item $temp -Recurse -Force
