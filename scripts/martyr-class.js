@@ -472,19 +472,36 @@ class MartyrResourceManager {
             "dnd5e-martyr-class.martyr-subclasses"
         ];
         
-        const missingPacks = [];
-        for (const packName of packNames) {
-            const pack = game.packs.get(packName);
-            if (!pack) {
-                missingPacks.push(packName);
-            }
-        }
+        // Wait for compendiums to be ready
+        let attempts = 0;
+        const maxAttempts = 10;
         
-        if (missingPacks.length > 0) {
-            console.warn("Martyr Class | Missing compendium packs:", missingPacks);
-            ui.notifications.warn("Martyr Class: Some compendium packs are missing. Module may not work correctly.");
-        } else {
-            console.log("Martyr Class | All compendium packs found and ready");
+        while (attempts < maxAttempts) {
+            const missingPacks = [];
+            let allPacksReady = true;
+            
+            for (const packName of packNames) {
+                const pack = game.packs.get(packName);
+                if (!pack) {
+                    missingPacks.push(packName);
+                    allPacksReady = false;
+                }
+            }
+            
+            if (allPacksReady) {
+                console.log("Martyr Class | All compendium packs found and ready");
+                return;
+            }
+            
+            attempts++;
+            if (attempts >= maxAttempts) {
+                console.warn("Martyr Class | Missing compendium packs after waiting:", missingPacks);
+                ui.notifications.warn("Martyr Class: Some compendium packs are missing. Module may not work correctly.");
+                return;
+            }
+            
+            // Wait 500ms before trying again
+            await new Promise(resolve => setTimeout(resolve, 500));
         }
     }
 }
@@ -494,8 +511,8 @@ Hooks.once('init', () => {
     MartyrResourceManager.initialize();
 });
 
-Hooks.once('ready', () => {
-    MartyrResourceManager.validateCompendiums();
+Hooks.once('ready', async () => {
+    await MartyrResourceManager.validateCompendiums();
 });
 
 // Export for module compatibility
