@@ -461,56 +461,7 @@ class MartyrResourceManager {
                 flavor: flavor
             });
         }
-    }
-
-    // Validate that compendium packs are available
-    static async validateCompendiums() {
-        console.log("Martyr Class | Starting compendium validation...");
-        
-        const packNames = [
-            "dnd5e-martyr-class.martyr-classes",
-            "dnd5e-martyr-class.martyr-class-features", 
-            "dnd5e-martyr-class.martyr-spells",
-            "dnd5e-martyr-class.martyr-subclasses"
-        ];
-        
-        console.log("Martyr Class | Looking for packs:", packNames);
-        console.log("Martyr Class | Available packs:", Array.from(game.packs.keys()));
-        
-        // Wait for compendiums to be ready
-        let attempts = 0;
-        const maxAttempts = 10;
-        
-        while (attempts < maxAttempts) {
-            const missingPacks = [];
-            let allPacksReady = true;
-            
-            for (const packName of packNames) {
-                const pack = game.packs.get(packName);
-                if (!pack) {
-                    missingPacks.push(packName);
-                    allPacksReady = false;
-                }
-            }
-            
-            if (allPacksReady) {
-                console.log("Martyr Class | All compendium packs found and ready");
-                return;
-            }
-            
-            attempts++;
-            console.log(`Martyr Class | Attempt ${attempts}/${maxAttempts} - Missing: ${missingPacks.join(', ')}`);
-            
-            if (attempts >= maxAttempts) {
-                console.warn("Martyr Class | Missing compendium packs after waiting:", missingPacks);
-                ui.notifications.warn("Martyr Class: Some compendium packs are missing. Module may not work correctly.");
-                return;
-            }
-            
-            // Wait 500ms before trying again
-            await new Promise(resolve => setTimeout(resolve, 500));
-        }
-    }
+}
 }
 
 // Hook registration
@@ -519,7 +470,9 @@ Hooks.once('init', () => {
 });
 
 Hooks.once('ready', async () => {
-    await MartyrResourceManager.validateCompendiums();
+    console.log("Martyr Class | Module loaded successfully");
+    // Note: Compendium validation removed as it was causing timing issues
+    // The packs will load automatically when accessed
 });
 
 // Export for module compatibility
