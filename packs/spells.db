@@ -1,0 +1,1744 @@
+﻿[
+    {
+        "name":  "Absolution",
+        "type":  "spell",
+        "img":  "icons/magic/lightning/bolt-strike-blue.webp",
+        "system":  {
+                       "description":  {
+                                           "value":  "\u003cp\u003eA sky-splitter bolt pierces your heart; you suffer \u003cstrong\u003e6d10 lightning\u003c/strong\u003e damage. Each enemy within 30 feet must make a Wisdom save.\u003c/p\u003e\u003cp\u003e\u003cstrong\u003eOn a failure:\u003c/strong\u003e takes force damage equal to \u003cstrong\u003eÂ½\u003c/strong\u003e the lightning you took, is pushed 20 feet directly away, and knocked prone.\u003c/p\u003e\u003cp\u003e\u003cstrong\u003eOn a success:\u003c/strong\u003e takes force damage equal to \u003cstrong\u003eÂ¼\u003c/strong\u003e the lightning; no push or prone.\u003c/p\u003e",
+                                           "chat":  "",
+                                           "unidentified":  ""
+                                       },
+                       "source":  "Martyr Class",
+                       "activation":  {
+                                          "type":  "action",
+                                          "cost":  1,
+                                          "condition":  ""
+                                      },
+                       "duration":  {
+                                        "value":  null,
+                                        "units":  "inst"
+                                    },
+                       "target":  {
+                                      "value":  30,
+                                      "width":  null,
+                                      "units":  "ft",
+                                      "type":  "sphere"
+                                  },
+                       "range":  {
+                                     "value":  null,
+                                     "long":  null,
+                                     "units":  "self"
+                                 },
+                       "uses":  {
+                                    "value":  null,
+                                    "max":  "",
+                                    "per":  null,
+                                    "recovery":  ""
+                                },
+                       "consume":  {
+                                       "type":  "attribute",
+                                       "target":  "flags.dnd5e-martyr-class.vengeance",
+                                       "amount":  30
+                                   },
+                       "ability":  "cha",
+                       "actionType":  "save",
+                       "attackBonus":  "",
+                       "chatFlavor":  "Lightning sacrifice for divine judgment",
+                       "critical":  {
+                                        "threshold":  null,
+                                        "damage":  ""
+                                    },
+                       "damage":  {
+                                      "parts":  [
+                                                    [
+                                                        "6d10",
+                                                        "lightning"
+                                                    ]
+                                                ],
+                                      "versatile":  ""
+                                  },
+                       "formula":  "",
+                       "save":  {
+                                    "ability":  "wis",
+                                    "dc":  null,
+                                    "scaling":  "spell"
+                                },
+                       "level":  6,
+                       "school":  "evo",
+                       "components":  {
+                                          "value":  "",
+                                          "vocal":  true,
+                                          "somatic":  true,
+                                          "material":  false,
+                                          "ritual":  false,
+                                          "concentration":  false
+                                      },
+                       "materials":  {
+                                         "value":  "",
+                                         "consumed":  false,
+                                         "cost":  0,
+                                         "supply":  0
+                                     },
+                       "preparation":  {
+                                           "mode":  "prepared",
+                                           "prepared":  false
+                                       },
+                       "scaling":  {
+                                       "mode":  "none",
+                                       "formula":  ""
+                                   }
+                   },
+        "ownership":  {
+                          "default":  0,
+                          "PLAYER":  2,
+                          "ASSISTANT":  3
+                      },
+        "flags":  {
+
+                  },
+        "_stats":  {
+                       "systemId":  "dnd5e",
+                       "systemVersion":  "3.3.1",
+                       "coreVersion":  "12.331",
+                       "createdTime":  1736445600000,
+                       "modifiedTime":  1736445600000,
+                       "lastModifiedBy":  "martyrmodule"
+                   },
+        "folder":  null,
+        "sort":  600000,
+        "_id":  "absolution"
+    },
+    {
+        "name":  "Altar of Sacrifice",
+        "type":  "spell",
+        "img":  "icons/environment/settlement/altar-stone-temple.webp",
+        "system":  {
+                       "description":  {
+                                           "value":  "\u003cp\u003eA gore-slick pillar (hit points = \u003cstrong\u003ed6 Ã— Wis modifier\u003c/strong\u003e) erupts from the ground. Choose one creature within 15 ft of it; the target is restrained and dragged 5 ft toward the altar at the start of each of its turns. If the pillar still stands after 3 rounds, the creature takes \u003cstrong\u003e6d6 necrotic\u003c/strong\u003e as flesh fuses to stone. Destroying the altar ends the effect early.\u003c/p\u003e",
+                                           "chat":  "",
+                                           "unidentified":  ""
+                                       },
+                       "source":  "Martyr Class",
+                       "activation":  {
+                                          "type":  "action",
+                                          "cost":  1,
+                                          "condition":  ""
+                                      },
+                       "duration":  {
+                                        "value":  3,
+                                        "units":  "round"
+                                    },
+                       "target":  {
+                                      "value":  1,
+                                      "width":  null,
+                                      "units":  "",
+                                      "type":  "creature"
+                                  },
+                       "range":  {
+                                     "value":  30,
+                                     "long":  null,
+                                     "units":  "ft"
+                                 },
+                       "uses":  {
+                                    "value":  null,
+                                    "max":  "",
+                                    "per":  null,
+                                    "recovery":  ""
+                                },
+                       "consume":  {
+                                       "type":  "attribute",
+                                       "target":  "flags.dnd5e-martyr-class.vengeance",
+                                       "amount":  40
+                                   },
+                       "ability":  "cha",
+                       "actionType":  "other",
+                       "attackBonus":  "",
+                       "chatFlavor":  "Conjure sacrificial altar",
+                       "critical":  {
+                                        "threshold":  null,
+                                        "damage":  ""
+                                    },
+                       "damage":  {
+                                      "parts":  [
+                                                    [
+                                                        "6d6",
+                                                        "necrotic"
+                                                    ]
+                                                ],
+                                      "versatile":  ""
+                                  },
+                       "formula":  "",
+                       "save":  {
+                                    "ability":  "",
+                                    "dc":  null,
+                                    "scaling":  "spell"
+                                },
+                       "level":  7,
+                       "school":  "con",
+                       "components":  {
+                                          "value":  "",
+                                          "vocal":  true,
+                                          "somatic":  true,
+                                          "material":  false,
+                                          "ritual":  false,
+                                          "concentration":  false
+                                      },
+                       "materials":  {
+                                         "value":  "",
+                                         "consumed":  false,
+                                         "cost":  0,
+                                         "supply":  0
+                                     },
+                       "preparation":  {
+                                           "mode":  "prepared",
+                                           "prepared":  false
+                                       },
+                       "scaling":  {
+                                       "mode":  "none",
+                                       "formula":  ""
+                                   }
+                   },
+        "ownership":  {
+                          "default":  0,
+                          "PLAYER":  2,
+                          "ASSISTANT":  3
+                      },
+        "flags":  {
+
+                  },
+        "_stats":  {
+                       "systemId":  "dnd5e",
+                       "systemVersion":  "3.3.1",
+                       "coreVersion":  "12.331",
+                       "createdTime":  1736445600000,
+                       "modifiedTime":  1736445600000,
+                       "lastModifiedBy":  "martyrmodule"
+                   },
+        "folder":  null,
+        "sort":  700000,
+        "_id":  "altar-of-sacrifice"
+    },
+    {
+        "name":  "Bloodreign",
+        "type":  "spell",
+        "img":  "icons/magic/water/projectile-bolts-salvo-red.webp",
+        "system":  {
+                       "description":  {
+                                           "value":  "\u003cp\u003eMust be outdoors. Crimson clouds gather; beginning on your next turn and each round thereafter, you may (no action) summon rain of blood. Every hostile creature in the area makes a Wisdom save, taking \u003cstrong\u003e1d6 necrotic\u003c/strong\u003e damage on a failure, half on a success. You heal \u003cstrong\u003eÂ½\u003c/strong\u003e the damage dealt each round.\u003c/p\u003e\u003cp\u003e\u003cstrong\u003eAt Higher Levels:\u003c/strong\u003e 2d6 at 11th level; 3d6 at 17th level.\u003c/p\u003e",
+                                           "chat":  "",
+                                           "unidentified":  ""
+                                       },
+                       "source":  "Martyr Class",
+                       "activation":  {
+                                          "type":  "action",
+                                          "cost":  1,
+                                          "condition":  "Outdoors only, Path of the Moon"
+                                      },
+                       "duration":  {
+                                        "value":  1,
+                                        "units":  "minute"
+                                    },
+                       "target":  {
+                                      "value":  20,
+                                      "width":  null,
+                                      "units":  "ft",
+                                      "type":  "cylinder"
+                                  },
+                       "range":  {
+                                     "value":  60,
+                                     "long":  null,
+                                     "units":  "ft"
+                                 },
+                       "uses":  {
+                                    "value":  null,
+                                    "max":  "",
+                                    "per":  null,
+                                    "recovery":  ""
+                                },
+                       "consume":  {
+                                       "type":  "attribute",
+                                       "target":  "flags.dnd5e-martyr-class.vengeance",
+                                       "amount":  10
+                                   },
+                       "ability":  "cha",
+                       "actionType":  "save",
+                       "attackBonus":  "",
+                       "chatFlavor":  "Crimson rain of judgment",
+                       "critical":  {
+                                        "threshold":  null,
+                                        "damage":  ""
+                                    },
+                       "damage":  {
+                                      "parts":  [
+                                                    [
+                                                        "1d6",
+                                                        "necrotic"
+                                                    ]
+                                                ],
+                                      "versatile":  ""
+                                  },
+                       "formula":  "",
+                       "save":  {
+                                    "ability":  "wis",
+                                    "dc":  null,
+                                    "scaling":  "spell"
+                                },
+                       "level":  3,
+                       "school":  "nec",
+                       "components":  {
+                                          "value":  "",
+                                          "vocal":  true,
+                                          "somatic":  true,
+                                          "material":  false,
+                                          "ritual":  false,
+                                          "concentration":  true
+                                      },
+                       "materials":  {
+                                         "value":  "",
+                                         "consumed":  false,
+                                         "cost":  0,
+                                         "supply":  0
+                                     },
+                       "preparation":  {
+                                           "mode":  "prepared",
+                                           "prepared":  false
+                                       },
+                       "scaling":  {
+                                       "mode":  "none",
+                                       "formula":  ""
+                                   }
+                   },
+        "ownership":  {
+                          "default":  0,
+                          "PLAYER":  2,
+                          "ASSISTANT":  3
+                      },
+        "flags":  {
+
+                  },
+        "_stats":  {
+                       "systemId":  "dnd5e",
+                       "systemVersion":  "3.3.1",
+                       "coreVersion":  "12.331",
+                       "createdTime":  1736445600000,
+                       "modifiedTime":  1736445600000,
+                       "lastModifiedBy":  "martyrmodule"
+                   },
+        "folder":  null,
+        "sort":  300000,
+        "_id":  "bloodreign"
+    },
+    {
+        "name":  "Crucifixion",
+        "type":  "spell",
+        "img":  "icons/magic/death/skull-horned-goat-pentagram-red.webp",
+        "system":  {
+                       "description":  {
+                                           "value":  "\u003cp\u003eSpectral chains pierce your hands; you fall prone and take \u003cstrong\u003e1d6 piercing\u003c/strong\u003e damage. Each enemy in the radius makes a CON save:\u003c/p\u003e\u003cp\u003e\u003cstrong\u003eFail:\u003c/strong\u003e stunned for 1 round.\u003c/p\u003e\u003cp\u003e\u003cstrong\u003eSuccess:\u003c/strong\u003e frightened of you for 1 round.\u003c/p\u003e",
+                                           "chat":  "",
+                                           "unidentified":  ""
+                                       },
+                       "source":  "Martyr Class",
+                       "activation":  {
+                                          "type":  "action",
+                                          "cost":  1,
+                                          "condition":  "Path of the Sun only"
+                                      },
+                       "duration":  {
+                                        "value":  1,
+                                        "units":  "round"
+                                    },
+                       "target":  {
+                                      "value":  30,
+                                      "width":  null,
+                                      "units":  "ft",
+                                      "type":  "sphere"
+                                  },
+                       "range":  {
+                                     "value":  null,
+                                     "long":  null,
+                                     "units":  "self"
+                                 },
+                       "uses":  {
+                                    "value":  null,
+                                    "max":  "",
+                                    "per":  null,
+                                    "recovery":  ""
+                                },
+                       "consume":  {
+                                       "type":  "attribute",
+                                       "target":  "flags.dnd5e-martyr-class.mercy",
+                                       "amount":  10
+                                   },
+                       "ability":  "wis",
+                       "actionType":  "save",
+                       "attackBonus":  "",
+                       "chatFlavor":  "Self-sacrifice to control enemies",
+                       "critical":  {
+                                        "threshold":  null,
+                                        "damage":  ""
+                                    },
+                       "damage":  {
+                                      "parts":  [
+                                                    [
+                                                        "1d6",
+                                                        "piercing"
+                                                    ]
+                                                ],
+                                      "versatile":  ""
+                                  },
+                       "formula":  "",
+                       "save":  {
+                                    "ability":  "con",
+                                    "dc":  null,
+                                    "scaling":  "spell"
+                                },
+                       "level":  1,
+                       "school":  "enc",
+                       "components":  {
+                                          "value":  "",
+                                          "vocal":  true,
+                                          "somatic":  true,
+                                          "material":  false,
+                                          "ritual":  false,
+                                          "concentration":  false
+                                      },
+                       "materials":  {
+                                         "value":  "",
+                                         "consumed":  false,
+                                         "cost":  0,
+                                         "supply":  0
+                                     },
+                       "preparation":  {
+                                           "mode":  "prepared",
+                                           "prepared":  false
+                                       },
+                       "scaling":  {
+                                       "mode":  "none",
+                                       "formula":  ""
+                                   }
+                   },
+        "ownership":  {
+                          "default":  0,
+                          "PLAYER":  2,
+                          "ASSISTANT":  3
+                      },
+        "flags":  {
+
+                  },
+        "_stats":  {
+                       "systemId":  "dnd5e",
+                       "systemVersion":  "3.3.1",
+                       "coreVersion":  "12.331",
+                       "createdTime":  1736445600000,
+                       "modifiedTime":  1736445600000,
+                       "lastModifiedBy":  "martyrmodule"
+                   },
+        "folder":  null,
+        "sort":  140000,
+        "_id":  "crucifixion"
+    },
+    {
+        "name":  "Dark Penance",
+        "type":  "spell",
+        "img":  "icons/magic/death/blood-drip-droplet-red.webp",
+        "system":  {
+                       "description":  {
+                                           "value":  "\u003cp\u003eWhen you hit with an opportunity attack, the target begins to bleed: it takes \u003cstrong\u003e1 HP per 5 ft\u003c/strong\u003e it moves for 1 minute. The bloody trail is \u003cstrong\u003edifficult terrain\u003c/strong\u003e for everyone except you and your allies. The effect ends early if the creature teleports or finishes a rest.\u003c/p\u003e",
+                                           "chat":  "",
+                                           "unidentified":  ""
+                                       },
+                       "source":  "Martyr Class",
+                       "activation":  {
+                                          "type":  "reaction",
+                                          "cost":  1,
+                                          "condition":  "When hitting with opportunity attack"
+                                      },
+                       "duration":  {
+                                        "value":  1,
+                                        "units":  "minute"
+                                    },
+                       "target":  {
+                                      "value":  1,
+                                      "width":  null,
+                                      "units":  "",
+                                      "type":  "creature"
+                                  },
+                       "range":  {
+                                     "value":  5,
+                                     "long":  null,
+                                     "units":  "ft"
+                                 },
+                       "uses":  {
+                                    "value":  null,
+                                    "max":  "",
+                                    "per":  null,
+                                    "recovery":  ""
+                                },
+                       "consume":  {
+                                       "type":  "attribute",
+                                       "target":  "flags.dnd5e-martyr-class.vengeance",
+                                       "amount":  5
+                                   },
+                       "ability":  "cha",
+                       "actionType":  "other",
+                       "attackBonus":  "",
+                       "chatFlavor":  "Bleeding trail of punishment",
+                       "critical":  {
+                                        "threshold":  null,
+                                        "damage":  ""
+                                    },
+                       "damage":  {
+                                      "parts":  [
+
+                                                ],
+                                      "versatile":  ""
+                                  },
+                       "formula":  "",
+                       "save":  {
+                                    "ability":  "",
+                                    "dc":  null,
+                                    "scaling":  "spell"
+                                },
+                       "level":  2,
+                       "school":  "nec",
+                       "components":  {
+                                          "value":  "",
+                                          "vocal":  true,
+                                          "somatic":  false,
+                                          "material":  false,
+                                          "ritual":  false,
+                                          "concentration":  false
+                                      },
+                       "materials":  {
+                                         "value":  "",
+                                         "consumed":  false,
+                                         "cost":  0,
+                                         "supply":  0
+                                     },
+                       "preparation":  {
+                                           "mode":  "prepared",
+                                           "prepared":  false
+                                       },
+                       "scaling":  {
+                                       "mode":  "none",
+                                       "formula":  ""
+                                   }
+                   },
+        "ownership":  {
+                          "default":  0,
+                          "PLAYER":  2,
+                          "ASSISTANT":  3
+                      },
+        "flags":  {
+
+                  },
+        "_stats":  {
+                       "systemId":  "dnd5e",
+                       "systemVersion":  "3.3.1",
+                       "coreVersion":  "12.331",
+                       "createdTime":  1736445600000,
+                       "modifiedTime":  1736445600000,
+                       "lastModifiedBy":  "martyrmodule"
+                   },
+        "folder":  null,
+        "sort":  210000,
+        "_id":  "dark-penance"
+    },
+    {
+        "name":  "Deconstruct Flesh",
+        "type":  "spell",
+        "img":  "icons/magic/death/skull-face-white-pink.webp",
+        "system":  {
+                       "description":  {
+                                           "value":  "\u003cp\u003eA creature with flesh makes a CON save.\u003c/p\u003e\u003cp\u003e\u003cstrong\u003eFail:\u003c/strong\u003e \u003cstrong\u003e5d8 necrotic\u003c/strong\u003e and gains one level of exhaustion.\u003c/p\u003e\u003cp\u003e\u003cstrong\u003eSuccess:\u003c/strong\u003e \u003cstrong\u003e2d8 necrotic\u003c/strong\u003e.\u003c/p\u003e",
+                                           "chat":  "",
+                                           "unidentified":  ""
+                                       },
+                       "source":  "Martyr Class",
+                       "activation":  {
+                                          "type":  "action",
+                                          "cost":  1,
+                                          "condition":  "Path of the Moon only"
+                                      },
+                       "duration":  {
+                                        "value":  null,
+                                        "units":  "inst"
+                                    },
+                       "target":  {
+                                      "value":  1,
+                                      "width":  null,
+                                      "units":  "",
+                                      "type":  "creature"
+                                  },
+                       "range":  {
+                                     "value":  40,
+                                     "long":  null,
+                                     "units":  "ft"
+                                 },
+                       "uses":  {
+                                    "value":  null,
+                                    "max":  "",
+                                    "per":  null,
+                                    "recovery":  ""
+                                },
+                       "consume":  {
+                                       "type":  "attribute",
+                                       "target":  "flags.dnd5e-martyr-class.vengeance",
+                                       "amount":  40
+                                   },
+                       "ability":  "cha",
+                       "actionType":  "save",
+                       "attackBonus":  "",
+                       "chatFlavor":  "Tear apart flesh and soul",
+                       "critical":  {
+                                        "threshold":  null,
+                                        "damage":  ""
+                                    },
+                       "damage":  {
+                                      "parts":  [
+                                                    [
+                                                        "5d8",
+                                                        "necrotic"
+                                                    ]
+                                                ],
+                                      "versatile":  ""
+                                  },
+                       "formula":  "",
+                       "save":  {
+                                    "ability":  "con",
+                                    "dc":  null,
+                                    "scaling":  "spell"
+                                },
+                       "level":  9,
+                       "school":  "nec",
+                       "components":  {
+                                          "value":  "",
+                                          "vocal":  true,
+                                          "somatic":  true,
+                                          "material":  false,
+                                          "ritual":  false,
+                                          "concentration":  false
+                                      },
+                       "materials":  {
+                                         "value":  "",
+                                         "consumed":  false,
+                                         "cost":  0,
+                                         "supply":  0
+                                     },
+                       "preparation":  {
+                                           "mode":  "prepared",
+                                           "prepared":  false
+                                       },
+                       "scaling":  {
+                                       "mode":  "none",
+                                       "formula":  ""
+                                   }
+                   },
+        "ownership":  {
+                          "default":  0,
+                          "PLAYER":  2,
+                          "ASSISTANT":  3
+                      },
+        "flags":  {
+
+                  },
+        "_stats":  {
+                       "systemId":  "dnd5e",
+                       "systemVersion":  "3.3.1",
+                       "coreVersion":  "12.331",
+                       "createdTime":  1736445600000,
+                       "modifiedTime":  1736445600000,
+                       "lastModifiedBy":  "martyrmodule"
+                   },
+        "folder":  null,
+        "sort":  900000,
+        "_id":  "deconstruct-flesh"
+    },
+    {
+        "name":  "Eagleheart",
+        "type":  "spell",
+        "img":  "icons/creatures/birds/eagle-flying-wings-blue.webp",
+        "system":  {
+                       "description":  {
+                                           "value":  "\u003cp\u003eA spectral eagle weaves through up to three allies you can see. Each regains \u003cstrong\u003e1d4 + your Chosen modifier\u003c/strong\u003e hit points. You take \u003cstrong\u003e1d10 necrotic\u003c/strong\u003e damage.\u003c/p\u003e",
+                                           "chat":  "",
+                                           "unidentified":  ""
+                                       },
+                       "source":  "Martyr Class",
+                       "activation":  {
+                                          "type":  "action",
+                                          "cost":  1,
+                                          "condition":  "Path of the Sun only"
+                                      },
+                       "duration":  {
+                                        "value":  null,
+                                        "units":  "inst"
+                                    },
+                       "target":  {
+                                      "value":  3,
+                                      "width":  null,
+                                      "units":  "",
+                                      "type":  "ally"
+                                  },
+                       "range":  {
+                                     "value":  30,
+                                     "long":  null,
+                                     "units":  "ft"
+                                 },
+                       "uses":  {
+                                    "value":  null,
+                                    "max":  "",
+                                    "per":  null,
+                                    "recovery":  ""
+                                },
+                       "consume":  {
+                                       "type":  "attribute",
+                                       "target":  "flags.dnd5e-martyr-class.mercy",
+                                       "amount":  10
+                                   },
+                       "ability":  "wis",
+                       "actionType":  "heal",
+                       "attackBonus":  "",
+                       "chatFlavor":  "Sacrifice for healing",
+                       "critical":  {
+                                        "threshold":  null,
+                                        "damage":  ""
+                                    },
+                       "damage":  {
+                                      "parts":  [
+                                                    [
+                                                        "1d4 + @mod",
+                                                        "healing"
+                                                    ]
+                                                ],
+                                      "versatile":  ""
+                                  },
+                       "formula":  "",
+                       "save":  {
+                                    "ability":  "",
+                                    "dc":  null,
+                                    "scaling":  "spell"
+                                },
+                       "level":  1,
+                       "school":  "con",
+                       "components":  {
+                                          "value":  "a feather",
+                                          "vocal":  true,
+                                          "somatic":  true,
+                                          "material":  true,
+                                          "ritual":  false,
+                                          "concentration":  false
+                                      },
+                       "materials":  {
+                                         "value":  "a feather",
+                                         "consumed":  false,
+                                         "cost":  0,
+                                         "supply":  0
+                                     },
+                       "preparation":  {
+                                           "mode":  "prepared",
+                                           "prepared":  false
+                                       },
+                       "scaling":  {
+                                       "mode":  "none",
+                                       "formula":  ""
+                                   }
+                   },
+        "ownership":  {
+                          "default":  0,
+                          "PLAYER":  2,
+                          "ASSISTANT":  3
+                      },
+        "flags":  {
+
+                  },
+        "_stats":  {
+                       "systemId":  "dnd5e",
+                       "systemVersion":  "3.3.1",
+                       "coreVersion":  "12.331",
+                       "createdTime":  1736445600000,
+                       "modifiedTime":  1736445600000,
+                       "lastModifiedBy":  "martyrmodule"
+                   },
+        "folder":  null,
+        "sort":  130000,
+        "_id":  "eagleheart"
+    },
+    {
+        "name":  "Edge of Mortality",
+        "type":  "spell",
+        "img":  "icons/magic/defensive/shield-barrier-deflect-gold.webp",
+        "system":  {
+                       "description":  {
+                                           "value":  "\u003cp\u003eReduce the incoming damage to \u003cstrong\u003e0\u003c/strong\u003e and redirect the same amount (after resistances) to the original source within 120 ft. Usable once per long rest.\u003c/p\u003e",
+                                           "chat":  "",
+                                           "unidentified":  ""
+                                       },
+                       "source":  "Martyr Class",
+                       "activation":  {
+                                          "type":  "reaction",
+                                          "cost":  1,
+                                          "condition":  "When damage would reduce you to 0 HP"
+                                      },
+                       "duration":  {
+                                        "value":  null,
+                                        "units":  "inst"
+                                    },
+                       "target":  {
+                                      "value":  null,
+                                      "width":  null,
+                                      "units":  "",
+                                      "type":  "self"
+                                  },
+                       "range":  {
+                                     "value":  120,
+                                     "long":  null,
+                                     "units":  "ft"
+                                 },
+                       "uses":  {
+                                    "value":  1,
+                                    "max":  "1",
+                                    "per":  "lr",
+                                    "recovery":  ""
+                                },
+                       "consume":  {
+                                       "type":  "attribute",
+                                       "target":  "flags.dnd5e-martyr-class.vengeance",
+                                       "amount":  80
+                                   },
+                       "ability":  "cha",
+                       "actionType":  "other",
+                       "attackBonus":  "",
+                       "chatFlavor":  "Death\u0027s door reversal",
+                       "critical":  {
+                                        "threshold":  null,
+                                        "damage":  ""
+                                    },
+                       "damage":  {
+                                      "parts":  [
+
+                                                ],
+                                      "versatile":  ""
+                                  },
+                       "formula":  "",
+                       "save":  {
+                                    "ability":  "",
+                                    "dc":  null,
+                                    "scaling":  "spell"
+                                },
+                       "level":  9,
+                       "school":  "abj",
+                       "components":  {
+                                          "value":  "",
+                                          "vocal":  false,
+                                          "somatic":  false,
+                                          "material":  false,
+                                          "ritual":  false,
+                                          "concentration":  false
+                                      },
+                       "materials":  {
+                                         "value":  "",
+                                         "consumed":  false,
+                                         "cost":  0,
+                                         "supply":  0
+                                     },
+                       "preparation":  {
+                                           "mode":  "prepared",
+                                           "prepared":  false
+                                       },
+                       "scaling":  {
+                                       "mode":  "none",
+                                       "formula":  ""
+                                   }
+                   },
+        "ownership":  {
+                          "default":  0,
+                          "PLAYER":  2,
+                          "ASSISTANT":  3
+                      },
+        "flags":  {
+
+                  },
+        "_stats":  {
+                       "systemId":  "dnd5e",
+                       "systemVersion":  "3.3.1",
+                       "coreVersion":  "12.331",
+                       "createdTime":  1736445600000,
+                       "modifiedTime":  1736445600000,
+                       "lastModifiedBy":  "martyrmodule"
+                   },
+        "folder":  null,
+        "sort":  910000,
+        "_id":  "edge-of-mortality"
+    },
+    {
+        "name":  "Flesh Bolt",
+        "type":  "spell",
+        "img":  "icons/magic/death/projectile-bolts-flying-salvo-red.webp",
+        "system":  {
+                       "description":  {
+                                           "value":  "\u003cp\u003eYou hurl a lance of necrotic power. Make a ranged spell attack; on a hit the target takes \u003cstrong\u003e2d8 necrotic\u003c/strong\u003e damage, and you regain hit points equal to \u003cstrong\u003eÂ¼\u003c/strong\u003e of the damage dealt.\u003c/p\u003e\u003cp\u003e\u003cstrong\u003eAt Higher Levels:\u003c/strong\u003e 3d8 at 11th level; 4d8 at 20th level.\u003c/p\u003e",
+                                           "chat":  "",
+                                           "unidentified":  ""
+                                       },
+                       "source":  "Martyr Class",
+                       "activation":  {
+                                          "type":  "action",
+                                          "cost":  1,
+                                          "condition":  "Path of the Moon only"
+                                      },
+                       "duration":  {
+                                        "value":  null,
+                                        "units":  "inst"
+                                    },
+                       "target":  {
+                                      "value":  1,
+                                      "width":  null,
+                                      "units":  "",
+                                      "type":  "creature"
+                                  },
+                       "range":  {
+                                     "value":  80,
+                                     "long":  null,
+                                     "units":  "ft"
+                                 },
+                       "uses":  {
+                                    "value":  null,
+                                    "max":  "",
+                                    "per":  null,
+                                    "recovery":  ""
+                                },
+                       "consume":  {
+                                       "type":  "attribute",
+                                       "target":  "flags.dnd5e-martyr-class.vengeance",
+                                       "amount":  5
+                                   },
+                       "ability":  "cha",
+                       "actionType":  "rsak",
+                       "attackBonus":  "",
+                       "chatFlavor":  "Blood magic of the Moon",
+                       "critical":  {
+                                        "threshold":  null,
+                                        "damage":  ""
+                                    },
+                       "damage":  {
+                                      "parts":  [
+                                                    [
+                                                        "2d8",
+                                                        "necrotic"
+                                                    ]
+                                                ],
+                                      "versatile":  ""
+                                  },
+                       "formula":  "",
+                       "save":  {
+                                    "ability":  "",
+                                    "dc":  null,
+                                    "scaling":  "spell"
+                                },
+                       "level":  1,
+                       "school":  "nec",
+                       "components":  {
+                                          "value":  "",
+                                          "vocal":  true,
+                                          "somatic":  true,
+                                          "material":  false,
+                                          "ritual":  false,
+                                          "concentration":  false
+                                      },
+                       "materials":  {
+                                         "value":  "",
+                                         "consumed":  false,
+                                         "cost":  0,
+                                         "supply":  0
+                                     },
+                       "preparation":  {
+                                           "mode":  "prepared",
+                                           "prepared":  false
+                                       },
+                       "scaling":  {
+                                       "mode":  "none",
+                                       "formula":  ""
+                                   }
+                   },
+        "ownership":  {
+                          "default":  0,
+                          "PLAYER":  2,
+                          "ASSISTANT":  3
+                      },
+        "flags":  {
+
+                  },
+        "_stats":  {
+                       "systemId":  "dnd5e",
+                       "systemVersion":  "3.3.1",
+                       "coreVersion":  "12.331",
+                       "createdTime":  1736445600000,
+                       "modifiedTime":  1736445600000,
+                       "lastModifiedBy":  "martyrmodule"
+                   },
+        "folder":  null,
+        "sort":  100000,
+        "_id":  "flesh-bolt"
+    },
+    {
+        "name":  "Flesh Storm",
+        "type":  "spell",
+        "img":  "icons/magic/death/undead-skeleton-rags-fire-green.webp",
+        "system":  {
+                       "description":  {
+                                           "value":  "\u003cp\u003eA whirlwind of ethereal flesh erupts around you. Each hostile creature in the area makes a Wisdom save.\u003c/p\u003e\u003cp\u003e\u003cstrong\u003eFail:\u003c/strong\u003e \u003cstrong\u003e5d8 necrotic\u003c/strong\u003e damage.\u003c/p\u003e\u003cp\u003e\u003cstrong\u003eSuccess:\u003c/strong\u003e half damage.\u003c/p\u003e\u003cp\u003eYou regain hit points equal to \u003cstrong\u003eÂ½\u003c/strong\u003e the total damage dealt.\u003c/p\u003e",
+                                           "chat":  "",
+                                           "unidentified":  ""
+                                       },
+                       "source":  "Martyr Class",
+                       "activation":  {
+                                          "type":  "action",
+                                          "cost":  1,
+                                          "condition":  "Path of the Moon only"
+                                      },
+                       "duration":  {
+                                        "value":  null,
+                                        "units":  "inst"
+                                    },
+                       "target":  {
+                                      "value":  20,
+                                      "width":  null,
+                                      "units":  "ft",
+                                      "type":  "sphere"
+                                  },
+                       "range":  {
+                                     "value":  null,
+                                     "long":  null,
+                                     "units":  "self"
+                                 },
+                       "uses":  {
+                                    "value":  null,
+                                    "max":  "",
+                                    "per":  null,
+                                    "recovery":  ""
+                                },
+                       "consume":  {
+                                       "type":  "attribute",
+                                       "target":  "flags.dnd5e-martyr-class.vengeance",
+                                       "amount":  20
+                                   },
+                       "ability":  "cha",
+                       "actionType":  "save",
+                       "attackBonus":  "",
+                       "chatFlavor":  "Whirlwind of necrotic flesh",
+                       "critical":  {
+                                        "threshold":  null,
+                                        "damage":  ""
+                                    },
+                       "damage":  {
+                                      "parts":  [
+                                                    [
+                                                        "5d8",
+                                                        "necrotic"
+                                                    ]
+                                                ],
+                                      "versatile":  ""
+                                  },
+                       "formula":  "",
+                       "save":  {
+                                    "ability":  "wis",
+                                    "dc":  null,
+                                    "scaling":  "spell"
+                                },
+                       "level":  5,
+                       "school":  "nec",
+                       "components":  {
+                                          "value":  "",
+                                          "vocal":  true,
+                                          "somatic":  true,
+                                          "material":  false,
+                                          "ritual":  false,
+                                          "concentration":  false
+                                      },
+                       "materials":  {
+                                         "value":  "",
+                                         "consumed":  false,
+                                         "cost":  0,
+                                         "supply":  0
+                                     },
+                       "preparation":  {
+                                           "mode":  "prepared",
+                                           "prepared":  false
+                                       },
+                       "scaling":  {
+                                       "mode":  "none",
+                                       "formula":  ""
+                                   }
+                   },
+        "ownership":  {
+                          "default":  0,
+                          "PLAYER":  2,
+                          "ASSISTANT":  3
+                      },
+        "flags":  {
+
+                  },
+        "_stats":  {
+                       "systemId":  "dnd5e",
+                       "systemVersion":  "3.3.1",
+                       "coreVersion":  "12.331",
+                       "createdTime":  1736445600000,
+                       "modifiedTime":  1736445600000,
+                       "lastModifiedBy":  "martyrmodule"
+                   },
+        "folder":  null,
+        "sort":  500000,
+        "_id":  "flesh-storm"
+    },
+    {
+        "name":  "Gabriel\u0027s Trumpet",
+        "type":  "spell",
+        "img":  "icons/magic/sonic/explosion-shock-sound-wave.webp",
+        "system":  {
+                       "description":  {
+                                           "value":  "\u003cp\u003eEach creature in the cone must make a Wisdom saving throw.\u003c/p\u003e\u003cp\u003e\u003cstrong\u003eFail:\u003c/strong\u003e \u003cstrong\u003e1d4 force\u003c/strong\u003e damage and the creature is \u003cstrong\u003etaunted\u003c/strong\u003e until the end of its next turn.\u003c/p\u003e\u003cp\u003e\u003cstrong\u003eSuccess:\u003c/strong\u003e the creature is taunted but takes no damage.\u003c/p\u003e\u003cp\u003e\u003cem\u003eA taunted creature has disadvantage on attack rolls against any target other than you.\u003c/em\u003e\u003c/p\u003e",
+                                           "chat":  "",
+                                           "unidentified":  ""
+                                       },
+                       "source":  "Martyr Class",
+                       "activation":  {
+                                          "type":  "action",
+                                          "cost":  1,
+                                          "condition":  "Path of the Moon only"
+                                      },
+                       "duration":  {
+                                        "value":  1,
+                                        "units":  "round"
+                                    },
+                       "target":  {
+                                      "value":  60,
+                                      "width":  null,
+                                      "units":  "ft",
+                                      "type":  "cone"
+                                  },
+                       "range":  {
+                                     "value":  null,
+                                     "long":  null,
+                                     "units":  "self"
+                                 },
+                       "uses":  {
+                                    "value":  null,
+                                    "max":  "",
+                                    "per":  null,
+                                    "recovery":  ""
+                                },
+                       "consume":  {
+                                       "type":  "attribute",
+                                       "target":  "flags.dnd5e-martyr-class.vengeance",
+                                       "amount":  10
+                                   },
+                       "ability":  "cha",
+                       "actionType":  "save",
+                       "attackBonus":  "",
+                       "chatFlavor":  "Divine trumpet of judgment",
+                       "critical":  {
+                                        "threshold":  null,
+                                        "damage":  ""
+                                    },
+                       "damage":  {
+                                      "parts":  [
+                                                    [
+                                                        "1d4",
+                                                        "force"
+                                                    ]
+                                                ],
+                                      "versatile":  ""
+                                  },
+                       "formula":  "",
+                       "save":  {
+                                    "ability":  "wis",
+                                    "dc":  null,
+                                    "scaling":  "spell"
+                                },
+                       "level":  1,
+                       "school":  "evo",
+                       "components":  {
+                                          "value":  "",
+                                          "vocal":  true,
+                                          "somatic":  true,
+                                          "material":  false,
+                                          "ritual":  false,
+                                          "concentration":  false
+                                      },
+                       "materials":  {
+                                         "value":  "",
+                                         "consumed":  false,
+                                         "cost":  0,
+                                         "supply":  0
+                                     },
+                       "preparation":  {
+                                           "mode":  "prepared",
+                                           "prepared":  false
+                                       },
+                       "scaling":  {
+                                       "mode":  "none",
+                                       "formula":  ""
+                                   }
+                   },
+        "ownership":  {
+                          "default":  0,
+                          "PLAYER":  2,
+                          "ASSISTANT":  3
+                      },
+        "flags":  {
+
+                  },
+        "_stats":  {
+                       "systemId":  "dnd5e",
+                       "systemVersion":  "3.3.1",
+                       "coreVersion":  "12.331",
+                       "createdTime":  1736445600000,
+                       "modifiedTime":  1736445600000,
+                       "lastModifiedBy":  "martyrmodule"
+                   },
+        "folder":  null,
+        "sort":  110000,
+        "_id":  "gabriels-trumpet"
+    },
+    {
+        "name":  "Spiteful Maneuver",
+        "type":  "spell",
+        "img":  "icons/weapons/swords/sword-winged-gray.webp",
+        "system":  {
+                       "description":  {
+                                           "value":  "\u003cp\u003eIf you have already hit a creature with a weapon attack this turn, you may immediately make one additional weapon attack.\u003c/p\u003e",
+                                           "chat":  "",
+                                           "unidentified":  ""
+                                       },
+                       "source":  "Martyr Class",
+                       "activation":  {
+                                          "type":  "bonus",
+                                          "cost":  1,
+                                          "condition":  "After hitting with weapon attack this turn"
+                                      },
+                       "duration":  {
+                                        "value":  null,
+                                        "units":  "inst"
+                                    },
+                       "target":  {
+                                      "value":  null,
+                                      "width":  null,
+                                      "units":  "",
+                                      "type":  "self"
+                                  },
+                       "range":  {
+                                     "value":  null,
+                                     "long":  null,
+                                     "units":  "self"
+                                 },
+                       "uses":  {
+                                    "value":  null,
+                                    "max":  "",
+                                    "per":  null,
+                                    "recovery":  ""
+                                },
+                       "consume":  {
+                                       "type":  "attribute",
+                                       "target":  "flags.dnd5e-martyr-class.vengeance",
+                                       "amount":  15
+                                   },
+                       "ability":  "cha",
+                       "actionType":  "other",
+                       "attackBonus":  "",
+                       "chatFlavor":  "Extra attack fueled by vengeance",
+                       "critical":  {
+                                        "threshold":  null,
+                                        "damage":  ""
+                                    },
+                       "damage":  {
+                                      "parts":  [
+
+                                                ],
+                                      "versatile":  ""
+                                  },
+                       "formula":  "",
+                       "save":  {
+                                    "ability":  "",
+                                    "dc":  null,
+                                    "scaling":  "spell"
+                                },
+                       "level":  4,
+                       "school":  "evo",
+                       "components":  {
+                                          "value":  "",
+                                          "vocal":  true,
+                                          "somatic":  false,
+                                          "material":  false,
+                                          "ritual":  false,
+                                          "concentration":  false
+                                      },
+                       "materials":  {
+                                         "value":  "",
+                                         "consumed":  false,
+                                         "cost":  0,
+                                         "supply":  0
+                                     },
+                       "preparation":  {
+                                           "mode":  "prepared",
+                                           "prepared":  false
+                                       },
+                       "scaling":  {
+                                       "mode":  "none",
+                                       "formula":  ""
+                                   }
+                   },
+        "ownership":  {
+                          "default":  0,
+                          "PLAYER":  2,
+                          "ASSISTANT":  3
+                      },
+        "flags":  {
+
+                  },
+        "_stats":  {
+                       "systemId":  "dnd5e",
+                       "systemVersion":  "3.3.1",
+                       "coreVersion":  "12.331",
+                       "createdTime":  1736445600000,
+                       "modifiedTime":  1736445600000,
+                       "lastModifiedBy":  "martyrmodule"
+                   },
+        "folder":  null,
+        "sort":  400000,
+        "_id":  "spiteful-maneuver"
+    },
+    {
+        "name":  "The Devil\u0027s Leverage",
+        "type":  "spell",
+        "img":  "icons/magic/unholy/hand-marked-red.webp",
+        "system":  {
+                       "description":  {
+                                           "value":  "\u003cp\u003eUntil the end of the turn, your next weapon attack roll has advantage. You forfeit your reaction during the following round.\u003c/p\u003e",
+                                           "chat":  "",
+                                           "unidentified":  ""
+                                       },
+                       "source":  "Martyr Class",
+                       "activation":  {
+                                          "type":  "bonus",
+                                          "cost":  1,
+                                          "condition":  "Path of the Moon only"
+                                      },
+                       "duration":  {
+                                        "value":  1,
+                                        "units":  "turn"
+                                    },
+                       "target":  {
+                                      "value":  null,
+                                      "width":  null,
+                                      "units":  "",
+                                      "type":  "self"
+                                  },
+                       "range":  {
+                                     "value":  null,
+                                     "long":  null,
+                                     "units":  "self"
+                                 },
+                       "uses":  {
+                                    "value":  null,
+                                    "max":  "",
+                                    "per":  null,
+                                    "recovery":  ""
+                                },
+                       "consume":  {
+                                       "type":  "attribute",
+                                       "target":  "flags.dnd5e-martyr-class.vengeance",
+                                       "amount":  5
+                                   },
+                       "ability":  "cha",
+                       "actionType":  "other",
+                       "attackBonus":  "",
+                       "chatFlavor":  "Gain advantage, lose reaction next round",
+                       "critical":  {
+                                        "threshold":  null,
+                                        "damage":  ""
+                                    },
+                       "damage":  {
+                                      "parts":  [
+
+                                                ],
+                                      "versatile":  ""
+                                  },
+                       "formula":  "",
+                       "save":  {
+                                    "ability":  "",
+                                    "dc":  null,
+                                    "scaling":  "spell"
+                                },
+                       "level":  1,
+                       "school":  "tra",
+                       "components":  {
+                                          "value":  "",
+                                          "vocal":  false,
+                                          "somatic":  true,
+                                          "material":  false,
+                                          "ritual":  false,
+                                          "concentration":  false
+                                      },
+                       "materials":  {
+                                         "value":  "",
+                                         "consumed":  false,
+                                         "cost":  0,
+                                         "supply":  0
+                                     },
+                       "preparation":  {
+                                           "mode":  "prepared",
+                                           "prepared":  false
+                                       },
+                       "scaling":  {
+                                       "mode":  "none",
+                                       "formula":  ""
+                                   }
+                   },
+        "ownership":  {
+                          "default":  0,
+                          "PLAYER":  2,
+                          "ASSISTANT":  3
+                      },
+        "flags":  {
+
+                  },
+        "_stats":  {
+                       "systemId":  "dnd5e",
+                       "systemVersion":  "3.3.1",
+                       "coreVersion":  "12.331",
+                       "createdTime":  1736445600000,
+                       "modifiedTime":  1736445600000,
+                       "lastModifiedBy":  "martyrmodule"
+                   },
+        "folder":  null,
+        "sort":  120000,
+        "_id":  "the-devils-leverage"
+    },
+    {
+        "name":  "Uncompromising Purity",
+        "type":  "spell",
+        "img":  "icons/magic/light/explosion-star-large-blue.webp",
+        "system":  {
+                       "description":  {
+                                           "value":  "\u003cp\u003eAll negative conditions, spells, curses, and levels of exhaustion affecting you end immediately.\u003c/p\u003e",
+                                           "chat":  "",
+                                           "unidentified":  ""
+                                       },
+                       "source":  "Martyr Class",
+                       "activation":  {
+                                          "type":  "bonus",
+                                          "cost":  1,
+                                          "condition":  ""
+                                      },
+                       "duration":  {
+                                        "value":  null,
+                                        "units":  "inst"
+                                    },
+                       "target":  {
+                                      "value":  null,
+                                      "width":  null,
+                                      "units":  "",
+                                      "type":  "self"
+                                  },
+                       "range":  {
+                                     "value":  null,
+                                     "long":  null,
+                                     "units":  "self"
+                                 },
+                       "uses":  {
+                                    "value":  null,
+                                    "max":  "",
+                                    "per":  null,
+                                    "recovery":  ""
+                                },
+                       "consume":  {
+                                       "type":  "attribute",
+                                       "target":  "flags.dnd5e-martyr-class.vengeance",
+                                       "amount":  60
+                                   },
+                       "ability":  "cha",
+                       "actionType":  "other",
+                       "attackBonus":  "",
+                       "chatFlavor":  "Purge all negative effects",
+                       "critical":  {
+                                        "threshold":  null,
+                                        "damage":  ""
+                                    },
+                       "damage":  {
+                                      "parts":  [
+
+                                                ],
+                                      "versatile":  ""
+                                  },
+                       "formula":  "",
+                       "save":  {
+                                    "ability":  "",
+                                    "dc":  null,
+                                    "scaling":  "spell"
+                                },
+                       "level":  6,
+                       "school":  "abj",
+                       "components":  {
+                                          "value":  "",
+                                          "vocal":  true,
+                                          "somatic":  false,
+                                          "material":  false,
+                                          "ritual":  false,
+                                          "concentration":  false
+                                      },
+                       "materials":  {
+                                         "value":  "",
+                                         "consumed":  false,
+                                         "cost":  0,
+                                         "supply":  0
+                                     },
+                       "preparation":  {
+                                           "mode":  "prepared",
+                                           "prepared":  false
+                                       },
+                       "scaling":  {
+                                       "mode":  "none",
+                                       "formula":  ""
+                                   }
+                   },
+        "ownership":  {
+                          "default":  0,
+                          "PLAYER":  2,
+                          "ASSISTANT":  3
+                      },
+        "flags":  {
+
+                  },
+        "_stats":  {
+                       "systemId":  "dnd5e",
+                       "systemVersion":  "3.3.1",
+                       "coreVersion":  "12.331",
+                       "createdTime":  1736445600000,
+                       "modifiedTime":  1736445600000,
+                       "lastModifiedBy":  "martyrmodule"
+                   },
+        "folder":  null,
+        "sort":  610000,
+        "_id":  "uncompromising-purity"
+    },
+    {
+        "name":  "Veil of Suffering",
+        "type":  "spell",
+        "img":  "icons/magic/unholy/strike-body-life-soul-green.webp",
+        "system":  {
+                       "description":  {
+                                           "value":  "\u003cp\u003eAfter you hit a creature with a weapon attack, it must make a Wisdom save. On a failure, the target is \u003cstrong\u003etaunted\u003c/strong\u003e until the end of its next turn.\u003c/p\u003e\u003cp\u003e\u003cem\u003eA Martyr can cast at most one Free- or Bonus-action blood magic per round.\u003c/em\u003e\u003c/p\u003e",
+                                           "chat":  "",
+                                           "unidentified":  ""
+                                       },
+                       "source":  "Martyr Class",
+                       "activation":  {
+                                          "type":  "bonus",
+                                          "cost":  1,
+                                          "condition":  "After hitting with weapon attack"
+                                      },
+                       "duration":  {
+                                        "value":  1,
+                                        "units":  "round"
+                                    },
+                       "target":  {
+                                      "value":  1,
+                                      "width":  null,
+                                      "units":  "",
+                                      "type":  "creature"
+                                  },
+                       "range":  {
+                                     "value":  30,
+                                     "long":  null,
+                                     "units":  "ft"
+                                 },
+                       "uses":  {
+                                    "value":  null,
+                                    "max":  "",
+                                    "per":  null,
+                                    "recovery":  ""
+                                },
+                       "consume":  {
+                                       "type":  "attribute",
+                                       "target":  "flags.dnd5e-martyr-class.vengeance",
+                                       "amount":  5
+                                   },
+                       "ability":  "cha",
+                       "actionType":  "save",
+                       "attackBonus":  "",
+                       "chatFlavor":  "Taunt enemies with suffering",
+                       "critical":  {
+                                        "threshold":  null,
+                                        "damage":  ""
+                                    },
+                       "damage":  {
+                                      "parts":  [
+
+                                                ],
+                                      "versatile":  ""
+                                  },
+                       "formula":  "",
+                       "save":  {
+                                    "ability":  "wis",
+                                    "dc":  null,
+                                    "scaling":  "spell"
+                                },
+                       "level":  2,
+                       "school":  "enc",
+                       "components":  {
+                                          "value":  "",
+                                          "vocal":  true,
+                                          "somatic":  true,
+                                          "material":  false,
+                                          "ritual":  false,
+                                          "concentration":  false
+                                      },
+                       "materials":  {
+                                         "value":  "",
+                                         "consumed":  false,
+                                         "cost":  0,
+                                         "supply":  0
+                                     },
+                       "preparation":  {
+                                           "mode":  "prepared",
+                                           "prepared":  false
+                                       },
+                       "scaling":  {
+                                       "mode":  "none",
+                                       "formula":  ""
+                                   }
+                   },
+        "ownership":  {
+                          "default":  0,
+                          "PLAYER":  2,
+                          "ASSISTANT":  3
+                      },
+        "flags":  {
+
+                  },
+        "_stats":  {
+                       "systemId":  "dnd5e",
+                       "systemVersion":  "3.3.1",
+                       "coreVersion":  "12.331",
+                       "createdTime":  1736445600000,
+                       "modifiedTime":  1736445600000,
+                       "lastModifiedBy":  "martyrmodule"
+                   },
+        "folder":  null,
+        "sort":  200000,
+        "_id":  "veil-of-suffering"
+    },
+    {
+        "name":  "Vindicate",
+        "type":  "spell",
+        "img":  "icons/magic/light/beam-rays-orange-large.webp",
+        "system":  {
+                       "description":  {
+                                           "value":  "\u003cp\u003eYou invoke final judgment upon foes who have truly harmed you. Choose any number of enemies within 60 ft that have dealt \u003cstrong\u003e50 HP or more\u003c/strong\u003e damage to you since your last long rest. Each must make a WIS save.\u003c/p\u003e\u003cp\u003e\u003cstrong\u003eFail:\u003c/strong\u003e a solar/lunar bolt erases the creature, dropping it to 0 HP with no death saves.\u003c/p\u003e\u003cp\u003e\u003cstrong\u003eSuccess:\u003c/strong\u003e it instead takes \u003cstrong\u003e12d10 radiant or necrotic\u003c/strong\u003e (your choice).\u003c/p\u003e\u003cp\u003e\u003cstrong\u003eRestriction:\u003c/strong\u003e Only usable if the sun or moon is visible to you.\u003c/p\u003e",
+                                           "chat":  "",
+                                           "unidentified":  ""
+                                       },
+                       "source":  "Martyr Class",
+                       "activation":  {
+                                          "type":  "action",
+                                          "cost":  1,
+                                          "condition":  "Sun or moon visible, targets must have dealt 50+ damage"
+                                      },
+                       "duration":  {
+                                        "value":  null,
+                                        "units":  "inst"
+                                    },
+                       "target":  {
+                                      "value":  null,
+                                      "width":  null,
+                                      "units":  "",
+                                      "type":  "creature"
+                                  },
+                       "range":  {
+                                     "value":  60,
+                                     "long":  null,
+                                     "units":  "ft"
+                                 },
+                       "uses":  {
+                                    "value":  null,
+                                    "max":  "",
+                                    "per":  null,
+                                    "recovery":  ""
+                                },
+                       "consume":  {
+                                       "type":  "attribute",
+                                       "target":  "flags.dnd5e-martyr-class.vengeance",
+                                       "amount":  120
+                                   },
+                       "ability":  "cha",
+                       "actionType":  "save",
+                       "attackBonus":  "",
+                       "chatFlavor":  "Ultimate judgment of the Martyr",
+                       "critical":  {
+                                        "threshold":  null,
+                                        "damage":  ""
+                                    },
+                       "damage":  {
+                                      "parts":  [
+                                                    [
+                                                        "12d10",
+                                                        "radiant"
+                                                    ]
+                                                ],
+                                      "versatile":  ""
+                                  },
+                       "formula":  "",
+                       "save":  {
+                                    "ability":  "wis",
+                                    "dc":  null,
+                                    "scaling":  "spell"
+                                },
+                       "level":  9,
+                       "school":  "evo",
+                       "components":  {
+                                          "value":  "",
+                                          "vocal":  true,
+                                          "somatic":  true,
+                                          "material":  false,
+                                          "ritual":  false,
+                                          "concentration":  false
+                                      },
+                       "materials":  {
+                                         "value":  "",
+                                         "consumed":  false,
+                                         "cost":  0,
+                                         "supply":  0
+                                     },
+                       "preparation":  {
+                                           "mode":  "prepared",
+                                           "prepared":  false
+                                       },
+                       "scaling":  {
+                                       "mode":  "none",
+                                       "formula":  ""
+                                   }
+                   },
+        "ownership":  {
+                          "default":  0,
+                          "PLAYER":  2,
+                          "ASSISTANT":  3
+                      },
+        "flags":  {
+
+                  },
+        "_stats":  {
+                       "systemId":  "dnd5e",
+                       "systemVersion":  "3.3.1",
+                       "coreVersion":  "12.331",
+                       "createdTime":  1736445600000,
+                       "modifiedTime":  1736445600000,
+                       "lastModifiedBy":  "martyrmodule"
+                   },
+        "folder":  null,
+        "sort":  920000,
+        "_id":  "vindicate"
+    }
+]

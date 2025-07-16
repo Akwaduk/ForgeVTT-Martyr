@@ -33,25 +33,25 @@
     {
       "name": "martyr-classes",
       "label": "Martyr Classes",
-      "path": "packs/classes",
+      "path": "packs/classes.db",
       "type": "Item"
     },
     {
       "name": "martyr-class-features",
       "label": "Martyr Class Features",
-      "path": "packs/class-features",
+      "path": "packs/class-features.db",
       "type": "Item"
     },
     {
       "name": "martyr-spells",
       "label": "Martyr Blood Magic Spells",
-      "path": "packs/spells",
+      "path": "packs/spells.db",
       "type": "Item"
     },
     {
       "name": "martyr-subclasses",
       "label": "Martyr Subclasses",
-      "path": "packs/subclasses",
+      "path": "packs/subclasses.db",
       "type": "Item"
     }
   ],
