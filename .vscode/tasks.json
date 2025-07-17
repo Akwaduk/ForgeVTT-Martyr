@@ -1,0 +1,12 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Validate Martyr Module",
+			"type": "shell",
+			"command": "Get-ChildItem -Recurse | Where-Object { $_.Extension -in '.json', '.js', '.css' } | ForEach-Object { Write-Host \"Checking: $($_.FullName)\"; if ($_.Extension -eq '.json') { try { Get-Content $_.FullName | ConvertFrom-Json | Out-Null; Write-Host \"✅ Valid JSON\" -ForegroundColor Green } catch { Write-Host \"❌ Invalid JSON: $_\" -ForegroundColor Red } } }",
+			"group": "build",
+			"isBackground": false
+		}
+	]
+}

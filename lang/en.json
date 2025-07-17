@@ -1,0 +1,163 @@
+{
+  "MARTYR": {
+    "ClassName": "Martyr",
+    "ClassDescription": "The Martyr understands that suffering is the ultimate path to self-realization. They obtain their powers through a profound connection to either the Sun or the Moon, aligning with paths of Mercy or Vengeance.",
+    
+    "Resources": {
+      "Vengeance": "Vengeance",
+      "Mercy": "Mercy",
+      "Points": "Points",
+      "Maximum": "Maximum",
+      "Current": "Current"
+    },
+    
+    "Paths": {
+      "Moon": "Path of the Moon",
+      "Sun": "Path of the Sun",
+      "MoonDescription": "Disciples of the Moon see death as the ultimate judgment and suffering as the inevitable journey towards it.",
+      "SunDescription": "Disciples of the Sun believe that suffering can be transcended through compassion and healing."
+    },
+    
+    "Features": {
+      "VengeanceAndMercy": "Vengeance and Mercy",
+      "MartyrsInsight": "Martyr's Insight",
+      "DoubleEdgedBlade": "Double-Edged Blade",
+      "MartyrSpellcasting": "Martyr Spellcasting",
+      "MortalDevotion": "Mortal Devotion",
+      "Retribution": "Retribution",
+      "ExactVengeance": "Exact Vengeance",
+      "MercifulPatience": "Merciful Patience",
+      "ImprovedSufferance": "Improved Sufferance",
+      "BloodAndThunder": "Blood and Thunder",
+      "SacrificeAndAtonement": "Sacrifice and Atonement",
+      "IndomitablePresence": "Indomitable Presence",
+      "ImprovedRetribution": "Improved Retribution",
+      "VindictiveDivinity": "Vindictive Divinity",
+      "ApocalypticAffinity": "Apocalyptic Affinity"
+    },
+    
+    "Subclasses": {
+      "DiscipleOfTheMoon": "Disciple of the Moon",
+      "DiscipleOfTheSun": "Disciple of the Sun",
+      "BonusProficiency": "Bonus Proficiency",
+      "Hellbent": "Hellbent",
+      "BaneOfSisyphus": "Bane of Sisyphus",
+      "ImpendingConviction": "Impending Conviction",
+      "BurdenOfExistence": "Burden of Existence",
+      "AspectOfDeath": "Aspect of Death",
+      "UndertakersSigh": "Undertaker's Sigh",
+      "CuspOfGreatness": "Cusp of Greatness",
+      "Forgiveness": "Forgiveness",
+      "HeaviestMatterOfTheUniverse": "Heaviest Matter of the Universe",
+      "RadiantIntervention": "Radiant Intervention"
+    },
+    
+    "BloodMagic": {
+      "Name": "Blood Magic",
+      "Cost": "Point Cost",
+      "Type": "Resource Type",
+      "Both": "Both Vengeance & Mercy",
+      "VengeanceOnly": "Vengeance Only",
+      "MercyOnly": "Mercy Only",
+      "Description": "These spells consume Vengeance or Mercy points instead of spell slots."
+    },
+    
+    "Spells": {
+      "FleshBolt": "Flesh Bolt",
+      "GabrielsTrumpet": "Gabriel's Trumpet",
+      "TheDevilsLeverage": "The Devil's Leverage",
+      "Eagleheart": "Eagleheart",
+      "Crucifixion": "Crucifixion",
+      "VeilOfSuffering": "Veil of Suffering",
+      "DarkPenance": "Dark Penance",
+      "Bloodreign": "Bloodreign",
+      "SpitefulManeuver": "Spiteful Maneuver",
+      "FleshStorm": "Flesh Storm",
+      "Absolution": "Absolution",
+      "AltarOfSacrifice": "Altar of Sacrifice",
+      "GhostsOfWar": "Ghosts of War",
+      "DeconstructFlesh": "Deconstruct Flesh",
+      "DeathsHand": "Death's Hand",
+      "UncompromisingPurity": "Uncompromising Purity",
+      "CallOfTerror": "Call of Terror",
+      "Decauterize": "Decauterize",
+      "EdgeOfMortality": "Edge of Mortality",
+      "Vindicate": "Vindicate"
+    },
+    
+    "UI": {
+      "ControlPanel": "Martyr Panel",
+      "ResourceTracker": "Resource Tracker",
+      "QuickActions": "Quick Actions",
+      "ShortRest": "Short Rest",
+      "LongRest": "Long Rest",
+      "UseRetribution": "Use Retribution",
+      "AdjustPoints": "Adjust Points",
+      "SetPoints": "Set Points",
+      "Close": "Close",
+      "Cancel": "Cancel",
+      "Confirm": "Confirm"
+    },
+    
+    "Notifications": {
+      "VengeanceGained": "{actor} gained {points} Vengeance points from suffering!",
+      "MercyGained": "{actor} gained {points} Mercy points from witnessing suffering!",
+      "NotEnoughPoints": "Not enough {resource} points! Need {required}, have {current}.",
+      "SpellCastSuccess": "Spent {cost} {resource} points to cast {spell}",
+      "ExcessPointsFade": "Excess {resource} points fade after a long rest.",
+      "RetributionActivated": "Retribution activated! {effect} {points} points.",
+      "PathRequired": "This spell requires the {path}!",
+      "MoonPathRequired": "This spell requires the Path of the Moon!",
+      "SunPathRequired": "This spell requires the Path of the Sun!"
+    },
+    
+    "Dialogs": {
+      "GrantMercyTitle": "Grant Mercy Points",
+      "GrantMercyContent": "An ally has taken {damage} damage. Grant {points} Mercy points?",
+      "GrantMercy": "Grant Mercy",
+      "No": "No",
+      "RetributionTitle": "Use Retribution",
+      "RetributionContent": "Spend Vengeance/Mercy points to activate Retribution:",
+      "PointsToSpend": "Points to spend (max {max}):",
+      "Effect": "Effect:",
+      "DealDamage": "Deal necrotic damage (Moon)",
+      "HealTarget": "Heal target (Sun)",
+      "ControlPanelTitle": "Martyr Control Panel - {actor}",
+      "PathInfo": "Path: {path}",
+      "ResourceControls": "Resource Controls",
+      "CurrentPoints": "{current} / {max}"
+    },
+    
+    "Errors": {
+      "NotMartyr": "This feature can only be used by Martyr characters.",
+      "NoPathSelected": "No Martyr path has been selected.",
+      "InvalidPath": "Invalid Martyr path specified.",
+      "InsufficientPoints": "Insufficient {resource} points.",
+      "FeatureNotAvailable": "This feature is not available at your current level.",
+      "UsesExpended": "All uses of this feature have been expended."
+    },
+    
+    "Settings": {
+      "EnableAutomaticResourceGain": {
+        "Name": "Enable Automatic Resource Gain",
+        "Hint": "Automatically grant Vengeance/Mercy points when taking/witnessing damage"
+      },
+      "ShowResourceTracker": {
+        "Name": "Show Resource Tracker",
+        "Hint": "Display the Martyr resource tracker in the character sheet"
+      },
+      "EnableBloodMagicAutomation": {
+        "Name": "Enable Blood Magic Automation",
+        "Hint": "Automatically handle point costs for Blood Magic spells"
+      },
+      "EnableLevelProgression": {
+        "Name": "Enable Automatic Level Progression",
+        "Hint": "Automatically add class features when leveling up as a Martyr"
+      },
+      "ShowBloodMagicIndicators": {
+        "Name": "Show Blood Magic Indicators",
+        "Hint": "Display visual indicators for Blood Magic spells in inventories"
+      }
+    }
+  }
+}

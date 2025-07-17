@@ -1,239 +1,398 @@
-/* Martyr Class Styles for Foundry VTT */
+/**
+ * Martyr Class Module Styles
+ * Custom styling for the Martyr class interface elements
+ */
 
-.martyr-resource {
-    background: linear-gradient(135deg, #2c1810 0%, #4a2c1a 100%);
-    border: 2px solid #8b4513;
-    border-radius: 8px;
-    padding: 10px;
-    margin: 5px 0;
-    color: #f4f4f4;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-}
-
-.martyr-resource h3 {
-    margin: 0 0 5px 0;
-    color: #ff6b6b;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
-    font-size: 14px;
-    font-weight: bold;
-}
-
-.martyr-resource p {
-    margin: 0;
-    font-size: 12px;
-}
-
-.martyr-spell {
-    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-    border: 2px solid #4a5568;
-    border-radius: 8px;
-    padding: 12px;
-    margin: 5px 0;
-    color: #e2e8f0;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
-}
-
-.martyr-spell h3 {
-    margin: 0 0 8px 0;
-    color: #9f7aea;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
-    font-size: 16px;
-    font-weight: bold;
-}
-
-.martyr-spell p {
-    margin: 4px 0;
-    font-size: 13px;
-}
-
-.martyr-spell em {
-    color: #a0aec0;
-    font-style: italic;
-    font-size: 11px;
-}
-
-/* Enhanced Controls Dialog */
-.martyr-controls-dialog {
-    padding: 10px;
-    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-    border-radius: 8px;
-    color: #e2e8f0;
-}
-
-.martyr-controls-dialog h3 {
-    color: #ff6b6b;
-    text-align: center;
-    margin-bottom: 15px;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
-}
-
-.martyr-controls-dialog .form-group {
-    margin: 10px 0;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.martyr-controls-dialog label {
-    font-weight: bold;
-    min-width: 120px;
-}
-
-.martyr-controls-dialog input {
-    flex: 1;
-    padding: 5px;
-    border: 1px solid #4a5568;
-    border-radius: 4px;
-    background: #2d3748;
-    color: #e2e8f0;
-}
-
-.martyr-controls-dialog button {
-    padding: 8px 16px;
-    background: linear-gradient(135deg, #9f7aea 0%, #805ad5 100%);
-    border: none;
-    border-radius: 4px;
+/* Martyr Control Panel Button */
+.martyr-control-panel {
+    background: linear-gradient(135deg, #8B0000, #A0522D);
     color: white;
-    cursor: pointer;
-    font-weight: bold;
-    transition: all 0.3s ease;
-}
-
-.martyr-controls-dialog button:hover {
-    background: linear-gradient(135deg, #b794f6 0%, #9f7aea 100%);
-    transform: translateY(-1px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-}
-
-.blood-magic-section {
-    margin-top: 15px;
-    padding: 10px;
-    background: rgba(0, 0, 0, 0.3);
-    border-radius: 6px;
-    border: 1px solid #4a5568;
-}
-
-.blood-magic-section h4 {
-    color: #9f7aea;
-    margin-bottom: 10px;
-    text-align: center;
-}
-
-.blood-magic-btn {
-    display: block;
-    width: 100%;
-    margin: 5px 0;
-    padding: 8px;
-    background: linear-gradient(135deg, #e53e3e 0%, #c53030 100%);
-    border: none;
+    border: 1px solid #654321;
     border-radius: 4px;
-    color: white;
-    cursor: pointer;
-    font-weight: bold;
-    transition: all 0.3s ease;
-}
-
-.blood-magic-btn:hover {
-    background: linear-gradient(135deg, #fc8181 0%, #e53e3e 100%);
-    transform: translateY(-1px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-}
-
-/* Resource Display Enhancement */
-.martyr-resource .form-fields {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-}
-
-.martyr-resource input {
-    width: 60px;
-    padding: 4px;
-    border: 1px solid #8b4513;
-    border-radius: 3px;
-    background: #2c1810;
-    color: #f4f4f4;
-    text-align: center;
-}
-
-.martyr-resource .sep {
-    color: #8b4513;
-    font-weight: bold;
-}
-
-.martyr-resource .max {
-    color: #ff6b6b;
-    font-weight: bold;
-}
-
-/* Spell Effects Display */
-.spell-effects {
-    margin-top: 10px;
-    padding: 8px;
-    background: rgba(0, 0, 0, 0.2);
-    border-radius: 4px;
-    border: 1px solid #4a5568;
-}
-
-.spell-effects p {
-    margin: 4px 0;
-    font-size: 12px;
-    line-height: 1.4;
-}
-
-.spell-effects strong {
-    color: #9f7aea;
-}
-
-/* Roll Button Styling */
-.spell-roll-btn {
-    display: inline-block;
     padding: 4px 8px;
-    margin: 2px;
-    background: linear-gradient(135deg, #38a169 0%, #2f855a 100%);
-    border: none;
-    border-radius: 3px;
-    color: white;
-    cursor: pointer;
+    margin-right: 5px;
     font-size: 11px;
     font-weight: bold;
+    cursor: pointer;
     transition: all 0.2s ease;
 }
 
-.spell-roll-btn:hover {
-    background: linear-gradient(135deg, #48bb78 0%, #38a169 100%);
+.martyr-control-panel:hover {
+    background: linear-gradient(135deg, #A0522D, #8B0000);
     transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-/* Moon vs Sun Theming */
-.martyr-moon {
-    --martyr-primary: #9f7aea;
-    --martyr-secondary: #805ad5;
-    --martyr-accent: #e53e3e;
-    --martyr-bg: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+.martyr-control-panel i {
+    margin-right: 3px;
+    color: #FFB6C1;
 }
 
-.martyr-sun {
-    --martyr-primary: #ed8936;
-    --martyr-secondary: #dd6b20;
-    --martyr-accent: #ecc94b;
-    --martyr-bg: linear-gradient(135deg, #2d1b1b 0%, #3d2b1f 100%);
+/* Resource Display in Character Sheet */
+.counter.martyr-resource {
+    background: linear-gradient(135deg, rgba(139, 0, 0, 0.1), rgba(160, 82, 45, 0.1));
+    border: 1px solid #8B0000;
+    border-radius: 6px;
+    padding: 8px;
+    margin: 4px 0;
 }
 
-/* Taunted Condition Styling */
-.condition-taunted {
-    color: #ff6b6b;
+.counter.martyr-resource h4 {
+    color: #8B0000;
     font-weight: bold;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+    margin-bottom: 4px;
+    text-align: center;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
-/* Animation for resource gains */
-@keyframes resourceGain {
-    0% { transform: scale(1); opacity: 0.8; }
-    50% { transform: scale(1.1); opacity: 1; }
-    100% { transform: scale(1); opacity: 0.8; }
+.counter.martyr-resource .counter-value {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
 }
 
-.martyr-resource.gaining {
-    animation: resourceGain 0.5s ease-in-out;
+.martyr-points-input {
+    width: 50px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid #8B0000;
+    border-radius: 3px;
+    color: #8B0000;
+    font-weight: bold;
+}
+
+.martyr-points-input:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(139, 0, 0, 0.5);
+}
+
+/* Martyr Control Panel Dialog */
+.martyr-panel {
+    padding: 15px;
+    min-width: 350px;
+}
+
+.martyr-panel h3 {
+    color: #8B0000;
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 18px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.resource-controls,
+.quick-actions {
+    background: rgba(139, 0, 0, 0.05);
+    border: 1px solid #8B0000;
+    border-radius: 6px;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+.resource-controls h4,
+.quick-actions h4 {
+    color: #8B0000;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.counter-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 10px;
+}
+
+.adjust-points {
+    background: #8B0000;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 4px 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.2s ease;
+}
+
+.adjust-points:hover {
+    background: #A0522D;
+}
+
+.current-points {
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid #8B0000;
+    border-radius: 4px;
+    padding: 4px 12px;
+    font-weight: bold;
+    color: #8B0000;
+    min-width: 80px;
+    text-align: center;
+}
+
+.direct-set {
+    width: 60px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid #8B0000;
+    border-radius: 3px;
+    color: #8B0000;
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.set-points,
+.rest-action,
+.retribution-action {
+    background: linear-gradient(135deg, #8B0000, #A0522D);
+    color: white;
+    border: 1px solid #654321;
+    border-radius: 4px;
+    padding: 6px 12px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.2s ease;
+    margin: 2px;
+}
+
+.set-points:hover,
+.rest-action:hover,
+.retribution-action:hover {
+    background: linear-gradient(135deg, #A0522D, #8B0000);
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.quick-actions {
+    text-align: center;
+}
+
+/* Blood Magic Controls */
+.blood-magic-controls {
+    background: rgba(139, 0, 0, 0.05);
+    border: 1px solid #8B0000;
+    border-radius: 6px;
+    padding: 15px;
+    margin-top: 15px;
+}
+
+.blood-magic-controls h3 {
+    color: #8B0000;
+    margin-bottom: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.blood-magic-controls .form-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.blood-magic-controls label {
+    color: #8B0000;
+    font-weight: bold;
+    min-width: 100px;
+    margin-right: 10px;
+}
+
+.blood-magic-controls input,
+.blood-magic-controls select {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid #8B0000;
+    border-radius: 3px;
+    color: #8B0000;
+    padding: 4px 8px;
+}
+
+.blood-magic-controls input:focus,
+.blood-magic-controls select:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(139, 0, 0, 0.5);
+}
+
+/* Path-specific styling */
+.martyr-path-moon {
+    background: linear-gradient(135deg, rgba(25, 25, 112, 0.1), rgba(139, 0, 0, 0.1));
+    border-color: #191970;
+}
+
+.martyr-path-moon h4,
+.martyr-path-moon .current-points {
+    color: #191970;
+}
+
+.martyr-path-sun {
+    background: linear-gradient(135deg, rgba(255, 215, 0, 0.1), rgba(255, 140, 0, 0.1));
+    border-color: #FFD700;
+}
+
+.martyr-path-sun h4,
+.martyr-path-sun .current-points {
+    color: #FF8C00;
+}
+
+/* Retribution Dialog */
+.retribution-dialog {
+    min-width: 300px;
+}
+
+.retribution-dialog .form-group {
+    margin-bottom: 10px;
+}
+
+.retribution-dialog label {
+    display: block;
+    color: #8B0000;
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+
+.retribution-dialog input,
+.retribution-dialog select {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid #8B0000;
+    border-radius: 3px;
+    color: #8B0000;
+    padding: 4px 8px;
+}
+
+/* Notifications styling for Martyr actions */
+.notification.martyr {
+    background: linear-gradient(135deg, #8B0000, #A0522D);
+    border-left: 4px solid #654321;
+    color: white;
+}
+
+.notification.martyr i {
+    color: #FFB6C1;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    .martyr-panel {
+        min-width: 280px;
+        padding: 10px;
+    }
+    
+    .counter-controls {
+        flex-wrap: wrap;
+        gap: 4px;
+    }
+    
+    .adjust-points {
+        padding: 3px 6px;
+        font-size: 11px;
+    }
+    
+    .current-points {
+        min-width: 60px;
+        padding: 3px 8px;
+    }
+}
+
+/* Animation for resource changes */
+@keyframes resource-change {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+.martyr-resource.resource-changed {
+    animation: resource-change 0.3s ease-in-out;
+}
+
+.martyr-resource.resource-gained {
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+}
+
+.martyr-resource.resource-spent {
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+}
+
+/* Tooltip styles for Martyr features */
+.martyr-tooltip {
+    background: rgba(139, 0, 0, 0.95);
+    color: white;
+    border: 1px solid #654321;
+    border-radius: 4px;
+    padding: 8px;
+    font-size: 12px;
+    max-width: 250px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Blood Magic spell indicators */
+.item.blood-magic {
+    position: relative;
+}
+
+.item.blood-magic::before {
+    content: "🩸";
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    font-size: 12px;
+    z-index: 10;
+}
+
+.item.blood-magic .item-name {
+    color: #8B0000;
+    font-weight: bold;
+}
+
+/* Martyr class features styling */
+.martyr-feature {
+    border-left: 3px solid #8B0000;
+    padding-left: 8px;
+    margin: 4px 0;
+}
+
+.martyr-feature .feature-name {
+    color: #8B0000;
+    font-weight: bold;
+}
+
+.martyr-feature .feature-description {
+    color: #654321;
+    font-style: italic;
+}
+
+/* Level progression indicators */
+.martyr-level-indicator {
+    background: linear-gradient(90deg, #8B0000, #A0522D);
+    color: white;
+    padding: 2px 6px;
+    border-radius: 10px;
+    font-size: 10px;
+    font-weight: bold;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+/* Resource bar visualization */
+.martyr-resource-bar {
+    width: 100%;
+    height: 8px;
+    background: rgba(139, 0, 0, 0.2);
+    border-radius: 4px;
+    overflow: hidden;
+    margin-top: 4px;
+}
+
+.martyr-resource-bar .fill {
+    height: 100%;
+    background: linear-gradient(90deg, #8B0000, #A0522D);
+    transition: width 0.3s ease;
+}
+
+.martyr-resource-bar.mercy .fill {
+    background: linear-gradient(90deg, #FFD700, #FF8C00);
+}
+
+.martyr-resource-bar.vengeance .fill {
+    background: linear-gradient(90deg, #191970, #8B0000);
 }

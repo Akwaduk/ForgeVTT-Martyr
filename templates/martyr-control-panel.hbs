@@ -1,0 +1,165 @@
+{{!-- Martyr Control Panel Template --}}
+<div class="martyr-control-panel-content">
+    <header class="panel-header">
+        <h2>{{localize "MARTYR.UI.ControlPanel"}} - {{actor.name}}</h2>
+        <div class="path-indicator martyr-path-{{actor.martyrPath}}">
+            {{#if (eq actor.martyrPath "moon")}}
+                <i class="fas fa-moon"></i> {{localize "MARTYR.Paths.Moon"}}
+            {{else if (eq actor.martyrPath "sun")}}
+                <i class="fas fa-sun"></i> {{localize "MARTYR.Paths.Sun"}}
+            {{else}}
+                <i class="fas fa-question"></i> No Path Selected
+            {{/if}}
+        </div>
+    </header>
+
+    {{#if actor.martyrPath}}
+    <section class="resource-management">
+        <h3>{{localize "MARTYR.UI.ResourceTracker"}}</h3>
+        
+        <div class="resource-display">
+            <div class="resource-info">
+                <h4>
+                    {{#if (eq actor.martyrPath "moon")}}
+                        {{localize "MARTYR.Resources.Vengeance"}}
+                    {{else}}
+                        {{localize "MARTYR.Resources.Mercy"}}
+                    {{/if}}
+                    {{localize "MARTYR.Resources.Points"}}
+                </h4>
+                
+                <div class="resource-bar-container">
+                    <div class="martyr-resource-bar {{actor.martyrPath}}">
+                        <div class="fill" style="width: {{resourcePercentage}}%"></div>
+                    </div>
+                    <div class="resource-numbers">
+                        <span class="current">{{currentPoints}}</span>
+                        <span class="separator"> / </span>
+                        <span class="max">{{maxPoints}}</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="resource-controls">
+                <div class="adjustment-buttons">
+                    <button type="button" class="adjust-btn decrease" data-amount="-5">
+                        <i class="fas fa-minus-square"></i> -5
+                    </button>
+                    <button type="button" class="adjust-btn decrease" data-amount="-1">
+                        <i class="fas fa-minus"></i> -1
+                    </button>
+                    <button type="button" class="adjust-btn increase" data-amount="1">
+                        <i class="fas fa-plus"></i> +1
+                    </button>
+                    <button type="button" class="adjust-btn increase" data-amount="5">
+                        <i class="fas fa-plus-square"></i> +5
+                    </button>
+                </div>
+                
+                <div class="direct-input">
+                    <input type="number" class="points-input" value="{{currentPoints}}" min="0" max="{{maxPoints}}">
+                    <button type="button" class="set-btn">
+                        <i class="fas fa-check"></i> {{localize "MARTYR.UI.SetPoints"}}
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="quick-actions">
+        <h3>{{localize "MARTYR.UI.QuickActions"}}</h3>
+        
+        <div class="action-grid">
+            <button type="button" class="action-btn retribution" data-action="retribution">
+                <i class="fas fa-bolt"></i>
+                <span>{{localize "MARTYR.Features.Retribution"}}</span>
+                <small>{{retributionUses}} uses left</small>
+            </button>
+            
+            {{#if (gte actor.system.details.level 5)}}
+            <button type="button" class="action-btn exact-vengeance" data-action="exact-vengeance">
+                <i class="fas fa-sword"></i>
+                <span>
+                    {{#if (eq actor.martyrPath "moon")}}
+                        {{localize "MARTYR.Features.ExactVengeance"}}
+                    {{else}}
+                        {{localize "MARTYR.Features.MercifulPatience"}}
+                    {{/if}}
+                </span>
+                <small>{{exactVengeanceUses}} uses left</small>
+            </button>
+            {{/if}}
+            
+            {{#if (gte actor.system.details.level 17)}}
+            <button type="button" class="action-btn vindictive-divinity" data-action="vindictive-divinity">
+                <i class="fas fa-crown"></i>
+                <span>{{localize "MARTYR.Features.VindictiveDivinity"}}</span>
+                <small>{{vindictiveDivinityUses}} uses left</small>
+            </button>
+            {{/if}}
+        </div>
+        
+        <div class="rest-actions">
+            <button type="button" class="rest-btn short-rest" data-rest="short">
+                <i class="fas fa-bed"></i> {{localize "MARTYR.UI.ShortRest"}}
+            </button>
+            <button type="button" class="rest-btn long-rest" data-rest="long">
+                <i class="fas fa-bed"></i> {{localize "MARTYR.UI.LongRest"}}
+            </button>
+        </div>
+    </section>
+
+    <section class="blood-magic-info">
+        <h3>{{localize "MARTYR.BloodMagic.Name"}} {{localize "MARTYR.UI.QuickReference"}}</h3>
+        
+        <div class="spell-cost-reference">
+            <h4>Spell Cost Reference</h4>
+            <div class="cost-table">
+                <div class="cost-row">
+                    <span class="level">1st-2nd Level</span>
+                    <span class="cost">5-10 points</span>
+                </div>
+                <div class="cost-row">
+                    <span class="level">3rd Level</span>
+                    <span class="cost">10-15 points</span>
+                </div>
+                <div class="cost-row">
+                    <span class="level">4th-5th Level</span>
+                    <span class="cost">15-20 points</span>
+                </div>
+                <div class="cost-row">
+                    <span class="level">6th-9th Level</span>
+                    <span class="cost">30-120 points</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    {{else}}
+    <section class="path-selection">
+        <h3>Choose Your Path</h3>
+        <p>At 3rd level, select your Mortal Devotion to unlock resource management:</p>
+        
+        <div class="path-options">
+            <div class="path-option moon">
+                <h4><i class="fas fa-moon"></i> {{localize "MARTYR.Subclasses.DiscipleOfTheMoon"}}</h4>
+                <p>{{localize "MARTYR.Paths.MoonDescription"}}</p>
+                <p><strong>Resource:</strong> Vengeance (from taking damage)</p>
+                <p><strong>Spellcasting:</strong> Charisma</p>
+            </div>
+            
+            <div class="path-option sun">
+                <h4><i class="fas fa-sun"></i> {{localize "MARTYR.Subclasses.DiscipleOfTheSun"}}</h4>
+                <p>{{localize "MARTYR.Paths.SunDescription"}}</p>
+                <p><strong>Resource:</strong> Mercy (from witnessing ally damage)</p>
+                <p><strong>Spellcasting:</strong> Wisdom</p>
+            </div>
+        </div>
+    </section>
+    {{/if}}
+
+    <footer class="panel-footer">
+        <button type="button" class="close-btn" data-action="close">
+            <i class="fas fa-times"></i> {{localize "MARTYR.UI.Close"}}
+        </button>
+    </footer>
+</div>

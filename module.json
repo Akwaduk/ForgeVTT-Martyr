@@ -1,15 +1,17 @@
 {
   "id": "dnd5e-martyr-class",
   "title": "D&D 5e Martyr Class",
-  "description": "Adds the Martyr class with Vengeance/Mercy resource system and blood magic spells",
-  "version": "1.3.2",
+  "description": "Adds the complete Martyr class with Vengeance/Mercy resource system, blood magic spells, subclasses, and interactive level progression for D&D 5e",
+  "version": "2.0.0",
   "compatibility": {
-    "minimum": "11",
-    "verified": "13"
+    "minimum": "13",
+    "verified": "13",
+    "maximum": "13"
   },
   "authors": [
     {
-      "name": "Custom Class Creator"
+      "name": "ForgeVTT Martyr Module",
+      "discord": "community"
     }
   ],
   "relationships": {
@@ -18,22 +20,32 @@
         "id": "dnd5e",
         "type": "system",
         "compatibility": {
-          "minimum": "3.0.0"
+          "minimum": "3.0.0",
+          "verified": "4.0.0"
         }
       }
     ]
   },
   "esmodules": [
-    "scripts/martyr-class.js"
+    "scripts/martyr-main.js",
+    "scripts/martyr-progression.js",
+    "scripts/martyr-ui.js"
   ],
   "styles": [
     "styles/martyr.css"
+  ],
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json"
+    }
   ],
   "packs": [
     {
       "name": "martyr-classes",
       "label": "Martyr Classes",
-      "path": "packs/classes",
+      "path": "packs/martyr-classes.db",
       "type": "Item",
       "system": "dnd5e",
       "ownership": {
@@ -44,18 +56,7 @@
     {
       "name": "martyr-class-features",
       "label": "Martyr Class Features",
-      "path": "packs/class-features",
-      "type": "Item",
-      "system": "dnd5e",
-      "ownership": {
-        "PLAYER": "OBSERVER",
-        "ASSISTANT": "OWNER"
-      }
-    },
-    {
-      "name": "martyr-spells",
-      "label": "Martyr Blood Magic Spells",
-      "path": "packs/spells",
+      "path": "packs/martyr-class-features.db",
       "type": "Item",
       "system": "dnd5e",
       "ownership": {
@@ -66,7 +67,18 @@
     {
       "name": "martyr-subclasses",
       "label": "Martyr Subclasses",
-      "path": "packs/subclasses",
+      "path": "packs/martyr-subclasses.db",
+      "type": "Item",
+      "system": "dnd5e",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "name": "martyr-spells",
+      "label": "Martyr Blood Magic",
+      "path": "packs/martyr-spells.db",
       "type": "Item",
       "system": "dnd5e",
       "ownership": {
@@ -82,15 +94,16 @@
       "packs": [
         "martyr-classes",
         "martyr-class-features",
-        "martyr-spells",
-        "martyr-subclasses"
+        "martyr-subclasses",
+        "martyr-spells"
       ]
     }
   ],
+  "socket": true,
   "flags": {
     "hotReload": {
-      "extensions": ["css", "hbs", "json"],
-      "paths": ["templates", "lang"]
+      "extensions": ["css", "hbs", "json", "js"],
+      "paths": ["templates", "lang", "scripts"]
     }
   },
   "manifest": "https://raw.githubusercontent.com/Akwaduk/ForgeVTT-Martyr/refs/heads/master/module.json",
