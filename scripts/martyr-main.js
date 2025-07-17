@@ -28,16 +28,20 @@ const PATHS = {
 Hooks.once("init", function() {
     console.log(`${MARTYR_MODULE.NAME} | Initializing module v${MARTYR_MODULE.VERSION}`);
     
-    // Register module settings
-    registerSettings();
-    
-    // Register custom item types and properties
-    registerCustomProperties();
-    
-    // Register Handlebars helpers
-    registerHandlebarsHelpers();
-    
-    console.log(`${MARTYR_MODULE.NAME} | Initialization complete`);
+    try {
+        // Register module settings
+        registerSettings();
+        
+        // Register custom item types and properties
+        registerCustomProperties();
+        
+        // Register Handlebars helpers
+        registerHandlebarsHelpers();
+        
+        console.log(`${MARTYR_MODULE.NAME} | Initialization complete`);
+    } catch (error) {
+        console.error(`${MARTYR_MODULE.NAME} | Error during initialization:`, error);
+    }
 });
 
 /**
@@ -46,11 +50,15 @@ Hooks.once("init", function() {
 Hooks.once("ready", function() {
     console.log(`${MARTYR_MODULE.NAME} | Module ready`);
     
-    // Initialize UI components
-    initializeUI();
-    
-    // Setup automatic resource tracking
-    setupResourceTracking();
+    try {
+        // Initialize UI components
+        initializeUI();
+        
+        // Setup automatic resource tracking
+        setupResourceTracking();
+    } catch (error) {
+        console.error(`${MARTYR_MODULE.NAME} | Error during ready phase:`, error);
+    }
 });
 
 /**
@@ -180,16 +188,7 @@ function registerHandlebarsHelpers() {
         return a >= b;
     });
     
-    // Template helper for localization with variable replacement
-    Handlebars.registerHelper("localize", function(key, options) {
-        let str = game.i18n.localize(key);
-        if (options && options.hash) {
-            for (let [k, v] of Object.entries(options.hash)) {
-                str = str.replace(new RegExp(`{${k}}`, 'g'), v);
-            }
-        }
-        return str;
-    });
+    // NOTE: Removed custom localize helper to avoid conflicts with Foundry's built-in system
 }
 
 /**
@@ -198,16 +197,24 @@ function registerHandlebarsHelpers() {
 function initializeUI() {
     // Add Martyr control panel button to character sheet header
     Hooks.on("renderActorSheet5eCharacter", (app, html, data) => {
-        if (!isMartyr(app.actor)) return;
-        
-        addMartyrControlButton(app, html);
-        addResourceDisplay(app, html);
+        try {
+            if (!isMartyr(app.actor)) return;
+            
+            addMartyrControlButton(app, html);
+            addResourceDisplay(app, html);
+        } catch (error) {
+            console.error(`${MARTYR_MODULE.NAME} | Error in renderActorSheet5eCharacter hook:`, error);
+        }
     });
     
     // Modify spell casting for Blood Magic
     Hooks.on("renderItemSheet5e", (app, html, data) => {
-        if (app.item.isBloodMagic) {
-            addBloodMagicControls(app, html);
+        try {
+            if (app.item.isBloodMagic) {
+                addBloodMagicControls(app, html);
+            }
+        } catch (error) {
+            console.error(`${MARTYR_MODULE.NAME} | Error in renderItemSheet5e hook:`, error);
         }
     });
 }
@@ -220,41 +227,49 @@ function setupResourceTracking() {
     
     // Track damage taken for Vengeance points
     Hooks.on("updateActor", (actor, updateData, options, userId) => {
-        if (!isMartyr(actor) || actor.martyrPath !== PATHS.MOON) return;
-        
-        const hpChange = updateData.system?.attributes?.hp?.value;
-        if (hpChange !== undefined) {
-            const currentHp = actor.system.attributes.hp.value;
-            const previousHp = currentHp - (hpChange - currentHp);
+        try {
+            if (!isMartyr(actor) || actor.martyrPath !== PATHS.MOON) return;
             
-            if (currentHp < previousHp) {
-                const damage = previousHp - currentHp;
-                grantVengeancePoints(actor, damage);
+            const hpChange = updateData.system?.attributes?.hp?.value;
+            if (hpChange !== undefined) {
+                const currentHp = actor.system.attributes.hp.value;
+                const previousHp = currentHp - (hpChange - currentHp);
+                
+                if (currentHp < previousHp) {
+                    const damage = previousHp - currentHp;
+                    grantVengeancePoints(actor, damage);
+                }
             }
+        } catch (error) {
+            console.error(`${MARTYR_MODULE.NAME} | Error in updateActor hook:`, error);
         }
     });
     
     // Track ally damage for Mercy points (requires manual trigger due to reaction nature)
     Hooks.on("preUpdateActor", (actor, updateData, options, userId) => {
-        if (!updateData.system?.attributes?.hp?.value) return;
-        
-        const damage = (actor.system.attributes.hp.value || 0) - updateData.system.attributes.hp.value;
-        if (damage <= 0) return;
-        
-        // Find nearby Martyrs of the Sun
-        const martyrs = game.actors.contents.filter(a => 
-            isMartyr(a) && 
-            a.martyrPath === PATHS.SUN && 
-            a.id !== actor.id
-        );
-        
-        martyrs.forEach(martyr => {
-            // In a real implementation, you'd check distance
-            // For now, we'll assume they're in range and show a dialog
-            if (game.user.character?.id === martyr.id) {
-                showMercyPointDialog(martyr, damage);
-            }
-        });
+        try {
+            if (!updateData.system?.attributes?.hp?.value) return;
+            
+            const damage = (actor.system.attributes.hp.value || 0) - updateData.system.attributes.hp.value;
+            if (damage <= 0) return;
+            
+            // Find nearby Martyrs of the Sun
+            const martyrs = game.actors.contents.filter(a => 
+                isMartyr(a) && 
+                a.martyrPath === PATHS.SUN && 
+                a.id !== actor.id
+            );
+            
+            martyrs.forEach(martyr => {
+                // In a real implementation, you'd check distance
+                // For now, we'll assume they're in range and show a dialog
+                if (game.user.character?.id === martyr.id) {
+                    showMercyPointDialog(martyr, damage);
+                }
+            });
+        } catch (error) {
+            console.error(`${MARTYR_MODULE.NAME} | Error in preUpdateActor hook:`, error);
+        }
     });
 }
 
@@ -617,43 +632,48 @@ function addBloodMagicControls(app, html) {
  * Handle Blood Magic spell casting
  */
 Hooks.on("dnd5e.preUseItem", (item, config, options) => {
-    if (!item.isBloodMagic || !game.settings.get(MARTYR_MODULE.ID, "enableBloodMagicAutomation")) return true;
-    
-    const actor = item.actor;
-    if (!isMartyr(actor)) return true;
-    
-    const cost = item.bloodMagicCost;
-    const bloodMagicType = item.bloodMagicType;
-    const path = actor.martyrPath;
-    
-    // Check if the spell can be cast with current path
-    if (bloodMagicType === "vengeance" && path !== PATHS.MOON) {
-        ui.notifications.error("This spell requires the Path of the Moon!");
-        return false;
+    try {
+        if (!item.isBloodMagic || !game.settings.get(MARTYR_MODULE.ID, "enableBloodMagicAutomation")) return true;
+        
+        const actor = item.actor;
+        if (!isMartyr(actor)) return true;
+        
+        const cost = item.bloodMagicCost;
+        const bloodMagicType = item.bloodMagicType;
+        const path = actor.martyrPath;
+        
+        // Check if the spell can be cast with current path
+        if (bloodMagicType === "vengeance" && path !== PATHS.MOON) {
+            ui.notifications.error("This spell requires the Path of the Moon!");
+            return false;
+        }
+        
+        if (bloodMagicType === "mercy" && path !== PATHS.SUN) {
+            ui.notifications.error("This spell requires the Path of the Sun!");
+            return false;
+        }
+        
+        // Check if actor has enough points
+        const currentPoints = path === PATHS.MOON ? actor.vengeancePoints : actor.mercyPoints;
+        if (currentPoints < cost) {
+            ui.notifications.error(`Not enough ${path === PATHS.MOON ? 'Vengeance' : 'Mercy'} points! Need ${cost}, have ${currentPoints}.`);
+            return false;
+        }
+        
+        // Spend the points
+        if (path === PATHS.MOON) {
+            actor.vengeancePoints = currentPoints - cost;
+            ui.notifications.info(`Spent ${cost} Vengeance points to cast ${item.name}`);
+        } else {
+            actor.mercyPoints = currentPoints - cost;
+            ui.notifications.info(`Spent ${cost} Mercy points to cast ${item.name}`);
+        }
+        
+        return true;
+    } catch (error) {
+        console.error(`${MARTYR_MODULE.NAME} | Error in dnd5e.preUseItem hook:`, error);
+        return true; // Allow the spell to proceed if there's an error
     }
-    
-    if (bloodMagicType === "mercy" && path !== PATHS.SUN) {
-        ui.notifications.error("This spell requires the Path of the Sun!");
-        return false;
-    }
-    
-    // Check if actor has enough points
-    const currentPoints = path === PATHS.MOON ? actor.vengeancePoints : actor.mercyPoints;
-    if (currentPoints < cost) {
-        ui.notifications.error(`Not enough ${path === PATHS.MOON ? 'Vengeance' : 'Mercy'} points! Need ${cost}, have ${currentPoints}.`);
-        return false;
-    }
-    
-    // Spend the points
-    if (path === PATHS.MOON) {
-        actor.vengeancePoints = currentPoints - cost;
-        ui.notifications.info(`Spent ${cost} Vengeance points to cast ${item.name}`);
-    } else {
-        actor.mercyPoints = currentPoints - cost;
-        ui.notifications.info(`Spent ${cost} Mercy points to cast ${item.name}`);
-    }
-    
-    return true;
 });
 
 // Export for use in other scripts
