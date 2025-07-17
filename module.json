@@ -106,6 +106,6 @@
       "paths": ["templates", "lang", "scripts"]
     }
   },
-  "manifest": "https://raw.githubusercontent.com/Akwaduk/ForgeVTT-Martyr/main/module.json",
-  "download": "https://github.com/Akwaduk/ForgeVTT-Martyr/releases/download/latest/dnd5e-martyr-class.zip"
+  "manifest": "https://raw.githubusercontent.com/Akwaduk/ForgeVTT-Martyr/master/module.json",
+  "download": "https://raw.githubusercontent.com/Akwaduk/ForgeVTT-Martyr/master/dnd5e-martyr-class.zip"
 }
