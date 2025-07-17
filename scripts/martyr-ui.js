@@ -31,13 +31,17 @@ export class MartyrControlPanel extends Application {
         const actor = this.actor;
         const path = actor.getFlag("dnd5e-martyr-class", "path");
         
-        data.actor = actor;
+        // Copy actor data and add martyrPath for template compatibility
+        data.actor = foundry.utils.duplicate(actor);
+        data.actor.martyrPath = path;
         data.martyrPath = path;
+        
+        // Calculate resource points
         data.currentPoints = path === "moon" ? 
             actor.getFlag("dnd5e-martyr-class", "vengeance") || 0 :
             actor.getFlag("dnd5e-martyr-class", "mercy") || 0;
         data.maxPoints = this.getMaxResourcePoints(actor);
-        data.resourcePercentage = Math.round((data.currentPoints / data.maxPoints) * 100);
+        data.resourcePercentage = data.maxPoints > 0 ? Math.round((data.currentPoints / data.maxPoints) * 100) : 0;
         
         // Get feature uses
         data.retributionUses = this.getFeatureUses(actor, "Retribution");

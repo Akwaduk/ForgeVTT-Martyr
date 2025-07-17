@@ -251,7 +251,7 @@ For detailed class mechanics, spell descriptions, and advanced usage:
 
 ---
 
-## 🎲 Design Philosophy
+Plea## 🎲 Design Philosophy
 
 The Martyr class embodies the concept that **power comes through sacrifice**. Whether channeling the brutal justice of the Moon or the redemptive light of the Sun, Martyrs transform suffering into strength. The Blood Magic system replaces traditional spell slots with a dynamic resource that fluctuates based on combat circumstances, creating engaging tactical decisions about when to endure pain for power.
 

@@ -393,6 +393,431 @@
     background: linear-gradient(90deg, #FFD700, #FF8C00);
 }
 
+/* Martyr Control Panel Application */
+.martyr.control-panel {
+    background: linear-gradient(135deg, rgba(139, 0, 0, 0.95), rgba(160, 82, 45, 0.95));
+    border: 2px solid #654321;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.martyr-control-panel-content {
+    padding: 15px;
+    color: white;
+}
+
+.panel-header {
+    border-bottom: 2px solid #654321;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.panel-header h2 {
+    color: #FFB6C1;
+    margin-bottom: 8px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.path-indicator {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.path-indicator.martyr-path-moon {
+    background: linear-gradient(135deg, #191970, #4169E1);
+    color: #E6E6FA;
+}
+
+.path-indicator.martyr-path-sun {
+    background: linear-gradient(135deg, #FFD700, #FF8C00);
+    color: #8B4513;
+}
+
+.panel-header i {
+    margin-right: 5px;
+}
+
+.resource-management {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+.resource-management h3 {
+    color: #FFB6C1;
+    text-align: center;
+    margin-bottom: 15px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.resource-display {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.resource-info h4 {
+    color: white;
+    margin-bottom: 8px;
+    text-align: center;
+}
+
+.resource-bar-container {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+}
+
+.martyr-resource-bar {
+    width: 200px;
+    height: 12px;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 6px;
+    overflow: hidden;
+    border: 1px solid #654321;
+}
+
+.martyr-resource-bar .fill {
+    height: 100%;
+    transition: width 0.3s ease;
+    background: linear-gradient(90deg, #8B0000, #A0522D);
+}
+
+.martyr-resource-bar.moon .fill {
+    background: linear-gradient(90deg, #191970, #4169E1);
+}
+
+.martyr-resource-bar.sun .fill {
+    background: linear-gradient(90deg, #FFD700, #FF8C00);
+}
+
+.resource-numbers {
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.resource-numbers .current {
+    color: #FFB6C1;
+}
+
+.resource-numbers .max {
+    color: #DDD;
+}
+
+.resource-controls {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+.adjustment-buttons {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+.adjust-btn {
+    background: linear-gradient(135deg, #654321, #8B4513);
+    color: white;
+    border: 1px solid #4A4A4A;
+    border-radius: 4px;
+    padding: 6px 10px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.2s ease;
+    font-size: 12px;
+}
+
+.adjust-btn:hover {
+    background: linear-gradient(135deg, #8B4513, #A0522D);
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.adjust-btn.decrease {
+    background: linear-gradient(135deg, #8B0000, #A52A2A);
+}
+
+.adjust-btn.decrease:hover {
+    background: linear-gradient(135deg, #A52A2A, #DC143C);
+}
+
+.adjust-btn.increase {
+    background: linear-gradient(135deg, #228B22, #32CD32);
+}
+
+.adjust-btn.increase:hover {
+    background: linear-gradient(135deg, #32CD32, #7FFF00);
+}
+
+.direct-input {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+.points-input {
+    width: 80px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid #654321;
+    border-radius: 4px;
+    color: #8B0000;
+    font-weight: bold;
+    padding: 4px 8px;
+}
+
+.points-input:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(255, 182, 193, 0.5);
+}
+
+.set-btn {
+    background: linear-gradient(135deg, #4169E1, #6495ED);
+    color: white;
+    border: 1px solid #4A4A4A;
+    border-radius: 4px;
+    padding: 6px 10px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.2s ease;
+    font-size: 12px;
+}
+
+.set-btn:hover {
+    background: linear-gradient(135deg, #6495ED, #87CEEB);
+    transform: translateY(-1px);
+}
+
+.quick-actions {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+.quick-actions h3 {
+    color: #FFB6C1;
+    text-align: center;
+    margin-bottom: 15px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.action-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.action-btn {
+    background: linear-gradient(135deg, #8B4513, #A0522D);
+    color: white;
+    border: 1px solid #654321;
+    border-radius: 6px;
+    padding: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.2s ease;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.action-btn:hover {
+    background: linear-gradient(135deg, #A0522D, #CD853F);
+    transform: translateY(-1px);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.action-btn i {
+    font-size: 16px;
+    color: #FFB6C1;
+}
+
+.action-btn span {
+    font-size: 12px;
+}
+
+.action-btn small {
+    font-size: 10px;
+    color: #DDD;
+    font-style: italic;
+}
+
+.rest-actions {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.rest-btn {
+    background: linear-gradient(135deg, #2F4F4F, #708090);
+    color: white;
+    border: 1px solid #4A4A4A;
+    border-radius: 4px;
+    padding: 8px 12px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.2s ease;
+    font-size: 12px;
+}
+
+.rest-btn:hover {
+    background: linear-gradient(135deg, #708090, #A9A9A9);
+    transform: translateY(-1px);
+}
+
+.blood-magic-info {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+.blood-magic-info h3 {
+    color: #FFB6C1;
+    text-align: center;
+    margin-bottom: 15px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.blood-magic-info h4 {
+    color: white;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.cost-table {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.cost-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 4px 8px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 3px;
+}
+
+.cost-row .level {
+    color: #FFB6C1;
+    font-weight: bold;
+}
+
+.cost-row .cost {
+    color: white;
+}
+
+.path-selection {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+    padding: 15px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.path-selection h3 {
+    color: #FFB6C1;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.path-selection p {
+    color: white;
+    margin-bottom: 15px;
+}
+
+.path-options {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.path-option {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 6px;
+    padding: 10px;
+    border: 1px solid #654321;
+}
+
+.path-option.moon {
+    border-color: #4169E1;
+    background: rgba(25, 25, 112, 0.2);
+}
+
+.path-option.sun {
+    border-color: #FFD700;
+    background: rgba(255, 215, 0, 0.2);
+}
+
+.path-option h4 {
+    color: #FFB6C1;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.path-option p {
+    color: white;
+    font-size: 12px;
+    margin-bottom: 4px;
+    text-align: left;
+}
+
+.panel-footer {
+    border-top: 2px solid #654321;
+    padding-top: 10px;
+    text-align: center;
+}
+
+.close-btn {
+    background: linear-gradient(135deg, #8B0000, #A52A2A);
+    color: white;
+    border: 1px solid #654321;
+    border-radius: 4px;
+    padding: 8px 16px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.2s ease;
+}
+
+.close-btn:hover {
+    background: linear-gradient(135deg, #A52A2A, #DC143C);
+    transform: translateY(-1px);
+}
+
+/* Responsive design for Control Panel */
+@media (max-width: 500px) {
+    .action-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .path-options {
+        grid-template-columns: 1fr;
+    }
+    
+    .adjustment-buttons {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .rest-actions {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
 .martyr-resource-bar.vengeance .fill {
     background: linear-gradient(90deg, #191970, #8B0000);
 }

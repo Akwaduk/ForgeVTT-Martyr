@@ -169,6 +169,27 @@ function registerHandlebarsHelpers() {
         const conMod = actor.system?.abilities?.con?.mod || 0;
         return level >= 20 ? 999 : level * Math.max(1, conMod);
     });
+    
+    // Template helper for equality checks
+    Handlebars.registerHelper("eq", function(a, b) {
+        return a === b;
+    });
+    
+    // Template helper for greater than or equal checks
+    Handlebars.registerHelper("gte", function(a, b) {
+        return a >= b;
+    });
+    
+    // Template helper for localization with variable replacement
+    Handlebars.registerHelper("localize", function(key, options) {
+        let str = game.i18n.localize(key);
+        if (options && options.hash) {
+            for (let [k, v] of Object.entries(options.hash)) {
+                str = str.replace(new RegExp(`{${k}}`, 'g'), v);
+            }
+        }
+        return str;
+    });
 }
 
 /**
@@ -376,6 +397,12 @@ function addResourceDisplay(app, html) {
  * Show Martyr control panel
  */
 function showMartyrControlPanel(actor) {
+    // Use the MartyrControlPanel class if available, otherwise fall back to simple dialog
+    if (window.MartyrControlPanel) {
+        new window.MartyrControlPanel(actor).render(true);
+        return;
+    }
+    
     const path = actor.martyrPath;
     const resourceName = path === PATHS.MOON ? "Vengeance" : "Mercy";
     const currentPoints = path === PATHS.MOON ? actor.vengeancePoints : actor.mercyPoints;
@@ -637,7 +664,12 @@ window.MartyrModule = {
     isMartyr,
     grantVengeancePoints,
     grantMercyPoints,
-    getMaxResourcePoints
+    getMaxResourcePoints,
+    showMartyrControlPanel,
+    adjustPoints,
+    setPoints,
+    handleRest,
+    useRetribution
 };
 
 console.log(`${MARTYR_MODULE.NAME} | Module loaded successfully`);
