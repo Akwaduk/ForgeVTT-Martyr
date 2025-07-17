@@ -1,0 +1,17 @@
+{
+  "entries": [
+    {
+      "type": "class",
+      "ownership": {
+        "default": 0,
+        "PLAYER": 2,
+        "ASSISTANT": 3
+      },
+      "_id": "martyrclass001",
+      "name": "Martyr",
+      "sort": 0
+    }
+  ],
+  "name": "Classes",
+  "label": "Classes"
+}

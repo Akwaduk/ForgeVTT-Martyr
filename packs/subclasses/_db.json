@@ -1,0 +1,28 @@
+{
+  "entries": [
+    {
+      "type": "subclass",
+      "ownership": {
+        "default": 0,
+        "PLAYER": 2,
+        "ASSISTANT": 3
+      },
+      "_id": "disciple-of-the-moon",
+      "name": "Disciple of the Moon",
+      "sort": 50000
+    },
+    {
+      "type": "subclass",
+      "ownership": {
+        "default": 0,
+        "PLAYER": 2,
+        "ASSISTANT": 3
+      },
+      "_id": "disciple-of-the-sun",
+      "name": "Disciple of the Sun",
+      "sort": 60000
+    }
+  ],
+  "name": "Subclasses",
+  "label": "Subclasses"
+}

@@ -1,0 +1,72 @@
+{
+  "entries": [
+    {
+      "type": "feat",
+      "ownership": {
+        "default": 0,
+        "PLAYER": 2,
+        "ASSISTANT": 3
+      },
+      "_id": "apocalyptic-affinity",
+      "name": "Apocalyptic Affinity",
+      "sort": 150000
+    },
+    {
+      "type": "feat",
+      "ownership": {
+        "default": 0,
+        "PLAYER": 2,
+        "ASSISTANT": 3
+      },
+      "_id": "double-edged-blade",
+      "name": "Double-Edged Blade",
+      "sort": 120000
+    },
+    {
+      "type": "feat",
+      "ownership": {
+        "default": 0,
+        "PLAYER": 2,
+        "ASSISTANT": 3
+      },
+      "_id": "martyr-spellcasting",
+      "name": "Martyr Spellcasting",
+      "sort": 130000
+    },
+    {
+      "type": "feat",
+      "ownership": {
+        "default": 0,
+        "PLAYER": 2,
+        "ASSISTANT": 3
+      },
+      "_id": "martyrs-insight",
+      "name": "Martyr's Insight",
+      "sort": 110000
+    },
+    {
+      "type": "feat",
+      "ownership": {
+        "default": 0,
+        "PLAYER": 2,
+        "ASSISTANT": 3
+      },
+      "_id": "retribution",
+      "name": "Retribution",
+      "sort": 140000
+    },
+    {
+      "type": "feat",
+      "ownership": {
+        "default": 0,
+        "PLAYER": 2,
+        "ASSISTANT": 3
+      },
+      "_id": "vengeance-mercy-resource",
+      "name": "Vengeance and Mercy Resource",
+      "sort": 100000
+    }
+  ],
+  "name": "Class Features",
+  "label": "Class Features"
+}
