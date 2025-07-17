@@ -127,6 +127,12 @@ Please open an issue and include:
 
 ## Changelog
 
+### Version 1.3.0
+- 🔧 **MAJOR FIX**: Corrected compendium pack paths to use folder structure instead of .db files
+- 📊 **ADDED**: Required `system` field for all compendium packs (Foundry VTT v10+ requirement)
+- 🎯 **IMPROVED**: Added proper ownership permissions for compendium packs
+- ✅ **RESOLVED**: Compendium content should now import correctly in Foundry VTT
+
 ### Version 1.1.4
 - 🧹 **CLEANUP**: Removed duplicate class file from class-features folder
 - 📁 **ORGANIZED**: Proper separation of classes and features for optimal compendium structure

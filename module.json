@@ -2,7 +2,7 @@
   "id": "dnd5e-martyr-class",
   "title": "D&D 5e Martyr Class",
   "description": "Adds the Martyr class with Vengeance/Mercy resource system and blood magic spells",
-  "version": "1.2.9",
+  "version": "1.3.0",
   "compatibility": {
     "minimum": "11",
     "verified": "13"
@@ -33,26 +33,46 @@
     {
       "name": "martyr-classes",
       "label": "Martyr Classes",
-      "path": "packs/classes.db",
-      "type": "Item"
+      "path": "packs/classes",
+      "type": "Item",
+      "system": "dnd5e",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
     },
     {
       "name": "martyr-class-features",
       "label": "Martyr Class Features",
-      "path": "packs/class-features.db",
-      "type": "Item"
+      "path": "packs/class-features",
+      "type": "Item",
+      "system": "dnd5e",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
     },
     {
       "name": "martyr-spells",
       "label": "Martyr Blood Magic Spells",
-      "path": "packs/spells.db",
-      "type": "Item"
+      "path": "packs/spells",
+      "type": "Item",
+      "system": "dnd5e",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
     },
     {
       "name": "martyr-subclasses",
       "label": "Martyr Subclasses",
-      "path": "packs/subclasses.db",
-      "type": "Item"
+      "path": "packs/subclasses",
+      "type": "Item",
+      "system": "dnd5e",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
     }
   ],
   "packFolders": [
