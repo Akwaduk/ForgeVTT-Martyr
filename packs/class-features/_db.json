@@ -1,4 +1,6 @@
 {
+  "name": "Martyr Class Features",
+  "label": "Martyr Class Features",
   "entries": [
     {
       "type": "feat",
@@ -66,7 +68,5 @@
       "name": "Vengeance and Mercy Resource",
       "sort": 100000
     }
-  ],
-  "name": "Class Features",
-  "label": "Class Features"
+  ]
 }

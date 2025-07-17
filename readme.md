@@ -127,6 +127,12 @@ Please open an issue and include:
 
 ## Changelog
 
+### Version 1.3.1
+- ✅ **RESOLVED**: Converted .db files to individual JSON files in folders
+- 📁 **CREATED**: All compendium items now exist as separate files
+- 🎯 **FIXED**: Compendiums now contain all content when imported
+- 📊 **VERIFIED**: All 25 items properly structured (1 class + 6 features + 16 spells + 2 subclasses)
+
 ### Version 1.3.0
 - 🔧 **MAJOR FIX**: Corrected compendium pack paths to use folder structure instead of .db files
 - 📊 **ADDED**: Required `system` field for all compendium packs (Foundry VTT v10+ requirement)

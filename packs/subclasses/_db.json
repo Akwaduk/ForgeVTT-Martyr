@@ -1,4 +1,6 @@
 {
+  "name": "Martyr Subclasses",
+  "label": "Martyr Subclasses",
   "entries": [
     {
       "type": "subclass",
@@ -22,7 +24,5 @@
       "name": "Disciple of the Sun",
       "sort": 60000
     }
-  ],
-  "name": "Subclasses",
-  "label": "Subclasses"
+  ]
 }
