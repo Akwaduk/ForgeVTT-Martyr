@@ -19,6 +19,14 @@ Hooks.on("dnd5e.advancementManagerComplete", (manager, actor, advancement) => {
     if (level === 1) {
         initializeMartyrResources(actor);
     }
+    
+    // Handle spell learning advancement completion
+    if (advancement?.type === "SpellLearning" && level >= 2) {
+        console.log(`Martyr Module | Spell learning advancement completed for level ${level}`);
+        // The D&D 5e advancement system will handle the actual spell selection
+        // This just logs for debugging and could handle additional logic if needed
+        handleSpellLearningComplete(actor, level);
+    }
 });
 
 /**
@@ -46,8 +54,28 @@ Hooks.on("createItem", (item, options, userId) => {
 });
 
 /**
- * Initialize Martyr resources for new characters
+ * Handle spell learning completion
  */
+function handleSpellLearningComplete(actor, level) {
+    console.log(`Martyr Module | Spell learning completed for ${actor.name} at level ${level}`);
+    
+    // Update spellcasting ability based on subclass if not already set
+    const subclass = actor.items.find(i => i.type === "subclass" && i.system.classIdentifier === "martyr");
+    if (subclass) {
+        const spellcastingAbility = subclass.system.identifier === "disciple-moon" ? "cha" : "wis";
+        console.log(`Martyr Module | Setting spellcasting ability to ${spellcastingAbility} based on ${subclass.name}`);
+        
+        // Update the actor's spellcasting ability if needed
+        // Note: This might require additional implementation depending on how Foundry handles this
+    }
+    
+    // Provide information about spell learning
+    if (level === 2) {
+        ui.notifications.info(`${actor.name} can now cast Martyr spells! Select 2 spells from the Blood Magic list.`);
+    } else {
+        ui.notifications.info(`${actor.name} can learn 1 additional Martyr spell.`);
+    }
+}
 function initializeMartyrResources(actor) {
     console.log(`Martyr Module | Initializing resources for ${actor.name}`);
     
@@ -235,3 +263,41 @@ Hooks.on("preUpdateActor", (actor, updateData, options, userId) => {
 });
 
 console.log("Martyr Module | Level progression and automation loaded");
+
+/**
+ * Validate spell restrictions based on Martyr path
+ */
+function validateMartyrSpell(actor, spell) {
+    const pathRestriction = spell.getFlag("dnd5e-martyr-class", "pathRestriction");
+    if (!pathRestriction) return true; // No restriction
+    
+    const actorPath = actor.getFlag("dnd5e-martyr-class", "path");
+    
+    if (pathRestriction === "moon" && actorPath !== "moon") {
+        return false;
+    }
+    if (pathRestriction === "sun" && actorPath !== "sun") {
+        return false;
+    }
+    
+    return true;
+}
+
+/**
+ * Hook into spell creation to validate Martyr spell restrictions
+ */
+Hooks.on("preCreateItem", (item, data, options, userId) => {
+    const actor = item.actor;
+    if (!actor || !window.MartyrModule.isMartyr(actor)) return true;
+    
+    if (item.type === "spell" && item.getFlag("dnd5e-martyr-class", "isBloodMagic")) {
+        if (!validateMartyrSpell(actor, item)) {
+            const pathRestriction = item.getFlag("dnd5e-martyr-class", "pathRestriction");
+            const pathName = pathRestriction === "moon" ? "Moon (Vengeance)" : "Sun (Mercy)";
+            ui.notifications.warn(`${item.name} is restricted to the Path of the ${pathName}.`);
+            return false; // Prevent creation
+        }
+    }
+    
+    return true;
+});
