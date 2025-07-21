@@ -30,11 +30,13 @@
 
 ## Troubleshooting
 
-**Module won't enable**: Make sure you're using Foundry VTT v11+ and D&D 5e system v3.0.0+
+**Module won't enable**: Make sure you're using Foundry VTT v13+ and D&D 5e system v3.0.0+
 
 **Resources not tracking**: Check that the "Auto-calculate Vengeance/Mercy" setting is enabled in module settings
 
 **Spells not appearing**: Make sure you've selected the Martyr class and are at least level 2
+
+**Icons not showing**: All icons have been updated to use standard D&D 5e system icons for v13 compatibility
 
 **Need help?**: Create an issue on the GitHub repository or ask in the Foundry VTT community
 ```
@@ -157,9 +159,11 @@ If automatic tracking fails:
 
 ## Compatibility
 
-- **Foundry VTT**: v11-12
+- **Foundry VTT**: v13+
 - **D&D 5e System**: v3.0.0+
 - **Other Modules**: Generally compatible, may conflict with other resource management modules
+
+**Note**: All icons have been updated for v13 compatibility and use standard D&D 5e system icon paths.
 
 ## Support
 
