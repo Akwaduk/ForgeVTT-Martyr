@@ -4,85 +4,21 @@
  */
 
 /**
- * Handle level progression for Martyr characters
+ * Handle level progression for Martyr characters - now using advancement system
+ * This hook primarily handles resource management and spell progression
  */
 Hooks.on("dnd5e.advancementManagerComplete", (manager, actor, advancement) => {
     if (!window.MartyrModule.isMartyr(actor)) return;
     
-    const newLevel = actor.system.details.level;
-    grantMartyrFeatures(actor, newLevel);
-});
-
-/**
- * Grant appropriate Martyr features based on level
- */
-async function grantMartyrFeatures(actor, level) {
-    console.log(`Martyr Module | Checking features for level ${level}`);
+    console.log(`Martyr Module | Level advancement completed for ${actor.name}`);
     
-    const featuresDB = {
-        1: ["martyrfeat001", "martyrfeat002"], // Vengeance/Mercy, Insight
-        2: ["martyrfeat003", "martyrfeat004"], // Double-Edged Blade, Spellcasting
-        3: ["martyrfeat005", "martyrfeat006"], // Mortal Devotion, Retribution
-        5: ["martyrfeat007"], // Exact Vengeance/Merciful Patience
-        9: ["martyrfeat008"], // Improved Sufferance
-        10: ["martyrfeat009"], // Blood and Thunder/Sacrifice and Atonement
-        13: ["martyrfeat010"], // Indomitable Presence
-        14: ["martyrfeat011"], // Improved Retribution
-        17: ["martyrfeat012"], // Vindictive Divinity
-        20: ["martyrfeat013"]  // Apocalyptic Affinity
-    };
-    
-    const featuresToGrant = featuresDB[level];
-    if (!featuresToGrant) return;
-    
-    for (const featureId of featuresToGrant) {
-        await grantFeatureFromCompendium(actor, featureId);
-    }
-    
-    // Update resource maximums
+    // Update resource maximums when leveling up
     updateResourceMaximums(actor);
-}
-
-/**
- * Grant a specific feature from the compendium
- */
-async function grantFeatureFromCompendium(actor, featureId) {
-    try {
-        const pack = game.packs.get("dnd5e-martyr-class.martyr-class-features");
-        if (!pack) {
-            console.warn("Martyr Module | Class features compendium not found");
-            return;
-        }
-        
-        const featureIndex = await pack.getIndex();
-        const featureEntry = featureIndex.find(e => e._id === featureId);
-        
-        if (!featureEntry) {
-            console.warn(`Martyr Module | Feature ${featureId} not found in compendium`);
-            return;
-        }
-        
-        const feature = await pack.getDocument(featureId);
-        if (!feature) {
-            console.warn(`Martyr Module | Could not load feature ${featureId}`);
-            return;
-        }
-        
-        // Check if actor already has this feature
-        const existingFeature = actor.items.find(i => i.name === feature.name);
-        if (existingFeature) {
-            console.log(`Martyr Module | Actor already has feature: ${feature.name}`);
-            return;
-        }
-        
-        // Add the feature to the actor
-        await actor.createEmbeddedDocuments("Item", [feature.toObject()]);
-        ui.notifications.info(`Added Martyr feature: ${feature.name}`);
-        
-    } catch (error) {
-        console.error(`Martyr Module | Error granting feature ${featureId}:`, error);
-    }
-}
+    
+    // Handle spell progression
+    const newLevel = actor.system.details.level;
+    updateMartyrSpells(actor, newLevel);
+});
 
 /**
  * Update resource maximums based on level and Constitution
@@ -107,21 +43,33 @@ function updateResourceMaximums(actor) {
 }
 
 /**
- * Handle subclass selection automation
+ * Handle subclass selection automation - now integrated with advancement system
  */
 Hooks.on("createItem", (item, options, userId) => {
-    if (item.type !== "subclass" || !item.system.classIdentifier === "martyr") return;
+    if (item.type !== "subclass") return;
     
     const actor = item.actor;
     if (!actor || !window.MartyrModule.isMartyr(actor)) return;
     
+    // Check if this is a Martyr subclass by looking at the classIdentifier
+    if (item.system.classIdentifier !== "martyr") return;
+    
     // Set the appropriate path based on subclass
+    console.log(`Martyr Module | Subclass selected: ${item.system.identifier}`);
+    
     if (item.system.identifier === "disciple-moon") {
         actor.martyrPath = window.MartyrModule.PATHS.MOON;
         ui.notifications.info(`${actor.name} has chosen the Path of the Moon (Vengeance)`);
+        console.log(`Martyr Module | Set path to Moon for ${actor.name}`);
     } else if (item.system.identifier === "disciple-sun") {
         actor.martyrPath = window.MartyrModule.PATHS.SUN;
         ui.notifications.info(`${actor.name} has chosen the Path of the Sun (Mercy)`);
+        console.log(`Martyr Module | Set path to Sun for ${actor.name}`);
+    }
+    
+    // Update the resource display if the sheet is open
+    if (actor.sheet && actor.sheet.rendered) {
+        actor.sheet.render(false);
     }
 });
 
